@@ -2,7 +2,7 @@
 
 # Team members:
 ```
-- Hayden Leung
+* Hayden Leung
 * Evan
 * Sara Shio
 + Kiona Peng
@@ -25,9 +25,9 @@ In the beginning stages of our development phase. We are going to make a website
 
 # Programming Language Use
 ```
-- HTML
+* HTML
 * CSS
-+ JS
+* JavaScript
 ```
 
 
