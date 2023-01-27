@@ -1,25 +1,25 @@
 ## **The Big Project**
 
-#Team members:
+# Team members:
 ```
-Hayden Leung
-Evan
-Sara Shio
-Kiona Peng
+- Hayden Leung
+* Evan
+* Sara Shio
++ Kiona Peng
 
 ```
 
-#The repo 
+# The repo 
 [github link](https://github.com/Haydenleung/MDIA2109-BigProject)
 
 
-#Description
+# Description
 
-#Programming Language Use
+# Programming Language Use
 ```
-HTML
-CSS
-JS
+- HTML
+* CSS
++ JS
 ```
 
 
