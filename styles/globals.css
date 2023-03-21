@@ -14,3 +14,21 @@
   --deep-cordovan: #3F382C;
   --deep-ash-red: #403534;
 }
+
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  border:1px black solid;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-clr);
+}
