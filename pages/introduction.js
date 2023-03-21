@@ -10,6 +10,11 @@ export default function introduction() {
                 <div className={styles.navbar}>
                     <Navbar />
                 </div>
+                <div className={styles.pageContent}>
+                    <div className={styles.contentContainer}>
+                        <h3>Introduction</h3>
+                    </div>
+                </div>
 
                 <Link href="/">Landing page</Link>
             </div>

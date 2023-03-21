@@ -17,10 +17,11 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.main_container}>
-          <div className={styles.landingImgBx}>
+          <div className={styles.pageImg}>
             <Image className={styles.landingImg} src={landingImg} width="300" />
           </div>
-          <div className={styles.landingLogoBx}>
+          <div className={styles.pageContent}>
+          <div className={styles.logoBx}>
             <Image src={landingLogo} width='200' />
             <p className={styles.tagline}>No Worries. We Stand By You.</p>
           </div>
@@ -31,6 +32,7 @@ export default function Home() {
             <Link href='/introduction'>
               <button className={styles.actionBtn}>Get Started</button>
             </Link>
+            </div>
           </div>
 
         </div>

@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-background);
+    background-color: var(--font-white);
 }
 
 .main_container{
@@ -19,5 +19,15 @@
 }
 
 .navbar{
+    width:100%;
     
+}
+
+.pageContent{
+    margin:0;
+}
+
+.contentContainer{
+    padding:1.5rem 1rem 1rem 1rem;
+    border:1px solid red;
 }
