@@ -1,0 +1,12 @@
+.navbar{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    padding:0.5rem 1rem;
+    background-color: var(--purple);
+   
+}
+
+.navbarLogo{
+
+}

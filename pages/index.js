@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
 import landingImg from "@/public/landingPageHugo.png"
 import landingLogo from "@/public/landingPageLogo.png"
@@ -27,8 +28,9 @@ export default function Home() {
             <div className={styles.memberIcon}>
               <Image />
             </div>
-
-            <button className={styles.actionBtn}>Get Started</button>
+            <Link href='/introduction'>
+              <button className={styles.actionBtn}>Get Started</button>
+            </Link>
           </div>
 
         </div>
