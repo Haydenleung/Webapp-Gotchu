@@ -6,7 +6,10 @@
   --cordovan: #9E8C6F;
   --burgundy: #894751;
   --ash-red: #A08381;
+  --font-white:white;
 
+  --hover-purple:#6E526B;
+  --hover-green:#8E9987;
   --deep-purple: #372936;
   --deep-green: #474C44;
   --deep-orange: #56382D;
@@ -19,7 +22,7 @@
   margin:0px;
   padding:0px;
   box-sizing: border-box;
-  border:1px black solid;
+  /* border:1px black solid; */
 }
 
 a {
