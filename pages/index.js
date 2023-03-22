@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
+import landingImg from "@/public/landingPageHugo.png"
+import landingLogo from "@/public/landingPageLogo.png"
 
 
 export default function Home() {
@@ -13,7 +16,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      
+        <div className={styles.main_container}>
+          <div className={styles.pageImg}>
+            <Image className={styles.landingImg} src={landingImg} width="300" />
+          </div>
+          <div className={styles.pageContent}>
+          <div className={styles.logoBx}>
+            <Image src={landingLogo} width='200' />
+            <p className={styles.tagline}>No Worries. We Stand By You.</p>
+          </div>
+          <div className={styles.action}>
+            <div className={styles.memberIcon}>
+              <Image />
+            </div>
+            <Link href='/introduction'>
+              <button className={styles.actionBtn}>Get Started</button>
+            </Link>
+            </div>
+          </div>
+
+        </div>
       </main>
     </>
   )
