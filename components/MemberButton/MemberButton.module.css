@@ -1,0 +1,11 @@
+.button{
+    width:48px;
+    height:48px;
+    background-color: var(--ash-red);
+    border: none;
+    border-radius: 10px;
+  }
+  
+  /* .button:hover{
+      background-color: var(--hover-purple);
+  } */
