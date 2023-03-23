@@ -1,11 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from "./Navbar.module.css"
 import Image from 'next/image'
-import navbarLogo from "@/public/NavbarLogo.svg"
-import hamburger from "@/public/hamburger.svg"
-import homeLogo from "@/public/icons/home.svg"
-import quizLogo from "@/public/icons/quiz.svg"
-import resultLogo from "@/public/icons/result.svg"
 import { useState } from 'react'
 
 export default function Navbar() {
@@ -21,22 +16,22 @@ export default function Navbar() {
   return (
     <section className={styles.navbar}>
       <div className={styles.headbar}>
-        <Image src={navbarLogo} className={styles.navbarLogo} />
-        <Image src={hamburger} onClick={() => setReverse(true)} className={styles.hamburger} />
+        <Image src={'NavbarLogo.svg'} className={styles.navbarLogo} width={40} height={40} />
+        <Image src={'hamburger.svg'} onClick={() => setReverse(true)} className={styles.hamburger} width={40} height={40} />
       </div>
       {
         popup === true ?
           <div className={styles.extendbar}>
             <div className={styles.extendtab}>
-              <Image src={homeLogo} className={styles.hamburger} />
+              <Image src={'/icons/home.svg'} className={styles.hamburger} width={20} height={20} />
               <h4>Home</h4>
             </div>
             <div className={styles.extendtab}>
-              <Image src={quizLogo} className={styles.hamburger} />
+              <Image src={'/icons/quiz.svg'} className={styles.hamburger} width={20} height={20} />
               <h4>Quiz</h4>
             </div>
             <div className={styles.extendtab}>
-              <Image src={resultLogo} className={styles.hamburger} />
+              <Image src={'/icons/result.svg'} className={styles.hamburger} width={20} height={20} />
               <h4>Result</h4>
             </div>
           </div>

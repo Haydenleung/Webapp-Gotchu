@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../styles/team.module.css"
+import styles from "../styles/Team.module.css"
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Card from '@/components/Card'
