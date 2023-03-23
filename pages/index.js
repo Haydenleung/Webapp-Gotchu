@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import landingImg from "@/public/landingPageHugo.png"
 import landingLogo from "@/public/landingPageLogo.png"
 import Button from '@/components/Button'
+import MemberButton from '@/components/MemberButton'
 
 
 export default function Home() {
@@ -22,18 +23,18 @@ export default function Home() {
             <Image className={styles.landingImg} src={landingImg} width="300" />
           </div>
           <div className={styles.pageContent}>
-          <div className={styles.logoBx}>
-            <Image src={landingLogo} width='200' />
-            <p className={styles.tagline}>No Worries. We Stand By You.</p>
-          </div>
-          <div className={styles.action}>
-            <div className={styles.memberIcon}>
-              <Image />
+            <div className={styles.logoBx}>
+              <Image src={landingLogo} width='200' />
+              <p className={styles.tagline}>No Worries. We Stand By You.</p>
             </div>
-            <Link href='/introduction'>
+            <div className={styles.action}>
+              <Link href='/team'>
+                <MemberButton />
+              </Link>
+              <Link href='/introduction'>
                 {/* <button className={styles.actionBtn}>Get Started</button> */}
-                <Button text="Get Started" color='#896686' width='180'/>
-            </Link>
+                <Button text="Get Started" color='#896686' width='180' />
+              </Link>
             </div>
           </div>
 

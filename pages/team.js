@@ -13,7 +13,7 @@ export default function Team() {
                 </div>
                 <div className={styles.pageContent}>
                     <div className={styles.contentContainer}>
-                        <img src='/icons/fill/group.png' />
+                        <img src='/group_fill.png' />
                         <h3>Our Team</h3>
                     </div>
                 </div>
