@@ -4,7 +4,7 @@ import styles from "../styles/introduction.module.css"
 import Link from 'next/link'
 import IntroductionCard from '@/components/IntroductionCard'
 import Button from '@/components/Button'
-import introImg from '@/public/introImg.svg'
+import introImg from '@/public/IntroImg.svg'
 import dots from '@/public/carouselIndicator.svg'
 
 
