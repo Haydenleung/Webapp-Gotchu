@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
 import landingImg from "@/public/landingPageHugo.png"
 import landingLogo from "@/public/landingPageLogo.png"
+import Button from '@/components/Button'
 
 
 export default function Home() {
@@ -30,7 +31,8 @@ export default function Home() {
               <Image />
             </div>
             <Link href='/introduction'>
-              <button className={styles.actionBtn}>Get Started</button>
+                {/* <button className={styles.actionBtn}>Get Started</button> */}
+                <Button text="Get Started" color='#896686' width='180'/>
             </Link>
             </div>
           </div>

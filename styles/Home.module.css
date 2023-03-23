@@ -72,10 +72,7 @@
   border: none;
 }
 
-.actionBtn:hover{
-  background-color: var(--hover-purple);
 
-}
 
 .memberIcon:hover{
   background-color: var(--orange);
