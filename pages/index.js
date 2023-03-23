@@ -33,8 +33,13 @@ export default function Home() {
               </Link>
               <Link href='/introduction'>
                 {/* <button className={styles.actionBtn}>Get Started</button> */}
+<<<<<<< HEAD
                 <Button text="Get Started" color='#896686' width='180' />
               </Link>
+=======
+                <Button text="Get Started" color='#896686' width={180} />
+            </Link>
+>>>>>>> 11bff50 (option components and question page added)
             </div>
           </div>
 
