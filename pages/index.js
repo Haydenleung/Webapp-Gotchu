@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <Link href='/introduction'>
                 {/* <button className={styles.actionBtn}>Get Started</button> */}
-                <Button text="Get Started" color='#896686' width='180'/>
+                <Button text="Get Started" color='#896686' width={180} />
             </Link>
             </div>
           </div>
