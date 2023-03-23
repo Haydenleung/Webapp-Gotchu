@@ -23,15 +23,15 @@ export default function Navbar() {
         popup === true ?
           <div className={styles.extendbar}>
             <div className={styles.extendtab}>
-              <Image src={'/icons/home.svg'} className={styles.hamburger} width={20} height={20} />
+              <Image src={'/icons/home.svg'} className={styles.tabIcon} width={20} height={20} />
               <h4>Home</h4>
             </div>
             <div className={styles.extendtab}>
-              <Image src={'/icons/quiz.svg'} className={styles.hamburger} width={20} height={20} />
+              <Image src={'/icons/quiz.svg'} className={styles.tabIcon} width={20} height={20} />
               <h4>Quiz</h4>
             </div>
             <div className={styles.extendtab}>
-              <Image src={'/icons/result.svg'} className={styles.hamburger} width={20} height={20} />
+              <Image src={'/icons/result.svg'} className={styles.tabIcon} width={20} height={20} />
               <h4>Result</h4>
             </div>
           </div>
