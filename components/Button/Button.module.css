@@ -1,0 +1,14 @@
+.button{
+  height:48px;
+  border-radius: 10px;
+  background-color: var(--purple);
+  color:var(--font-white);
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+
+}
+
+/* .button:hover{
+    background-color: var(--hover-purple);
+} */
