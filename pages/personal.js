@@ -1,4 +1,5 @@
-import React from 'react'
+import { React } from 'react'
+import { useState } from 'react'
 import styles from "../styles/Personal.module.css"
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
@@ -6,6 +7,7 @@ import Characters from '@/components/Characters'
 import NextButton from '@/components/NextButton'
 
 export default function Personal() {
+    const [name, setName] = useState('');
     return (
         <div className={styles.main}>
             <div className={styles.main_container}>
@@ -16,7 +18,13 @@ export default function Personal() {
                             <h4>What's your name?</h4>
                             <p>(Optional)</p>
                         </div>
-                        {/* Replace by Input Components */}
+
+                        <input
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            className={styles.inputFelid}
+
+                        />
                         <div className={styles.nameInput}>
                         </div>
                         <div className={styles.pagePick}>
@@ -27,6 +35,7 @@ export default function Personal() {
                         </div>
                     </div>
                     <div className={styles.bottomContent}>
+
                         <Link href="/start">
                             <NextButton />
                         </Link>
