@@ -47,14 +47,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--placeholder-text);
+    /* background-color: var(--placeholder-text); */
     margin-bottom: 0.5rem;
 }
 
 .introCard {
     height: 550px;
     width: 100%;
-    background-color: var(--placeholder-components);
+    
 }
 
 .bottomContent {
@@ -67,7 +67,7 @@
 
 /* Delete after inserting components into page */
 .bottomContent>div {
-    background-color: var(--placeholder-components);
+
     height: 60px;
     width: 100%;
 }
