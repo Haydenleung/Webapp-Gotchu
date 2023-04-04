@@ -7,41 +7,27 @@ import Button from '@/components/Button'
 import dots from '@/public/carouselIndicator.svg'
 
 
-export default function introduction() {
+export default function Introduction() {
 
     return (
         <div className={styles.main}>
             <div className={styles.main_container}>
-                <div className={styles.navbar}>
-                    <Navbar />
-                </div>
+                <Navbar />
                 <div className={styles.pageContent}>
-                    <div className={styles.contentContainer}>
+                    <div className={styles.topContent}>
                         <div className={styles.pageTitle}>
-                            <p>Introduction</p>
+                            <h4>Introduction</h4>
                         </div>
+                        {/* Replace by Cards Components */}
                         <div className={styles.introCard}>
-                            <IntroductionCard />
                         </div>
-                        <div className={styles.buttons}>
-                            <Link href='/character'>
-                                <Button color='#896686'
-                                    hoverColor='#6E526B'
-                                    text='Acknowledge'
-                                    className={styles.actionBtn}
-
-                                />
-                            </Link>
-                        </div>
-
-
-
+                    </div>
+                    <div className={styles.bottomContent}>
+                        {/* Replace by Buttons Components */}
+                        <div></div>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
     )
 }

@@ -27,6 +27,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
     padding: 2rem 1.5rem;
@@ -38,36 +39,80 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    flex-grow: 1;
+    margin-bottom: 150px;
 }
 
-.pageTitle {
+.pageIndicator {
     width: 100%;
     height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--placeholder-components);
+    margin-bottom: 1rem;
+}
+
+.question {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--placeholder-text);
-    margin-bottom: 0.5rem;
+    text-align: center;
+    height: 110px;
+    width: 100%;
+    background-color: var(--placeholder-components);
+    margin-bottom: 1rem;
 }
 
-.introCard {
-    height: 550px;
+.answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+    background-color: var(--placeholder-components);
+    margin-bottom: 2rem;
+}
+
+.answer>div {
+    height: 90px;
     width: 100%;
     background-color: var(--placeholder-components);
 }
 
-.bottomContent {
+.bottomGraphic {
+    position: absolute;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-end;
     width: 100%;
-    flex-grow: 1;
+    height: 150px;
+    background-color: var(--placeholder-components);
 }
 
-/* Delete after inserting components into page */
-.bottomContent>div {
+/* Adjust after inserting components into page */
+.bottomBack {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    height: 50px;
+    width: 105px;
+    z-index: 998;
     background-color: var(--placeholder-components);
-    height: 60px;
-    width: 100%;
+}
+
+.bottomNext {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    height: 50px;
+    width: 105px;
+    z-index: 998;
+    background-color: var(--placeholder-components);
 }
