@@ -51,6 +51,17 @@
   margin-bottom: 0.5rem;
 }
 
+.inputFelid{
+    height:60px;
+    width:346px;
+    padding: 1rem;
+    background-color: var(--font-white);
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
 .nameInput {
   height: 60px;
   width: 100%;
