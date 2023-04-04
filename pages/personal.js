@@ -3,6 +3,7 @@ import styles from "../styles/Personal.module.css"
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Characters from '@/components/Characters'
+import NextButton from '@/components/NextButton'
 
 export default function Personal() {
     return (
@@ -26,8 +27,9 @@ export default function Personal() {
                         </div>
                     </div>
                     <div className={styles.bottomContent}>
-                        {/* Replace by Buttons Components */}
-                        <div></div>
+                        <Link href="/start">
+                            <NextButton />
+                        </Link>
                     </div>
                 </div>
             </div>
