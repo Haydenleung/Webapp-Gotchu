@@ -57,6 +57,8 @@
     justify-content: center;
     align-items: center;
     gap:0.3rem;
+    position: absolute;
+    bottom: 0.5rem;
 
 }
 
