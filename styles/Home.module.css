@@ -6,74 +6,70 @@
   align-items: center;
   min-height: 100vh;
   background-color: var(--primary-background);
-  
-
 }
 
 /* display screen */
-.main_container{
+.main_container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  width:390px;
-  height:100vh;
+  width: 390px;
+  min-height: 844px;
+  height: 100vh;
   border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
- 
-  
 }
 
-.pageImg{
-  display: block;
-  margin-left: auto;
-  margin-top:2rem;
-  margin-bottom: 2rem;
-  /* height:100vh; */
-  
-
+.bubble {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  height: 100px;
+  width: 100px;
+  background-color: var(--placeholder-graphic);
+  z-index: 999;
 }
 
+.pageImg {
+  position: absolute;
+  top: 0;
+  height: 550px;
+  width: 100%;
+  background-color: var(--placeholder-graphic);
+}
 
 /* how to center the landing logo? */
-.logoBx{
+.pageContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  margin-top: 550px;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.appLogo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100px;
+  background-color: var(--placeholder-components);
 }
 
-.tagline{
-  color: var(--purple);
-}
-.action{
+.action {
   display: flex;
-  gap:1.5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
   margin-top: 1rem;
-
 }
 
-.memberIcon{
-  width:48px;
-  height:48px;
-  background-color: var(--ash-red);
-  border: none;
-  border-radius: 10px;
-}
-
-.actionBtn{
-  width:180px;
-  height:48px;
-  border-radius: 10px;
-  background-color: var(--purple);
-  color:var(--font-white);
-  font-weight: bold;
-  font-size: 18px;
-  border: none;
-}
-
-
-
-.memberIcon:hover{
-  background-color: var(--orange);
+/* Delete after inserting components into page */
+.action>div {
+  background-color: var(--placeholder-components);
+  height: 80px;
+  width: 100%;
 }
