@@ -21,7 +21,7 @@
 
   --placeholder-components: rgba(130, 130, 194, 0.6);
   --placeholder-graphic: rgba(130, 194, 165, 0.6);
-  --placeholder-text: rgba(190, 194, 130, 0.6);
+  --placeholder-text: rgba(194, 159, 130, 0.6);
 
 }
 
@@ -41,4 +41,9 @@ a {
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--background-clr);
+}
+
+h4 {
+  font-size: 18pt;
+  font-weight: 600;
 }
