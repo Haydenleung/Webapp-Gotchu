@@ -18,6 +18,11 @@
   --deep-burgundy: #381E20;
   --deep-cordovan: #3F382C;
   --deep-ash-red: #403534;
+
+  --placeholder-components: rgba(130, 130, 194, 0.6);
+  --placeholder-graphic: rgba(130, 194, 165, 0.6);
+  --placeholder-text: rgba(190, 194, 130, 0.6);
+
 }
 
 * {
