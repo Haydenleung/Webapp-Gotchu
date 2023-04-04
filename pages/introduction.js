@@ -4,7 +4,6 @@ import styles from "../styles/introduction.module.css"
 import Link from 'next/link'
 import IntroductionCard from '@/components/IntroductionCard'
 import Button from '@/components/Button'
-import introImg from '@/public/IntroImg.svg'
 import dots from '@/public/carouselIndicator.svg'
 
 
@@ -25,9 +24,14 @@ export default function introduction() {
                             <IntroductionCard />
                         </div>
                         <div className={styles.buttons}>
-                            <button className={styles.acknowledgeBtn}>Acknowledge</button>
-                            <button className={styles.tutorialBtn}>Tutorial</button>
-                            {/* <Button /> */}
+                            <Link href='/character'>
+                                <Button color='#896686'
+                                    hoverColor='#6E526B'
+                                    text='Acknowledge'
+                                    className={styles.actionBtn}
+
+                                />
+                            </Link>
                         </div>
 
 
@@ -35,7 +39,7 @@ export default function introduction() {
                     </div>
                 </div>
 
-                <Link href="/">Landing page</Link>
+
             </div>
 
         </div>
