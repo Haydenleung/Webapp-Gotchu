@@ -7,7 +7,7 @@ import Button from '@/components/Button'
 import dots from '@/public/carouselIndicator.svg'
 
 
-export default function introduction() {
+export default function Introduction() {
 
     return (
         <div className={styles.main}>
@@ -27,10 +27,7 @@ export default function introduction() {
                         <div></div>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
     )
 }
