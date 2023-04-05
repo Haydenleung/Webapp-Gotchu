@@ -8,6 +8,14 @@ import NextButton from '@/components/NextButton'
 
 export default function Personal() {
     const [name, setName] = useState('');
+    const handleInputChange = (e) => {
+        // Remove any non-alphabetic characters using regex
+        const inputValue = e.target.value.replace(/[^a-zA-Z]/g, '');
+        // Update the input field's value
+        e.target.value = inputValue;
+        setName(e.target.value);
+    };
+
     return (
         <div className={styles.main}>
             <div className={styles.main_container}>
@@ -20,8 +28,10 @@ export default function Personal() {
                         </div>
 
                         <input
+                            type="text"
                             value={name}
-                            onChange={e => setName(e.target.value)}
+                            placeholder="Characters Only"
+                            onChange={handleInputChange}
                             className={styles.inputFelid}
 
                         />
