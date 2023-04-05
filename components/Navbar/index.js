@@ -14,22 +14,28 @@ export default function Navbar() {
     <section className={styles.navbar}>
       <div className={styles.headbar}>
         <Image src={'NavbarLogo.svg'} className={styles.navbarLogo} width={40} height={40} />
-        <Image src={'hamburger.svg'} onClick={() => setPopup(true)} className={styles.hamburger} width={40} height={40} />
+        <Image src={'hamburger.svg'} onClick={() => setPopup(true)} className={styles.hamburger} width={30} height={30} />
       </div>
       {
         popup === true ?
-          <div className={styles.overlayMenu}>
+          <motion.div className={styles.overlayMenu} onClick={() => setPopup(false)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 100 }}
+            transition={{
+              type: "tween",
+              duration: 0.6
+            }}>
             <motion.div
               className={styles.menu}
-              initial={{ x: 20, opacity: 0 }}
+              initial={{ x: 300, opacity: 80 }}
               animate={{ x: 0, opacity: 100 }}
               transition={{
-                type: "linear",
-                duration: 0.5
+                type: "tween",
+                duration: 0.6
               }}
             >
               <div className={styles.close}>
-                <Image src={'icons/close.svg'} onClick={() => setPopup(false)} className={styles.hamburger} width={30} height={30} />
+                <Image src={'icons/close.svg'} onClick={() => setPopup(false)} className={styles.closeIcon} width={30} height={30} />
               </div>
               <Link href="/">
                 <div className={styles.tab}>
@@ -68,7 +74,7 @@ export default function Navbar() {
                 </div>
               </Link>
             </motion.div>
-          </div>
+          </motion.div>
 
           : <></>
       }

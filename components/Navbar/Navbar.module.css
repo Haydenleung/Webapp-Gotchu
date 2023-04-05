@@ -1,10 +1,12 @@
 .navbar {
-    position: sticky;
+    position: fixed;
     display: flex;
     flex-direction: column;
     width: 100%;
     background-color: aliceblue;
     z-index: 999;
+    width: 390px;
+    top: 0;
 }
 
 .headbar {
@@ -27,6 +29,11 @@
 
 .hamburger {
     cursor: pointer;
+}
+
+.hamburger:hover {
+    transform: scale(1.05);
+
 }
 
 .overlayMenu {
@@ -60,6 +67,11 @@
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
+}
+
+.closeIcon:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .tab {
