@@ -18,8 +18,9 @@ export default function Personal() {
 
     return (
         <div className={styles.main}>
+            <div className={styles.empty} />
+            <Navbar />
             <div className={styles.main_container}>
-                <Navbar />
                 <div className={styles.pageContent}>
                     <div className={styles.topContent}>
                         <div className={styles.pageTitle}>
@@ -51,6 +52,7 @@ export default function Personal() {
                     </div>
                 </div>
             </div>
+            <div className={styles.empty} />
         </div>
     )
 }
