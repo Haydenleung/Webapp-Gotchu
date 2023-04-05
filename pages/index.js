@@ -30,25 +30,20 @@ export default function Home() {
               {/* Insert Graphic */}
             </div>
             <div className={styles.action}>
-              
-              
-                <Link href='/introduction'>
-                  <Button color='#896686'
-                    text='Acknowledge'
+              <Link href='/introduction'>
+                <Button color='#896686'
+                  text='Acknowledge'
                   className={styles.acknowledgeBtn}
-                  />
-                </Link>
-             
-              
+                />
+              </Link>
               {/* change destination to tutorial once the page is created */}
-              
-                <Link href='/'>
-                  <Button color='#B1BFA9'
-                    text='Tutorial'
-                    className={styles.tutorialBtn}
-                  />
-                </Link>
-              
+              <Link href='/'>
+                <Button color='#B1BFA9'
+                  text='Tutorial'
+                  className={styles.tutorialBtn}
+                />
+              </Link>
+
             </div>
           </div>
 

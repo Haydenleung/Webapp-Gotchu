@@ -49,6 +49,13 @@ h4 {
   line-height: 120%;
 }
 
+h5 {
+  font-size: 16pt;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+
 h6 {
   font-size: 12pt;
   font-weight: 400;
