@@ -1,10 +1,21 @@
-import React from 'react'
+import { React } from 'react'
+import { useState } from 'react'
 import styles from "../styles/Personal.module.css"
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Characters from '@/components/Characters'
+import NextButton from '@/components/NextButton'
 
 export default function Personal() {
+    const [name, setName] = useState('');
+    const handleInputChange = (e) => {
+        // Remove any non-alphabetic characters using regex
+        const inputValue = e.target.value.replace(/[^a-zA-Z]/g, '');
+        // Update the input field's value
+        e.target.value = inputValue;
+        setName(e.target.value);
+    };
+
     return (
         <div className={styles.main}>
             <div className={styles.main_container}>
@@ -15,7 +26,15 @@ export default function Personal() {
                             <h4>What's your name?</h4>
                             <p>(Optional)</p>
                         </div>
-                        {/* Replace by Input Components */}
+
+                        <input
+                            type="text"
+                            value={name}
+                            placeholder="Characters Only"
+                            onChange={handleInputChange}
+                            className={styles.inputFelid}
+
+                        />
                         <div className={styles.nameInput}>
                         </div>
                         <div className={styles.pagePick}>
@@ -26,8 +45,10 @@ export default function Personal() {
                         </div>
                     </div>
                     <div className={styles.bottomContent}>
-                        {/* Replace by Buttons Components */}
-                        <div></div>
+
+                        <Link href="/start">
+                            <NextButton />
+                        </Link>
                     </div>
                 </div>
             </div>

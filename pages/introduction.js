@@ -18,13 +18,21 @@ export default function Introduction() {
                         <div className={styles.pageTitle}>
                             <h4>Introduction</h4>
                         </div>
-                        {/* Replace by Cards Components */}
+
                         <div className={styles.introCard}>
+                            <IntroductionCard />
                         </div>
                     </div>
                     <div className={styles.bottomContent}>
-                        {/* Replace by Buttons Components */}
-                        <div></div>
+                        <Link href='/personal'>
+                            <Button color='#896686'
+                                text='Acknowledge'
+                                className={styles.actionBtn}
+                            />
+                        </Link>
+                        <div>
+
+                        </div>
                     </div>
                 </div>
             </div>
