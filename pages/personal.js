@@ -27,15 +27,14 @@ export default function Personal() {
                             <p>(Optional)</p>
                         </div>
 
-                        <input
-                            type="text"
-                            value={name}
-                            placeholder="Characters Only"
-                            onChange={handleInputChange}
-                            className={styles.inputFelid}
-
-                        />
                         <div className={styles.nameInput}>
+                            <input
+                                type="text"
+                                value={name}
+                                placeholder="Characters Only"
+                                onChange={handleInputChange}
+                                className={styles.inputFelid}
+                            />
                         </div>
                         <div className={styles.pagePick}>
                             <h4>Pick a color you like</h4>

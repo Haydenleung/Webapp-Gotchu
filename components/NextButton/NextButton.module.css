@@ -1,17 +1,17 @@
-.buttonContainer{
+.buttonContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width:105px;
-    height:50px;
+    width: 105px;
+    height: 50px;
     border-radius: 1rem;
     background-color: #E7DBDE;
-    color:var(--primary-background);
+    color: var(--primary-background);
     border-style: none;
     font-size: 22px;
 }
 
-.buttonContainer:hover{
-   background-color: var(--purple);
-   transform: translateX(5px);
+.buttonContainer:hover {
+    background-color: var(--purple);
+    transform: translateX(5px);
 }
