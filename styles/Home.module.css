@@ -74,3 +74,13 @@
   height: 60px;
   width: 100%;
 }
+
+
+.acknowledgeBtn:hover{
+  background-color: var(--hover-purple);
+}
+
+
+.tutorialBtn:hover{
+    background-color: var(--hover-green);
+}

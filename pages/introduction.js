@@ -26,10 +26,8 @@ export default function Introduction() {
                     <div className={styles.bottomContent}>
                         <Link href='/personal'>
                             <Button color='#896686'
-                                hoverColor='#6E526B'
                                 text='Acknowledge'
                                 className={styles.actionBtn}
-
                             />
                         </Link>
                         <div>
