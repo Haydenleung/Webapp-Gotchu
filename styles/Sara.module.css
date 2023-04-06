@@ -65,3 +65,7 @@
   #test{
     background-color: white;
   }
+
+  .colorTile{
+    display: flex;
+  }

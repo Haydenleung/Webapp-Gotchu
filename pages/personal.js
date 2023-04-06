@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Characters from '@/components/Characters'
 import NextButton from '@/components/NextButton'
+import ColorSelection from '@/components/ColorSelection'
 
 export default function Personal() {
     const [name, setName] = useState('');
@@ -30,9 +31,20 @@ export default function Personal() {
                         <div className={styles.pagePick}>
                             <h4>Pick a color you like</h4>
                         </div>
-                        {/* Replace by Characters Components */}
-                        <div className={styles.character}>
+
+                        <div className={styles.colorTile}>
+                            <ColorSelection img='purple_character.png' />
+                            <ColorSelection img='green_character.png' />
                         </div>
+                        <div className={styles.colorTile}>
+                            <ColorSelection img='orange_character.png' />
+                            <ColorSelection img='red_character.png' />
+                        </div>
+                        <div className={styles.colorTile}>
+                            <ColorSelection img='brown_character.png' />
+                            <ColorSelection img='tan_character.png' />
+                        </div>
+                        
                     </div>
                     <div className={styles.bottomContent}>
 
