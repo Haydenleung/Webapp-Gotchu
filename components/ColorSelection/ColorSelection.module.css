@@ -1,21 +1,13 @@
-.content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-  
-
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.content>img{
-    width: 10rem;
+.content>img {
+  width: 100%;
 }
-
-
-
-
-
 
 /* .row{
     display: flex;
