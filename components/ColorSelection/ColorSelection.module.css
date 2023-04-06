@@ -1,0 +1,31 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  
+
+}
+
+.content>img{
+    width: 10rem;
+}
+
+
+
+
+
+
+/* .row{
+    display: flex;
+    gap: 4rem;
+  }
+  
+  .row>img{
+  width:10px
+  }
+  
+  .row>div{
+    width: 100px;
+  } */

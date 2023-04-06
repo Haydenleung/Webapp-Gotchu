@@ -120,5 +120,8 @@
   height: 50px;
   width: 105px;
   z-index: 998;
+ }
 
+.colorTile{
+  display: flex;
 }
