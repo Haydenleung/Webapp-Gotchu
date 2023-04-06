@@ -43,7 +43,8 @@
     align-items: center;
     flex-grow: 1;
     padding: 2rem 1.5rem;
-    min-height: calc(844px - 3.5rem);
+    min-height: calc(744px - 3.5rem);
+    gap: 1rem;
 }
 
 .topContent {
@@ -66,9 +67,9 @@
 }
 
 .introCard {
-    height: 550px;
+    min-height: 500px;
+    height: calc(300px + 35vh);
     width: 100%;
-
 }
 
 .bottomContent {

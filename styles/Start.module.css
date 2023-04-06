@@ -66,6 +66,10 @@
     margin-bottom: 0.5rem;
 }
 
+.pageTitle>h4>span {
+    color: var(--purple);
+}
+
 .shape {
     position: relative;
     height: 400px;
@@ -79,7 +83,7 @@
 .box {
     position: absolute;
     width: 28rem;
-    height: 22rem;
+    height: 24rem;
     background: var(--purple);
 }
 
@@ -88,8 +92,12 @@
     padding: 0 5rem;
     position: absolute;
     text-align: center;
-    color: var(--font-white);
+    color: var(--primary-background);
     line-height: 140%;
+}
+
+.shapeText>span {
+    font-weight: 600;
 }
 
 .bottomGraphic {
@@ -97,11 +105,24 @@
     bottom: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     height: 150px;
-    background-color: var(--placeholder-components);
+    /* background-color: var(--placeholder-components); */
+}
+
+.walkingImg {
+    position: absolute;
+    left: 0;
+    height: 75%;
+    width: auto;
+}
+
+.walkingCharacter {
+    position: absolute;
+    top: 3rem;
+    z-index: 100;
 }
 
 /* Adjust after inserting components into page */
@@ -112,5 +133,4 @@
     height: 50px;
     width: 105px;
     z-index: 998;
-    background-color: var(--placeholder-components);
 }
