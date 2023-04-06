@@ -6,6 +6,7 @@
   align-items: center;
   min-height: 100vh;
   background-color: var(--font-white);
+  overflow-y: hidden;
 }
 
 /* display screen */
@@ -13,31 +14,55 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 390px;
-  min-height: 844px;
   height: 100vh;
   border-radius: 2rem;
   background-color: var(--primary-background);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  overflow-y: auto;
+}
+
+.main_container::-webkit-scrollbar {
+  display: none;
 }
 
 .bubble {
   position: absolute;
   top: 2rem;
   left: 2rem;
-  height: 100px;
-  width: 100px;
-  background-color: var(--placeholder-graphic);
+  height: 200px;
+  width: 170px;
   z-index: 999;
 }
 
-.pageImg {
+.bubbleOne {
   position: absolute;
+  left: 10px;
+  bottom: 70px;
+}
+
+.bubbleTwo {
+  position: absolute;
+  left: calc(30px + 8vh);
+  bottom: 120px;
+}
+
+.pageImg {
+  position: relative;
   top: 0;
-  height: 550px;
   width: 100%;
-  background-color: var(--placeholder-graphic);
+  min-height: 550px;
+  max-height: 800px;
+  padding-left: 2rem;
+  padding-top: 5rem;
+  flex-grow: 1;
+}
+
+.landingImg {
+  height: 100%;
+  width: auto;
 }
 
 /* how to center the landing logo? */
@@ -45,8 +70,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  flex-grow: 1;
-  margin-top: 550px;
   width: 100%;
   padding: 2rem 1.5rem;
 }
@@ -57,7 +80,6 @@
   justify-content: center;
   align-items: center;
   height: 100px;
-  background-color: var(--placeholder-components);
 }
 
 .action {
@@ -73,4 +95,14 @@
   background-color: var(--placeholder-components);
   height: 60px;
   width: 100%;
+}
+
+
+.acknowledgeBtn:hover {
+  background-color: var(--hover-purple);
+}
+
+
+.tutorialBtn:hover {
+  background-color: var(--hover-green);
 }

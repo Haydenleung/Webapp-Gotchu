@@ -9,10 +9,19 @@ import ColorSelection from '@/components/ColorSelection'
 
 export default function Personal() {
     const [name, setName] = useState('');
+    const handleInputChange = (e) => {
+        // Remove any non-alphabetic characters using regex
+        const inputValue = e.target.value.replace(/[^a-zA-Z]/g, '');
+        // Update the input field's value
+        e.target.value = inputValue;
+        setName(e.target.value);
+    };
+
     return (
         <div className={styles.main}>
+            <div className={styles.empty} />
+            <Navbar />
             <div className={styles.main_container}>
-                <Navbar />
                 <div className={styles.pageContent}>
                     <div className={styles.topContent}>
                         <div className={styles.pageTitle}>
@@ -20,13 +29,14 @@ export default function Personal() {
                             <p>(Optional)</p>
                         </div>
 
-                        <input
-                            value={name}
-                            onChange={e => setName(e.target.value)}
-                            className={styles.inputFelid}
-
-                        />
                         <div className={styles.nameInput}>
+                            <input
+                                type="text"
+                                value={name}
+                                placeholder="Characters Only"
+                                onChange={handleInputChange}
+                                className={styles.inputFelid}
+                            />
                         </div>
                         <div className={styles.pagePick}>
                             <h4>Pick a color you like</h4>
@@ -54,6 +64,7 @@ export default function Personal() {
                     </div>
                 </div>
             </div>
+            <div className={styles.empty} />
         </div>
     )
 }

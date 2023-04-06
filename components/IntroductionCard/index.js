@@ -49,7 +49,7 @@ export default function IntroductionCard() {
                         </> :
                         slideIndex == 3 ?
                             <>
-                                <Image src={'/IntroImg3.svg'} className={styles.disclaimerImg} width={200} height={170} />
+                                <Image src={'/IntroImg3.svg'} className={styles.cardImg} width={200} height={170} />
                                 <p className={styles.cardText}>{disclaimerText}</p>
                             </> :
                             <p className={styles.cardText}>{introText}</p>
@@ -78,7 +78,7 @@ export default function IntroductionCard() {
                 {Array.from({ length: 3 }).map((item, index) => (
                     <div
                         onClick={() => moveDot(index + 1)}
-                        className={slideIndex === index + 1 ? styles.dot.active : styles.dot}
+                        className={slideIndex === index + 1 ? styles.dotactive : styles.dot}
                     ></div>
                 ))}
             </div>
