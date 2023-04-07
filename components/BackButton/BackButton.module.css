@@ -1,17 +1,23 @@
-.buttonContainer{
+.buttonContainer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width:105px;
-    height:50px;
-    border-radius: 1rem;
-    background-color: #E7DBDE;
-    color:var(--primary-background);
-    border-style: none;
+    width: 105px;
+    height: 50px;
+    background-color: var(--purple);
+    color: var(--primary-background);
     font-size: 22px;
+    border-radius: 99px;
+    gap: 0.5rem;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+    opacity: 20%;
 }
 
-.buttonContainer:hover{
-   background-color: var(--purple);
-   transform: translateX(-5px);
+.buttonContainer:hover {
+    opacity: 100%;
+    transform: translateX(1px);
+}
+
+.button {
+    font-weight: 600;
 }

@@ -6,13 +6,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import BackButton from '@/components/BackButton'
+import NextButton from '@/components/NextButton'
 import { motion } from 'framer-motion'
+
 
 export default function Start() {
 
     const router = useRouter();
     const query = router.query;
     const name = query.name;
+    const color = query.color;
 
     return (
         <>
@@ -65,19 +68,21 @@ export default function Start() {
                             width={1000}
                             height={1000}
                             initial={{ x: 650 }}
-                            animate={{ x: -100 }}
+                            animate={{ x: -20 }}
                             transition={{
                                 duration: 12.5,
-                                ease: "linear"
+                                ease: "linear",
+                                delay: 1
                             }}
                         />
                         <motion.div
                             className={styles.walkingCharacter}
                             transition={{
                                 duration: 6,
+                                delay: 1
                             }}
                             animate={{
-                                x: ["-120%", "120%"],
+                                x: ["-180%", "120%"],
                             }}
                         >
                             <motion.img
@@ -88,19 +93,32 @@ export default function Start() {
                                     duration: 0.5,
                                     repeat: 24,
                                     repeatType: "reverse",
-                                    ease: "easeIn"
+                                    ease: "easeIn",
+                                    delay: 1
                                 }}
                                 initial={{ y: "10%" }}
                                 animate={{
-                                    y: ["-30%", "10%"],
+                                    y: ["-30%", "10%"]
                                 }}
                             />
                         </motion.div>
-                        <div>
-                            {/* <Link href="/personal">
+                        <motion.div
+                            className={styles.bottomButton}
+                            initial={{ opacity: "0%" }}
+                            animate={{
+                                opacity: "100%"
+                            }}
+                            transition={{
+                                delay: 14
+                            }}
+                        >
+                            <Link href={{ pathname: "/personal", query: { name, color } }}>
                                 <BackButton />
-                            </Link> */}
-                        </div>
+                            </Link>
+                            <Link href={{ pathname: "/start", query: { name, color } }}>
+                                {/* <NextButton /> */}
+                            </Link>
+                        </motion.div >
                     </div>
                 </div>
                 <div className={styles.empty} />
