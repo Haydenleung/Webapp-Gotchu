@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     background-color: var(--font-white);
     overflow-y: hidden;
@@ -25,6 +25,7 @@
     justify-content: flex-start;
     width: 390px;
     height: 100vh;
+    max-height: 1200px;
     border-radius: 2rem;
     background-color: var(--primary-background);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -108,29 +109,33 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 150px;
-    /* background-color: var(--placeholder-components); */
+    height: 170px;
+    background-color: var(--primary-background);
 }
 
 .walkingImg {
     position: absolute;
-    left: 0;
-    height: 75%;
+    left: 0rem;
+    top: 0rem;
+    height: 65%;
     width: auto;
 }
 
 .walkingCharacter {
     position: absolute;
+    left: 3.8rem;
     top: 3rem;
     z-index: 100;
 }
 
-/* Adjust after inserting components into page */
-.bottomGraphic>div {
+.bottomButton {
     position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    height: 50px;
-    width: 105px;
-    z-index: 998;
+    bottom: 5rem;
+    right: 0rem;
+    width: 100%;
+    padding: 0 1.5rem;
+    z-index: 120;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

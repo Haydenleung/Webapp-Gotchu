@@ -43,6 +43,7 @@ export default function Personal() {
     })
 
     const [name, setName] = useState('');
+    const [color, setColor] = useState('green');
     const handleInputChange = (e) => {
         // Remove any non-alphabetic characters using regex
         const inputValue = e.target.value.replace(/[^a-zA-Z" "]/g, '');
@@ -101,11 +102,9 @@ export default function Personal() {
                                     <ColorSelection img={imgT} />
                                 </div>
                             </div>
-
                         </div>
-                        <div className={styles.bottomContent}>
-
-                            <Link href={{ pathname: "/start", query: { name } }}>
+                        <div className={styles.bottomButton}>
+                            <Link href={{ pathname: "/start", query: { name, color } }}>
                                 <NextButton />
                             </Link>
                         </div>
