@@ -9,10 +9,30 @@ export default function Button({
 }) {
     return (
         <div>
-            <button className={styles.button}
-                style={{ backgroundColor: `${color}`}}>
-                {text}
-            </button>
+            {
+                text == "Get Started" || "Acknowledge" ?
+                <button className={styles.purpleButton}
+                    style={{ backgroundColor: `${color}` }}>
+                    {text}
+                    </button> :
+                    text == "Tutorial" ?
+                        <button className={styles.greenButton}
+                            style={{ backgroundColor: `${color}` }}>
+                            {text}
+                        </button> :
+                        text == "Get Help" ?
+                            <button className={styles.redButton}
+                                style={{ backgroundColor: `${color}` }}>
+                                {text}
+                            </button> :
+                            <button className={styles.purpleButton}
+                                style={{ backgroundColor: `${color}` }}>
+                                {text}
+                            </button>
+
+                            
+            }
+           
         </div>
     )
 }
