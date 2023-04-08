@@ -13,3 +13,49 @@
 /* .button:hover{
     background-color: var(--hover-purple);
 } */
+
+.purpleButton{
+  height:60px;
+  width:100%;
+  border-radius: 10px;
+  background-color: var(--purple);
+  color:var(--font-white);
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+
+}
+
+.greenButton{
+   height:60px;
+  width:100%;
+  border-radius: 10px;
+  background-color: var(--purple);
+  color:var(--font-white);
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+}
+
+.redButton{
+   height:60px;
+  width:100%;
+  border-radius: 10px;
+  background-color: var(--purple);
+  color:var(--font-white);
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+}
+
+.purpleButton:hover{
+  background-color:var(--hover-purple);
+}
+
+.greenButton:hover{
+  background-color: var(--hover-green);
+}
+
+.redButton:hover{
+  background-color: var(--deep-orange);
+}
