@@ -7,7 +7,8 @@ import { motion } from 'framer-motion'
 export default function BackButton() {
 
   const variants = {
-    over: { x: ["0%", "10%"] }
+    over: { x: ["0%", "10%"] },
+    noOver: { x: ["0%", "0%"] }
   }
 
   const [isOver, setIsOver] = useState(false)

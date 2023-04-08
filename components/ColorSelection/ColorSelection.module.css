@@ -5,8 +5,15 @@
   align-items: center;
 }
 
-.content>img {
+.background {
   width: 100%;
+  height: auto;
+}
+
+.character {
+  position: absolute;
+  width: 40%;
+  height: auto;
 }
 
 /* .row{

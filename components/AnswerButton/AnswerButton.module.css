@@ -1,0 +1,133 @@
+.contentP {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background-color: var(--font-white);
+    border-radius: 10px;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.contentG {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background-color: var(--font-white);
+    border-radius: 10px;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.contentO {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background-color: var(--font-white);
+    border-radius: 10px;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.contentP:active {
+    transform: translateY(1px);
+}
+
+.contentG:active {
+    transform: translateY(1px);
+}
+
+.contentO:active {
+    transform: translateY(1px);
+}
+
+.graphic {
+    height: 100%;
+    width: 35%;
+    padding: 1rem 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.text {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2rem;
+}
+
+.arrowP {
+    position: absolute;
+    right: 1.5rem;
+    height: 12px;
+    width: auto;
+    filter: invert(46%) sepia(12%) saturate(950%) hue-rotate(255deg) brightness(91%) contrast(88%);
+}
+
+.contentP:hover {
+    background-color: var(--purple);
+}
+
+.contentG:hover {
+    background-color: var(--green);
+}
+
+.contentO:hover {
+    background-color: var(--orange);
+}
+
+
+.contentP:hover .arrowP {
+    filter: invert(95%) sepia(1%) saturate(85%) hue-rotate(319deg) brightness(117%) contrast(100%);
+}
+
+.contentG:hover .arrowG {
+    filter: invert(95%) sepia(1%) saturate(85%) hue-rotate(319deg) brightness(117%) contrast(100%);
+}
+
+.contentO:hover .arrowO {
+    filter: invert(95%) sepia(1%) saturate(85%) hue-rotate(319deg) brightness(117%) contrast(100%);
+}
+
+.contentP:hover .text {
+    color: var(--font-white);
+}
+
+.contentG:hover .text {
+    color: var(--font-white);
+}
+
+.contentO:hover .text {
+    color: var(--font-white);
+}
+
+.arrowG {
+    position: absolute;
+    right: 1.5rem;
+    height: 12px;
+    width: auto;
+    filter: invert(86%) sepia(6%) saturate(661%) hue-rotate(54deg) brightness(88%) contrast(89%);
+}
+
+.arrowO {
+    position: absolute;
+    right: 1.5rem;
+    height: 12px;
+    width: auto;
+    filter: invert(92%) sepia(26%) saturate(3276%) hue-rotate(300deg) brightness(82%) contrast(109%);
+}

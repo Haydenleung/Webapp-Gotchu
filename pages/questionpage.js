@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import BackButton from '@/components/BackButton'
 import NextButton from '@/components/NextButton'
+import AnswerButton from '@/components/AnswerButton'
 
 export default function QuestionPage() {
 
@@ -21,6 +22,10 @@ export default function QuestionPage() {
   const storeAnswers = () => {
     setAnswer({ ...answer, answer1: { optionText } })
   }
+
+  const [isClickP, setIsClickP] = useState(false);
+  const [isClickG, setIsClickG] = useState(false);
+  const [isClickO, setIsClickO] = useState(false);
 
   return (
     <>
@@ -56,9 +61,15 @@ export default function QuestionPage() {
               </div>
               {/* Replace by Answer Components */}
               <div className={styles.answer}>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div className={styles.answerBox} onClick={() => { setIsClickP(true); setIsClickG(false); setIsClickO(false) }}>
+                  <AnswerButton img={'/answer/one_me.png'} txt={'Me'} color={'purple'} isClickP={isClickP} />
+                </div>
+                <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(true); setIsClickO(false) }}>
+                  <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'green'} isClickG={isClickG} />
+                </div>
+                <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(false); setIsClickO(true) }}>
+                  <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'orange'} isClickO={isClickO} />
+                </div>
               </div>
             </motion.div>
           </div>
