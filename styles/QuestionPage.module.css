@@ -76,8 +76,13 @@
     text-align: center;
     height: 110px;
     width: 100%;
-    background-color: var(--placeholder-components);
+    /* background-color: var(--placeholder-components); */
     margin-bottom: 1rem;
+}
+
+.question>h6 {
+    color: var(--purple);
+    font-weight: 600;
 }
 
 .answer {
@@ -86,16 +91,13 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-
     width: 100%;
-    background-color: var(--placeholder-components);
+    /* background-color: var(--placeholder-components); */
     margin-bottom: 2rem;
 }
 
-.answer>div {
-    height: 90px;
+.answerBox {
     width: 100%;
-    background-color: var(--placeholder-components);
 }
 
 .bottomGraphic {

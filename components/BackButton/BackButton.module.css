@@ -15,7 +15,11 @@
 
 .buttonContainer:hover {
     opacity: 100%;
-    transform: translateX(1px);
+    /* transform: translateX(1px); */
+}
+
+.buttonContainer:active {
+    transform: translateY(1px);
 }
 
 .button {

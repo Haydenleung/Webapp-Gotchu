@@ -6,7 +6,8 @@ import { motion } from 'framer-motion'
 export default function NextButton() {
 
     const variants = {
-        over: { x: ["-10%", "0%"] }
+        over: { x: ["-10%", "0%"] },
+        noOver: { x: ["0%", "0%"] }
     }
 
     const [isOver, setIsOver] = useState(false)
