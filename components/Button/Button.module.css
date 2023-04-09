@@ -49,13 +49,13 @@
 }
 
 .purpleButton:hover{
-  background-color:var(--hover-purple);
+  background-color:var(--hover-purple) !important;
 }
 
 .greenButton:hover{
-  background-color: var(--hover-green);
+  background-color: var(--hover-green) !important;
 }
 
 .redButton:hover{
-  background-color: var(--deep-orange);
+  background-color: var(--deep-orange) !important;
 }
