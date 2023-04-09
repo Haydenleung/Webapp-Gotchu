@@ -91,12 +91,7 @@
   margin-top: 1rem;
 }
 
-/* Delete after inserting components into page */
-.action>div {
-  background-color: var(--placeholder-components);
-  height: 60px;
-  width: 100%;
-}
+
 
 
 .acknowledgeBtn:hover {
