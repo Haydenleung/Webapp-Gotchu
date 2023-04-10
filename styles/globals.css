@@ -19,6 +19,11 @@
   --deep-cordovan: #3F382C;
   --deep-ash-red: #403534;
 
+  --resources-purple:#B8A3B6;
+  --resources-red:#B99297;
+  --resources-green:#D0D9CB;
+
+
   --placeholder-components: rgba(130, 130, 194, 0.6);
   --placeholder-graphic: rgba(130, 194, 165, 0.6);
   --placeholder-text: rgba(194, 159, 130, 0.6);
