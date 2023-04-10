@@ -61,7 +61,7 @@ export default function Navbar() {
                   <h5>Result</h5>
                 </div>
               </Link>
-              <Link href="">
+              <Link href="/resources">
                 <div className={styles.tab}>
                   <Image src={'icons/resources.svg'} className={styles.icon} width={30} height={30} />
                   <h5>Resources</h5>
