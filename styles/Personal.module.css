@@ -120,6 +120,10 @@
   /* transform: translate(-1px, -1px); */
 }
 
+.colorTile:hover {
+  cursor: pointer;
+}
+
 .bottomButton {
   position: absolute;
   bottom: 5rem;

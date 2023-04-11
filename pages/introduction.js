@@ -5,7 +5,6 @@ import styles from "../styles/introduction.module.css"
 import Link from 'next/link'
 import IntroductionCard from '@/components/IntroductionCard'
 import Button from '@/components/Button'
-import dots from '@/public/carouselIndicator.svg'
 
 
 export default function Introduction() {

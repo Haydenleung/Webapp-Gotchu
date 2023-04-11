@@ -1,11 +1,11 @@
 .main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  background-color: var(--font-white);
-  overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: var(--font-white);
+    overflow-y: hidden;
 }
 
 
@@ -43,55 +43,76 @@
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-    padding: 2rem 1.5rem;
+    padding: 1rem 1.5rem 2rem 1.5rem;
     min-height: calc(744px - 3.5rem);
 }
 
-
-
-.sectionHead{
+.sectionHead {
     font-size: 20px;
     font-weight: bold;
-    padding:1.5rem 0rem 0.8rem 0rem;
+    line-height: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    /* padding: 1rem 0rem 0.5rem 0rem; */
 }
 
-.sectionText{
+.sectionText {
     font-size: 14px;
-}
-.row{
-    display: flex;
-    justify-content:space-between;
-    margin:1.5rem 0rem;
+    margin-bottom: 1rem;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: column;
-    gap:0.85rem;
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.quizButton{
+.buttons {
     display: flex;
     flex-direction: column;
-    gap:0.8rem;
+    justify-content: space-between;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.quizButton {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
     justify-content: center;
     align-items: center;
-  background-color: var(--resources-green);
-  width:168px;
-  aspect-ratio: 1/1;
-  border-radius: 10px;
-  color:var(--font-white);
-  font-weight: bold;
-  font-size: 18px;
-  border: none;
+    background-color: var(--resources-green);
+    width: 100%;
+    aspect-ratio: 1/0.98;
+    border-radius: 10px;
+    color: var(--font-white);
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding-top: 1.3rem;
 }
 
-.quizButton:hover{
-  background-color:var(--green);
+.quizButton:hover {
+    background-color: var(--green);
 }
 
-.actionButton{
-    width:349px;
+.quizButton:active {
+    transform: translateY(1px);
+}
+
+.actionButton {
+    width: 100%;
     padding-bottom: 1.5rem;
-    
+}
+
+.logo {
+    margin-bottom: 1rem;
 }

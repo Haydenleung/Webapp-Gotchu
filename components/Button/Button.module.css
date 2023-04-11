@@ -1,45 +1,62 @@
-.purpleButton{
-  height:60px;
-  width:100%;
+.purpleButton {
+  height: 60px;
+  width: 100%;
   border-radius: 10px;
   background-color: var(--purple);
-  color:var(--font-white);
+  color: var(--font-white);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   border: none;
-
+  box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.greenButton{
-   height:60px;
-  width:100%;
+.greenButton {
+  height: 60px;
+  width: 100%;
   border-radius: 10px;
   background-color: var(--purple);
-  color:var(--font-white);
+  color: var(--font-white);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   border: none;
+  box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.redButton{
-   height:60px;
-  width:100%;
+.redButton {
+  height: 60px;
+  width: 100%;
   border-radius: 10px;
   background-color: var(--purple);
-  color:var(--font-white);
+  color: var(--font-white);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   border: none;
+  box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.purpleButton:hover{
-  background-color:var(--hover-purple) !important;
+.purpleButton:hover {
+  background-color: var(--hover-purple) !important;
 }
 
-.greenButton:hover{
+.greenButton:hover {
   background-color: var(--hover-green) !important;
 }
 
-.redButton:hover{
+.redButton:hover {
   background-color: #6F3B41 !important;
+}
+
+.purpleButton:active {
+  transform: translateY(1px);
+}
+
+.greenButton:active {
+  transform: translateY(1px);
+}
+
+.redButton:active {
+  transform: translateY(1px);
 }

@@ -79,7 +79,7 @@ export default function QuestionPage() {
                   <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'green'} isClickG={isClickG} />
                 </div>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(false); setIsClickO(true); setNext(true) }}>
-                  <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'orange'} isClickO={isClickO} />
+                  {/* <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'orange'} isClickO={isClickO} /> */}
                 </div>
               </div>
             </motion.div>

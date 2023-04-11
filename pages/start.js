@@ -32,6 +32,34 @@ export default function Start() {
 
     const [isNext, setIsNext] = useState(false);
 
+    const mainVariants = {
+        next: {
+            opacity: 0,
+            transition: {
+                duration: 1,
+                ease: "linear",
+                delay: 0.5
+            }
+        }
+    }
+
+    const buttonsVariants = {
+        start: {
+            opacity: 1,
+            transition: {
+                delay: 14
+            }
+        },
+        next: {
+            opacity: 0,
+            transition: {
+                duration: 1,
+                ease: "linear",
+                delay: 0.5
+            }
+        }
+    }
+
     const walkingVariants = {
         start: {
             x: -20,
@@ -89,7 +117,10 @@ export default function Start() {
                 <Navbar />
                 <div className={styles.main_container}>
                     <div className={styles.pageContent}>
-                        <div className={styles.topContent}>
+                        <motion.div
+                            className={styles.topContent}
+                            variants={mainVariants}
+                            animate={isNext ? "next" : ""}>
                             <div className={styles.pageTitle}>
                                 <h4>Hello <span>{name}</span></h4>
                             </div>
@@ -106,7 +137,7 @@ export default function Start() {
                                     }}
                                     transition={{
                                         duration: 15,
-                                        // ease: "easeInOut",
+                                        // ease: "easeInOut",ç
                                         ease: "linear"
                                     }}
                                 />
@@ -115,8 +146,7 @@ export default function Start() {
                                     <span>Release</span> your finger
                                     when you are Ready to Go</p>
                             </div>
-
-                        </div>
+                        </motion.div>
                     </div>
                     <div className={styles.bottomGraphic}>
                         {/* Replace by Animated Graphic and Buttons Components */}
@@ -151,12 +181,8 @@ export default function Start() {
                         <motion.div
                             className={styles.bottomButton}
                             initial={{ opacity: "0%" }}
-                            animate={{
-                                opacity: "100%"
-                            }}
-                            transition={{
-                                delay: 14
-                            }}
+                            variants={buttonsVariants}
+                            animate={isNext ? "next" : "start"}
                         >
                             <Link href={{ pathname: "/personal", query: { name, color } }}>
                                 <BackButton />
