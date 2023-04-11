@@ -1,45 +1,59 @@
-
-
-.purpleButton{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height:77px;
-  width:168px;
+.purpleButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 73px;
+  width: 100%;
   border-radius: 10px;
-  color:var(--font-white);
+  color: var(--font-white);
   font-weight: bold;
   font-size: 18px;
   border: none;
-  
-
-
+  box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 0rem 1rem 0rem 0.5rem;
 }
 
-.redButton{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height:77px;
-  width:168px;
+.redButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 73px;
+  width: 100%;
   border-radius: 10px;
-  color:var(--font-white);
+  color: var(--font-white);
   font-weight: bold;
   font-size: 18px;
   border: none;
- 
+  box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 0rem 1rem 0rem 0.5rem;
 }
 
-.purpleButton:hover{
-    background-color: var(--purple) !important;
+.purpleButton:hover {
+  background-color: var(--purple) !important;
 }
 
-.redButton:hover{
-    background-color: #A26E74 !important;
+.redButton:hover {
+  background-color: #A26E74 !important;
 }
 
-.buttonText{
+.buttonText {
   font-size: 14px;
-  font-weight: 400px;
+  font-weight: 600;
+  width: 75%;
+  line-height: 130%;
+  ;
 }
 
+.purpleButton:active {
+  transform: translateY(1px);
+}
+
+.redButton:active {
+  transform: translateY(1px);
+}
+
+.img {
+  width: 20%;
+}

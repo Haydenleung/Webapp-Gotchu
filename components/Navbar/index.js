@@ -55,7 +55,7 @@ export default function Navbar() {
                   <h5>Quiz</h5>
                 </div>
               </Link>
-              <Link href="">
+              <Link href="/result">
                 <div className={styles.tab}>
                   <Image src={'icons/result.svg'} className={styles.icon} width={30} height={30} />
                   <h5>Result</h5>

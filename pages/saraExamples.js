@@ -1,7 +1,7 @@
 import styles from "../styles/Sara.module.css";
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
-import TeamBioPopUp from "@/components/TeamBioPopUp";
+// import TeamBioPopUp from "@/components/TeamBioPopUp";
 import ColorSelection from "@/components/ColorSelection";
 import TeamBio from "@/components/TeamBio";
 import { useScroll } from "framer-motion";
