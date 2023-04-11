@@ -11,7 +11,7 @@ import BackButton from '@/components/BackButton'
 import NextButton from '@/components/NextButton'
 import AnswerButton from '@/components/AnswerButton'
 
-export default function QuestionPage() {
+export default function QuestionThree() {
 
   // const [answer, setAnswer] = useState([
   //   answer1 = "",
@@ -48,7 +48,7 @@ export default function QuestionPage() {
       {/* <option onClick={() => storeAnswers() infoPassing={answer}} />{optionText} */}
       {/* in next page: Q2({infoPassing}) */}
       <Head>
-        <title>Question One{name}{color}</title>
+        <title>Question Three{name}{color}</title>
         <meta name="description" content="Anti-Bully App" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -68,18 +68,18 @@ export default function QuestionPage() {
                 {/* Replace by Indicator Components */}
               </div>
               <div className={styles.question}>
-                <h6>Question 1</h6>
-                <h4>Are you or someone else being bullied?</h4>
+                <h6>Question 3</h6>
+                <h4>How does it impact your daily life?</h4>
               </div>
               <div className={styles.answer}>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(true); setIsClickG(false); setIsClickO(false); setNext(true) }}>
-                  <AnswerButton img={'/answer/one_me.png'} txt={'Me'} color={'purple'} isClickP={isClickP} />
+                  <AnswerButton img={'/answer/one_me.png'} txt={'It does affect me'} color={'purple'} isClickP={isClickP} />
                 </div>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(true); setIsClickO(false); setNext(true) }}>
-                  <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'green'} isClickG={isClickG} />
+                  <AnswerButton img={'/answer/one_someone.png'} txt={'It does not affect me'} color={'green'} isClickG={isClickG} />
                 </div>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(false); setIsClickO(true); setNext(true) }}>
-                  <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'orange'} isClickO={isClickO} />
+                  {/* <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'orange'} isClickO={isClickO} /> */}
                 </div>
               </div>
             </motion.div>
@@ -134,12 +134,12 @@ export default function QuestionPage() {
               animate={{ opacity: "100%" }}
               transition={{ delay: 1, ease: "easeInOut", duration: 0.8 }}
             >
-              <Link href={{ pathname: "/start", query: { name, color } }}>
+              <Link href={{ pathname: "/questiontwo", query: { name, color } }}>
                 <BackButton />
               </Link>
               {
                 next ?
-                  <Link href={{ pathname: "/questiontwo", query: { name, color } }}>
+                  <Link href={{ pathname: "/questionfour", query: { name, color } }}>
                     <NextButton />
                   </Link> : <></>
               }
