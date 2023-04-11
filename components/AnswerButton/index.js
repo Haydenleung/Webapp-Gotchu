@@ -37,7 +37,9 @@ export default function AnswerButton({
                             style={isClickP ? { color: `white` } : { color: `` }}>
                             {txt}
                         </p>
-                        <motion.img className={styles.arrowP} src={'/answer/answerArrow.svg'} width={100} height={100} animate={isOver ? "over" : "noOver"}
+                        <motion.img className={styles.arrowP} src={'/answer/answerArrow.svg'} width={100} height={100}
+                            animate={isOver ? "over" : "noOver"}
+                            style={isClickP ? { filter: `invert(95%) sepia(1%) saturate(85%) hue-rotate(319deg) brightness(117%) contrast(100%)` } : {}}
                             variants={variants}
                             transition={{
                                 duration: 0.4,
@@ -59,6 +61,7 @@ export default function AnswerButton({
                                 {txt}
                             </p>
                             <motion.img className={styles.arrowG} src={'/answer/answerArrow.svg'} width={100} height={100}
+                                style={isClickG ? { filter: `invert(95%) sepia(1%) saturate(85%) hue-rotate(319deg) brightness(117%) contrast(100%)` } : {}}
                                 animate={isOverG ? "over" : "noOver"}
                                 variants={variants}
                                 transition={{
@@ -79,6 +82,7 @@ export default function AnswerButton({
                                 style={isClickO ? { color: `white` } : { color: `` }}>
                                 {txt}</p>
                             <motion.img className={styles.arrowO} src={'/answer/answerArrow.svg'} width={100} height={100}
+                                style={isClickO ? { filter: `invert(95%) sepia(1%) saturate(85%) hue-rotate(319deg) brightness(117%) contrast(100%)` } : {}}
                                 animate={isOverO ? "over" : "noOver"}
                                 variants={variants}
                                 transition={{
