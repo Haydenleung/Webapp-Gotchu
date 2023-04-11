@@ -1,3 +1,8 @@
+.popUp{
+  display: flex;
+  align-items: center; 
+}
+
 .content{
     display: flex;
     flex-direction: column;
@@ -17,8 +22,40 @@
     width: 8rem;
 }
 
+.bioInfo>img{
+width: 10rem;
+}
 
+.clickedContent{
+  display: flex;
+  position: absolute;
+  width: 21.75rem;
+  height: 34rem;
 
+  background-color: var(--font-white);
+  border-right: 2px solid var(--sub-grey);
+  border-bottom: 2px solid var(--sub-grey);
+  border-radius: 10px;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.bioInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.bioInfo>img{
+  margin-bottom: 1rem;
+
+}
+
+.separator {
+border: 1px solid var(--sub-grey);
+}
 
 
 
