@@ -139,8 +139,8 @@ export default function QuestionFour() {
               </Link>
               {
                 next ?
-                  <Link href={{ pathname: "/result", query: { name, color } }}>
-                    <NextButton />
+                  <Link href={{ pathname: "/questiontwo", query: { name, color } }}>
+                    {/* <NextButton /> */}
                   </Link> : <></>
               }
             </motion.div >
