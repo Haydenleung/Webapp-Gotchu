@@ -1,0 +1,97 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: var(--font-white);
+  overflow-y: hidden;
+}
+
+
+.empty {
+    flex-grow: 1;
+    background-color: var(--font-white);
+    height: 100vh;
+    z-index: 999;
+}
+
+/* display screen */
+.main_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 390px;
+    height: 100vh;
+    max-height: 1200px;
+    border-radius: 2rem;
+    background-color: var(--primary-background);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    overflow: auto;
+    padding-top: 3.5rem;
+}
+
+.main_container::-webkit-scrollbar {
+    display: none;
+}
+
+.pageContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding: 2rem 1.5rem;
+    min-height: calc(744px - 3.5rem);
+}
+
+
+
+.sectionHead{
+    font-size: 20px;
+    font-weight: bold;
+    padding:1.5rem 0rem 0.8rem 0rem;
+}
+
+.sectionText{
+    font-size: 14px;
+}
+.row{
+    display: flex;
+    justify-content:space-between;
+    margin:1.5rem 0rem;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap:0.85rem;
+}
+
+.quizButton{
+    display: flex;
+    flex-direction: column;
+    gap:0.8rem;
+    justify-content: center;
+    align-items: center;
+  background-color: var(--resources-green);
+  width:168px;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  color:var(--font-white);
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+}
+
+.quizButton:hover{
+  background-color:var(--green);
+}
+
+.actionButton{
+    width:349px;
+    padding-bottom: 1.5rem;
+    
+}
