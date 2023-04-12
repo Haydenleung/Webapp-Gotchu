@@ -1,12 +1,13 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/Transition.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
+import Message from "@/components/Message";
 
 export default function Transition() {
     const router = useRouter();
@@ -14,75 +15,53 @@ export default function Transition() {
     const name = query.name;
     const color = query.color;
 
-    const nextClick = (e) => {
+    useEffect(() => {
         // e.preventDefault();
         // setLoading(true);
         setTimeout(() => {
             router.push(
                 {
-                    pathname: "/questionpage",
+                    pathname: "/questiontwo",
                     query: { name: name, color: color },
                 },
-                "/questionpage"
+                "/questiontwo"
             );
-        }, 8000);
-    };
+        }, 6500);
+    });
 
     const [isNext, setIsNext] = useState(false);
 
     const mainVariants = {
-        next: {
-            opacity: 0,
+        transit: {
+            opacity: [0, 100, 0],
             transition: {
-                duration: 1,
-                ease: "linear",
-                delay: 0.5,
+                duration: 6,
+                ease: "easeInOut"
             },
-        },
+        }
     };
 
     const walkingVariants = {
-        start: {
-            x: -20,
+        transit: {
+            x: [-240, -540],
             transition: {
-                duration: 12.5,
+                duration: 6,
                 ease: "linear",
-                delay: 1,
             },
-        },
-        next: {
-            x: -240,
-            transition: {
-                duration: 7,
-                ease: "linear",
-                delay: 0.5,
-            },
-        },
+        }
     };
 
     const characterVariants = {
-        start: {
-            y: ["-30%", "10%"],
-            rotate: [0, 5],
-            transition: {
-                duration: 0.5,
-                repeat: 24,
-                repeatType: "reverse",
-                ease: "easeIn",
-                delay: 1,
-            },
-        },
-        next: {
+        transit: {
             y: ["10%", "-30%"],
             rotate: [5, 0],
             transition: {
                 duration: 0.5,
-                repeat: 13,
+                repeat: 11,
                 repeatType: "reverse",
                 ease: "easeOut",
-                delay: 0.5,
             },
-        },
+        }
     };
 
     return (
@@ -101,31 +80,16 @@ export default function Transition() {
                 <Navbar />
                 <div className={styles.main_container}>
                     <div className={styles.pageContent}>
+                        <div className={styles.pageIndicator}>
+                            {/* Replace by Indicator Components */}
+                        </div>
                         <motion.div
                             className={styles.topContent}
                             variants={mainVariants}
-                            animate={isNext ? "next" : ""}
+                            animate={"transit"}
                         >
-                            <div className={styles.pageIndicator}>
-                                {/* Replace by Indicator Components */}
-                            </div>
-                            <div className={styles.messageBG}>
-                                <div className={styles.messageText}>
-                                    <div className={styles.open}>
-                                        <Image src={"/openQuotation.svg"} width={20} height={20}/>
-                                    </div>
-                                    <h6>You are not alone. You are seen and heard. I am here to support you.</h6>
-                                    <div className={styles.close}>
-                                    <Image src={"/closeQuotation.svg"} width={20} height={20}/>
-                                    </div>
-                                </div>
-                                        <Image
-                                            className={styles.messageImg}
-                                            src={"/message.svg"}
-                                            width={600}
-                                            height={600}
-                                        />
-                                </div>
+
+                            <Message txt={"You are not alone. \n You are seen and heard. \n I am here to support you."} />
                         </motion.div>
                     </div>
                     <div className={styles.bottomGraphic}>
@@ -137,25 +101,18 @@ export default function Transition() {
                             height={1000}
                             initial={{ x: 650 }}
                             variants={walkingVariants}
-                            animate={isNext ? "next" : "start"}
+                            animate={"transit"}
                         />
                         <motion.div
                             className={styles.walkingCharacter}
-                            transition={{
-                                duration: 6,
-                                delay: 1,
-                            }}
-                            animate={{
-                                x: ["-180%", "120%"],
-                            }}
-                        >
+                            initial={{ x: "120%" }}>
                             <motion.img
                                 src={"/character/walkingHugo.svg"}
                                 width={80}
                                 height={80}
                                 initial={{ y: "10%" }}
                                 variants={characterVariants}
-                                animate={isNext ? "next" : "start"}
+                                animate={"transit"}
                             />
                         </motion.div>
                     </div>

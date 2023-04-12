@@ -4,8 +4,9 @@
   border-radius: 10px;
   background-color: var(--purple);
   color: var(--font-white);
-  font-weight: bold;
+  font-weight: 600;
   font-size: 24px;
+  font-family: 'Poppins', sans-serif;
   border: none;
   box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -17,8 +18,9 @@
   border-radius: 10px;
   background-color: var(--purple);
   color: var(--font-white);
-  font-weight: bold;
+  font-weight: 600;
   font-size: 24px;
+  font-family: 'Poppins', sans-serif;
   border: none;
   box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -30,8 +32,9 @@
   border-radius: 10px;
   background-color: var(--purple);
   color: var(--font-white);
-  font-weight: bold;
+  font-weight: 600;
   font-size: 24px;
+  font-family: 'Poppins', sans-serif;
   border: none;
   box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;

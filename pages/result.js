@@ -36,7 +36,7 @@ export default function Result() {
                                 {/* Replace by Answer Components */}
                                 <div className={styles.userAns}>
                                     <div className={styles.ans}>
-                                        <Response imgSrc='/result/R1.svg' text='User Response 1'/>
+                                        <Response imgSrc='/result/R1.svg' text='User Response 1' />
                                     </div>
                                     <div className={styles.ans}>
                                         <Response imgSrc='/result/R2.svg' text='User Response 2' />
@@ -57,15 +57,15 @@ export default function Result() {
                         </div>
 
                         <div className={styles.bottomContent}>
-                            <Link href='/personal'>
-                                <Button color='#896686'
-                                    text='Acknowledge'
+                            <Link href='/resources'>
+                                <Button color='#8B4A51'
+                                    text='Get Help'
                                     className={styles.actionBtn}
                                 />
                             </Link>
                             <Link href='/personal'>
-                                <Button color='#896686'
-                                    text='Acknowledge'
+                                <Button color='#A18481'
+                                    text='Quiz Again'
                                     className={styles.actionBtn}
                                 />
                             </Link>
