@@ -8,7 +8,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     background-color: var(--font-white);
     border-right: 2px solid var(--sub-grey);
     border-bottom: 2px solid var(--sub-grey);
@@ -31,7 +30,6 @@ width: 10rem;
   position: absolute;
   width: 21.75rem;
   height: 34rem;
-
   background-color: var(--font-white);
   border-right: 2px solid var(--sub-grey);
   border-bottom: 2px solid var(--sub-grey);
