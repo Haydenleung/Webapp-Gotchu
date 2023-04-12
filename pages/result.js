@@ -4,6 +4,8 @@ import Navbar from '@/components/Navbar'
 import styles from "../styles/Result.module.css"
 import Link from 'next/link'
 import Button from '@/components/Button'
+import Image from 'next/image'
+import Response from '@/components/Response'
 
 
 export default function Result() {
@@ -28,13 +30,22 @@ export default function Result() {
                                     <h3>You did a great job!</h3>
                                 </div>
                                 {/* Replace by Graphic Components */}
-                                <div className={styles.resultImg}></div>
+                                <div className={styles.resultImg}>
+                                    <Image src={'/result/result-blob.svg'} width={300} height={169} />
+                                </div>
                                 {/* Replace by Answer Components */}
                                 <div className={styles.userAns}>
-                                    <div className={styles.ans}></div>
-                                    <div className={styles.ans}></div>
-                                    <div className={styles.ans}></div>
-                                    <div className={styles.ans}></div>
+                                    <div className={styles.ans}>
+                                        <Response imgSrc='/result/R1.svg' text='User Response 1'/>
+                                    </div>
+                                    <div className={styles.ans}>
+                                        <Response imgSrc='/result/R2.svg' text='User Response 2' />
+                                    </div>
+                                    <div className={styles.ans}>
+                                        <Response imgSrc='/result/R3.svg' text='User Response 3' />
+                                    </div>
+                                    <div className={styles.ans}>
+                                        <Response imgSrc='/result/R4.svg' text='User Response 4' /></div>
                                 </div>
                             </div>
                             {/* Replace by Animated Arrow with Text*/}
