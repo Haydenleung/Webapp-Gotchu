@@ -139,7 +139,7 @@ export default function QuestionPage() {
               </Link>
               {
                 next ?
-                  <Link href={{ pathname: "/questiontwo", query: { name, color } }}>
+                  <Link href={{ pathname: "/transition", query: { name, color } }}>
                     <NextButton />
                   </Link> : <></>
               }
