@@ -1,0 +1,85 @@
+[
+  {
+    "id":1,
+    "answer": "Me",
+    "transition":"You do not have to face anything alone. You are seen and heard. I will be with you every step of the way."
+  },
+  {
+    "id":2,
+    "answer": "Someone else",
+    "transition":"Thank you for being an ally. Your support and encouragement not only helps your loved ones, it helps make our world a safer place."
+  },
+  {
+    "id":3,
+    "answer": "Emotional and Psychological",
+    "transition":"Remember you are strong and resilient. The only person that can define you, is you. You matter and bring value to this world"
+  },
+  {
+    "id":4,
+    "answer": "Emotional and Psychologica",
+    "transition":"Check in on your loved ones, it can sometimes be difficult for them to ask for help. Let them know you are there to support them!"
+  },
+  {
+    "id":5,
+    "answer": "Physical",
+    "transition":"You deserve to be treated with dignity and respect. You deserve to feel safe. You have the strength to make a change."
+  },
+  {
+    "id":6,
+    "answer": "Physical",
+    "transition":"Reach out to your loved ones and offer safety and comfort. Help them find resources to secure a safe place."
+  },
+  {
+    "id":7,
+    "answer": "Verbal",
+    "transition":"We know how difficult this is for you. You are not to blame for what is happening to you. You deserve to be spoken to with love and kindness."
+  },
+  {
+    "id":8,
+    "answer": "Verbal",
+    "transition":"Tell your loved ones why you love them and what strengths you see in them. Help build their confidence so they do not feel alone."
+  },
+  {
+    "id":9,
+    "answer": "It does affect me",
+    "transition":"Bullying can negatively impact your daily life. Recognizing that bullying is affecting you is the first step in making a positive change."
+  },
+  {
+    "id":10,
+    "answer": "It does affect me",
+    "transition":"Help your loved ones recognize that bullying is affecting different parts of their life and support them to make changes"
+  },
+  {
+    "id":11,
+    "answer": "It does not affect me",
+    "transition":"Make sure to check in with yourself often. Sometimes emotions can be expressed in ways that we do not expect."
+  },
+  {
+    "id":12,
+    "answer": "It does not affect me",
+    "transition":"Everyone expresses emotions differently. People process bullying in many ways, there is no single way to deal with bullying."
+  },
+  {
+    "id":13,
+    "answer": "Yes, I have a support system",
+    "transition":"Asking for help and being vulnerable, is truly an act of strength. Reach out to your support system as often as you need to, they are there to help you."
+  },
+  {
+    "id":14,
+    "answer": "Yes, I have a support system",
+    "transition":"You are a part of your loved one support system. Be sure to take care of yourself as well, you cannot support others without supporting yourself."
+  },
+  {
+    "id":15,
+    "answer": "No, I deal with things on my own",
+    "transition":"It is okay to handle things on your own. Trust and connection with others is something that grows over time. You are not alone, our community is always here for you."
+  },
+  {
+    "id":16,
+    "answer": "No, I deal with things on my own",
+    "transition":"Your loved one may be more comfortable dealing with things on their own. Do not push them to share, just make sure they know you are there for them if they want to reach out."
+  }
+]
+
+
+  
