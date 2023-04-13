@@ -29,7 +29,8 @@
     border-radius: 2rem;
     background-color: var(--primary-background);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     padding-top: 3.5rem;
 }
 
@@ -62,10 +63,10 @@
     height: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-color: var(--placeholder-components);
     margin-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 .question {

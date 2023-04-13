@@ -10,21 +10,23 @@ import { motion } from "framer-motion";
 import Message from "@/components/Message";
 import QuestionIndicator from "@/components/QuestionIndicator";
 
-export default function Transition() {
+export default function TransitionThree() {
     const router = useRouter();
     const query = router.query;
     const name = query.name;
     const color = query.color;
     const answerOne = query.answerOne;
+    const answerTwo = query.answerTwo;
+    const answerThree = query.answerThree;
 
     useEffect(() => {
         setTimeout(() => {
             router.push(
                 {
-                    pathname: "/questiontwo",
-                    query: { name: name, color: color, answerOne: answerOne },
+                    pathname: "/questionfour",
+                    query: { name: name, color: color, answerOne: answerOne, answerTwo: answerTwo, answerThree: answerThree },
                 },
-                "/questiontwo"
+                "/questionfour"
             );
         }, 8000);
     });
@@ -45,7 +47,7 @@ export default function Transition() {
 
     const walkingVariants = {
         transit: {
-            x: [-540, -1080],
+            x: [-1620, -2060],
             transition: {
                 duration: 7.0,
                 ease: "linear",
@@ -60,7 +62,7 @@ export default function Transition() {
             rotate: [5, 0],
             transition: {
                 duration: 0.5,
-                repeat: 14,
+                repeat: 13,
                 repeatType: "reverse",
                 ease: "easeOut",
                 delay: 0.5
@@ -84,7 +86,7 @@ export default function Transition() {
                 <div className={styles.main_container}>
                     <div className={styles.pageContent}>
                         <div className={styles.pageIndicator}>
-                            <QuestionIndicator status={1} ini_wd={0} fin_wd={25} time={7.5} />
+                            <QuestionIndicator status={3} ini_wd={50} fin_wd={75} time={7.5} />
                         </div>
                         <motion.div
                             className={styles.topContent}

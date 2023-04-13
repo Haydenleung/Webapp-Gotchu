@@ -27,7 +27,7 @@ export default function Start() {
                 query: { name: name, color: color }
             },
                 "/questionpage")
-        }, 8000);
+        }, 4800);
     }
 
     const [isNext, setIsNext] = useState(false);
@@ -38,7 +38,6 @@ export default function Start() {
             transition: {
                 duration: 1,
                 ease: "linear",
-                delay: 0.5
             }
         }
     }
@@ -47,7 +46,7 @@ export default function Start() {
         start: {
             opacity: 1,
             transition: {
-                delay: 14
+                delay: 7.3
             }
         },
         next: {
@@ -55,26 +54,23 @@ export default function Start() {
             transition: {
                 duration: 1,
                 ease: "linear",
-                delay: 0.5
             }
         }
     }
 
     const walkingVariants = {
         start: {
-            x: -20,
+            x: [550, -120],
             transition: {
-                duration: 12.5,
-                ease: "linear",
-                delay: 1
+                duration: 6.8,
+                ease: "linear"
             }
         },
         next: {
-            x: -240,
+            x: [-120, -540],
             transition: {
-                duration: 7,
+                duration: 4.8,
                 ease: "linear",
-                delay: 0.5
             }
         }
     }
@@ -84,22 +80,20 @@ export default function Start() {
             y: ["-30%", "10%"],
             rotate: [0, 5],
             transition: {
-                duration: 0.5,
-                repeat: 24,
+                duration: 0.4,
+                repeat: 16,
                 repeatType: "reverse",
                 ease: "easeIn",
-                delay: 1
             }
         },
         next: {
             y: ["10%", "-30%"],
             rotate: [5, 0],
             transition: {
-                duration: 0.5,
-                repeat: 13,
+                duration: 0.4,
+                repeat: 11,
                 repeatType: "reverse",
                 ease: "easeOut",
-                delay: 0.5
             }
         }
     }
@@ -124,7 +118,6 @@ export default function Start() {
                             <div className={styles.pageTitle}>
                                 <h4>Hello <span>{name}</span></h4>
                             </div>
-                            {/* Replace by Aniamte Shape Components */}
                             <div className={styles.shape} onClick={() => { setIsNext(true); nextClick() }}>
                                 <motion.div
                                     className={styles.box}
@@ -137,7 +130,6 @@ export default function Start() {
                                     }}
                                     transition={{
                                         duration: 15,
-                                        // ease: "easeInOut",ç
                                         ease: "linear"
                                     }}
                                 />
@@ -149,13 +141,12 @@ export default function Start() {
                         </motion.div>
                     </div>
                     <div className={styles.bottomGraphic}>
-                        {/* Replace by Animated Graphic and Buttons Components */}
                         <motion.img
-                            src={'/walkingBG.svg'}
+                            src={'/walkingBG_long.svg'}
                             className={styles.walkingImg}
-                            width={1000}
-                            height={1000}
-                            initial={{ x: 650 }}
+                            width={500}
+                            height={500}
+                            // initial={{ x: 650 }}
                             variants={walkingVariants}
                             animate={isNext ? "next" : "start"}
                         />
@@ -166,7 +157,7 @@ export default function Start() {
                                 delay: 1
                             }}
                             animate={{
-                                x: ["-180%", "120%"],
+                                x: ["-200%", "120%"],
                             }}
                         >
                             <motion.img
@@ -187,9 +178,9 @@ export default function Start() {
                             <Link href={{ pathname: "/personal", query: { name, color } }}>
                                 <BackButton />
                             </Link>
-                            <Link href={{ pathname: "/start", query: { name, color } }}>
-                                {/* <NextButton /> */}
-                            </Link>
+                            {/* <Link href={{ pathname: "/start", query: { name, color } }}>
+                                <NextButton />
+                            </Link> */}
                         </motion.div >
                     </div>
                 </div>
