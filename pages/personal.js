@@ -34,16 +34,16 @@ export default function Personal() {
     }
 
     useEffect(() => {
-        purple === true ? setImgP('/character/character_BG_select.svg') : setImgP('/character/character_BG.svg')
-        green === true ? setImgG('/character/character_BG_select.svg') : setImgG('/character/character_BG.svg')
-        orange === true ? setImgO('/character/character_BG_select.svg') : setImgO('/character/character_BG.svg')
-        red === true ? setImgR('/character/character_BG_select.svg') : setImgR('/character/character_BG.svg')
-        brown === true ? setImgB('/character/character_BG_select.svg') : setImgB('/character/character_BG.svg')
-        tan === true ? setImgT('/character/character_BG_select.svg') : setImgT('/character/character_BG.svg')
+        purple === true ? (setImgP('/character/character_BG_select.svg'), setColor("purple")) : setImgP('/character/character_BG.svg')
+        green === true ? (setImgG('/character/character_BG_select.svg'), setColor("green")) : setImgG('/character/character_BG.svg')
+        orange === true ? (setImgO('/character/character_BG_select.svg'), setColor("orange")) : setImgO('/character/character_BG.svg')
+        red === true ? (setImgR('/character/character_BG_select.svg'), setColor("red")) : setImgR('/character/character_BG.svg')
+        brown === true ? (setImgB('/character/character_BG_select.svg'), setColor("brown")) : setImgB('/character/character_BG.svg')
+        tan === true ? (setImgT('/character/character_BG_select.svg'), setColor("tan")) : setImgT('/character/character_BG.svg')
     })
 
     const [name, setName] = useState('');
-    const [color, setColor] = useState('green');
+    const [color, setColor] = useState('purple');
     const handleInputChange = (e) => {
         // Remove any non-alphabetic characters using regex
         const inputValue = e.target.value.replace(/[^a-zA-Z" "]/g, '');

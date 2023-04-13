@@ -10,6 +10,7 @@ import Link from 'next/link'
 import BackButton from '@/components/BackButton'
 import NextButton from '@/components/NextButton'
 import AnswerButton from '@/components/AnswerButton'
+import QuestionIndicator from '@/components/QuestionIndicator'
 
 export default function QuestionThree() {
 
@@ -20,14 +21,18 @@ export default function QuestionThree() {
   //   answer4 = ''
   // ])
 
+  const [answerThree, setAnswerThree] = useState();
+
   const router = useRouter();
   const query = router.query;
   const name = query.name;
   const color = query.color;
+  const answerOne = query.answerOne;
+  const answerTwo = query.answerTwo;
 
-  const storeAnswers = () => {
-    setAnswer({ ...answer, answer1: { optionText } })
-  }
+  // const storeAnswers = () => {
+  //   setAnswer({ ...answer, answer1: { optionText } })
+  // }
 
   const [isClickP, setIsClickP] = useState(false);
   const [isClickG, setIsClickG] = useState(false);
@@ -48,7 +53,7 @@ export default function QuestionThree() {
       {/* <option onClick={() => storeAnswers() infoPassing={answer}} />{optionText} */}
       {/* in next page: Q2({infoPassing}) */}
       <Head>
-        <title>Question Three{name}{color}</title>
+        <title>Question Three</title>
         <meta name="description" content="Anti-Bully App" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -58,25 +63,26 @@ export default function QuestionThree() {
         <Navbar />
         <div className={styles.main_container}>
           <div className={styles.pageContent}>
+            <div className={styles.pageIndicator}>
+              <QuestionIndicator status={3} ini_wd={50} fin_wd={50} />
+            </div>
             <motion.div
               className={styles.topContent}
               initial={{ opacity: "0%" }}
               animate={{ opacity: "100%" }}
               transition={{ delay: 1, ease: "easeInOut", duration: 0.8 }}
             >
-              <div className={styles.pageIndicator}>
-                {/* Replace by Indicator Components */}
-              </div>
+
               <div className={styles.question}>
                 <h6>Question 3</h6>
                 <h4>How does it impact your daily life?</h4>
               </div>
               <div className={styles.answer}>
-                <div className={styles.answerBox} onClick={() => { setIsClickP(true); setIsClickG(false); setIsClickO(false); setNext(true) }}>
-                  <AnswerButton img={'/answer/one_me.png'} txt={'It does affect me'} color={'purple'} isClickP={isClickP} />
+                <div className={styles.answerBox} onClick={() => { setIsClickP(true); setIsClickG(false); setIsClickO(false); setNext(true); setAnswerThree("A") }}>
+                  <AnswerButton img={'/answer/three_affect.png'} txt={'It does affect me'} color={'purple'} isClickP={isClickP} />
                 </div>
-                <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(true); setIsClickO(false); setNext(true) }}>
-                  <AnswerButton img={'/answer/one_someone.png'} txt={'It does not affect me'} color={'green'} isClickG={isClickG} />
+                <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(true); setIsClickO(false); setNext(true); setAnswerThree("B") }}>
+                  <AnswerButton img={'/answer/three_notaffect.png'} txt={'It does not affect me'} color={'green'} isClickG={isClickG} />
                 </div>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(false); setIsClickO(true); setNext(true) }}>
                   {/* <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'orange'} isClickO={isClickO} /> */}
@@ -86,11 +92,11 @@ export default function QuestionThree() {
           </div>
           <div className={styles.bottomGraphic}>
             <motion.img
-              src={'/walkingBG.svg'}
+              src={'/walkingBG_long.svg'}
               className={styles.walkingImg}
               width={1000}
               height={1000}
-              initial={{ x: -240 }}
+              initial={{ x: -1620 }}
             // animate={{ x: -240 }}
             // transition={{
             //   duration: 7,
@@ -134,12 +140,12 @@ export default function QuestionThree() {
               animate={{ opacity: "100%" }}
               transition={{ delay: 1, ease: "easeInOut", duration: 0.8 }}
             >
-              <Link href={{ pathname: "/questiontwo", query: { name, color } }}>
+              <Link href={{ pathname: "/questiontwo", query: { name, color, answerOne, answerTwo } }}>
                 <BackButton />
               </Link>
               {
                 next ?
-                  <Link href={{ pathname: "/questionfour", query: { name, color } }}>
+                  <Link href={{ pathname: "/transitionthree", query: { name, color, answerOne, answerTwo, answerThree } }}>
                     <NextButton />
                   </Link> : <></>
               }

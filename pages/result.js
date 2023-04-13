@@ -6,9 +6,18 @@ import Link from 'next/link'
 import Button from '@/components/Button'
 import Image from 'next/image'
 import Response from '@/components/Response'
+import { useRouter } from 'next/router'
 
 
 export default function Result() {
+    const router = useRouter();
+    const query = router.query;
+    const name = query.name;
+    const color = query.color;
+    const answerOne = query.answerOne;
+    const answerTwo = query.answerTwo;
+    const answerThree = query.answerThree;
+    const answerFour = query.answerFour;
 
     return (
         <>
@@ -36,16 +45,16 @@ export default function Result() {
                                 {/* Replace by Answer Components */}
                                 <div className={styles.userAns}>
                                     <div className={styles.ans}>
-                                        <Response imgSrc='/result/R1.svg' text='User Response 1' />
+                                        <Response imgSrc='/result/R1.svg' text={answerOne} />
                                     </div>
                                     <div className={styles.ans}>
-                                        <Response imgSrc='/result/R2.svg' text='User Response 2' />
+                                        <Response imgSrc='/result/R2.svg' text={answerTwo} />
                                     </div>
                                     <div className={styles.ans}>
-                                        <Response imgSrc='/result/R3.svg' text='User Response 3' />
+                                        <Response imgSrc='/result/R3.svg' text={answerThree} />
                                     </div>
                                     <div className={styles.ans}>
-                                        <Response imgSrc='/result/R4.svg' text='User Response 4' /></div>
+                                        <Response imgSrc='/result/R4.svg' text={answerFour} /></div>
                                 </div>
                             </div>
                             {/* Replace by Animated Arrow with Text*/}
