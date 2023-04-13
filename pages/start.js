@@ -101,7 +101,7 @@ export default function Start() {
     return (
         <>
             <Head>
-                <title>Get Started{name}{color}</title>
+                <title>Get Started</title>
                 <meta name="description" content="Anti-Bully App" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
