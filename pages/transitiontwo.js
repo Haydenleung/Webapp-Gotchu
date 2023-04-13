@@ -36,7 +36,7 @@ export default function TransitionTwo() {
         transit: {
             opacity: [0, 100, 100, 0],
             transition: {
-                times: [0.1, 0.25, 0.8, 0.95],
+                times: [0.0, 0.15, 0.8, 0.95],
                 duration: 7.0,
                 ease: "easeInOut",
                 delay: 0.5
@@ -89,6 +89,7 @@ export default function TransitionTwo() {
                         </div>
                         <motion.div
                             className={styles.topContent}
+                            initial={{ opacity: 0 }}
                             variants={mainVariants}
                             animate={"transit"}
                         >
