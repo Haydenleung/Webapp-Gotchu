@@ -87,7 +87,7 @@ export default function TransitionFour() {
                 <div className={styles.main_container}>
                     <div className={styles.pageContent}>
                         <div className={styles.pageIndicator}>
-                            <QuestionIndicator status={3} ini_wd={50} fin_wd={75} time={7.5} />
+                            <QuestionIndicator status={4} ini_wd={0} fin_wd={75} time={0} />
                         </div>
                         <motion.div
                             className={styles.topContent}

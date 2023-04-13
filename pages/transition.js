@@ -60,7 +60,7 @@ export default function Transition() {
             rotate: [5, 0],
             transition: {
                 duration: 0.5,
-                repeat: 14,
+                repeat: 13,
                 repeatType: "reverse",
                 ease: "easeOut",
                 delay: 0.5
