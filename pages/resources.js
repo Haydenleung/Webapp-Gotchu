@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar'
 import styles from '@/styles/Resources.module.css'
 import ResourcesButton from '@/components/ResourcesButton'
 import Button from '@/components/Button'
+import Link from 'next/link'
 import Image from 'next/image'
 import logo from '/public/primary-use-logo.png'
 import desktop from '/public/icons/desktop.svg'
@@ -32,10 +33,14 @@ export default function Resources() {
                             <div className={styles.row}>
                                 <Image className={styles.img} src={'/resources/externalHelp.svg'} width={168} height={351} />
                                 <div className={styles.buttons}>
-                                    <ResourcesButton text='ERASE Bullying' imgSrc={desktop} color='var(--resources-purple)' />
-                                    <ResourcesButton text='Youth Against Violence' imgSrc={phone} color='var(--resources-purple)' />
-                                    <ResourcesButton text='Kids Help Phone' imgSrc={phone} color='var(--resources-purple)' />
-                                    <ResourcesButton text='Healthy Schools BC' imgSrc={desktop} color='var(--resources-purple)' />
+                                    <Link href={'https://www2.gov.bc.ca/gov/content/erase'}>
+                                        <ResourcesButton text='ERASE Bullying' imgSrc={desktop} color='var(--resources-purple)' /></Link>
+                                    <Link href={'http://www.youthagainstviolenceline.com/'}>
+                                        <ResourcesButton text='Youth Against Violence' imgSrc={phone} color='var(--resources-purple)' /></Link>
+                                    <Link href={'https://kidshelpphone.ca/'}>
+                                        <ResourcesButton text='Kids Help Phone' imgSrc={phone} color='var(--resources-purple)' /></Link>
+                                    <Link href={'https://www.talkspace.com/blog/category/bullying/'}>
+                                        <ResourcesButton text='Free Bullying Treatment' imgSrc={desktop} color='var(--resources-purple)' /></Link>
 
                                 </div>
                             </div>
@@ -45,10 +50,14 @@ export default function Resources() {
                             <p className={styles.sectionText}>We offer Reference Reading resources for those looking to learn more about the effects of bullying. Our selection includes a range of materials, including articles, books, and research papers from reputable sources.</p>
                             <div className={styles.row}>
                                 <div className={styles.buttons}>
-                                    <ResourcesButton text='Article' imgSrc={book} color='var(--resources-red)' />
-                                    <ResourcesButton text='Book' imgSrc={book} color='var(--resources-red)' />
-                                    <ResourcesButton text='Article' imgSrc={book} color='var(--resources-red)' />
-                                    <ResourcesButton text='Research' imgSrc={book} color='var(--resources-red)' />
+                                    <Link href={'https://momlovesbest.com/bullying-prevention'}>
+                                        <ResourcesButton text='How to Prevent Bullying' imgSrc={book} color='var(--resources-red)' /></Link>
+                                    <Link href={'https://www.psychologytoday.com/ca/blog/counseling-keys/201606/recovery-bullying-is-lifelong-process'}>
+                                        <ResourcesButton text='Recovering from Bullying' imgSrc={book} color='var(--resources-red)' /></Link>
+                                    <Link href={'https://www.goodtherapy.org/blog/how-therapy-helps-heal-scars-of-childhood-bullying-1012164'}>
+                                        <ResourcesButton text='How Therapy Helps' imgSrc={book} color='var(--resources-red)' /></Link>
+                                    <Link href={'https://www.bullyfreeatwork.com/'}>
+                                        <ResourcesButton text='Bully Free at Work' imgSrc={book} color='var(--resources-red)' /></Link>
                                 </div>
                                 <Image className={styles.img} src={'/resources/referenceReading.svg'} width={168} height={351} />
                             </div>
@@ -59,14 +68,18 @@ export default function Resources() {
                             <div className={styles.row}>
                                 <Image className={styles.img} src={'/resources/externalQuiz.svg'} width={168} height={351} />
                                 <div className={styles.buttons}>
-                                    <div className={styles.quizButton}>
-                                        <Image src={quiz} />
-                                        Quiz
-                                    </div>
-                                    <div className={styles.quizButton}>
-                                        <Image src={quiz} />
-                                        Quiz
-                                    </div>
+                                    <Link href={'https://www.quizony.com/are-you-a-bully/index.html'}>
+                                        <div className={styles.quizButton}>
+                                            <Image src={quiz} />
+                                            Am I A Bully?
+                                        </div>
+                                    </Link>
+                                    <Link href={'https://www.psycom.net/bullying-test'}>
+                                        <div className={styles.quizButton}>
+                                            <Image src={quiz} />
+                                            Am I Being Bullied?
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
                         </section>
