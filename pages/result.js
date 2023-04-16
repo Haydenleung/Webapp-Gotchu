@@ -35,33 +35,34 @@ export default function Result() {
                         <div className={styles.topContent}>
                             <div className={styles.top}>
                                 <div className={styles.pageTitle}>
-                                    <h6>We know it is not easy.</h6>
+                                    <div className={styles.userName}>
+                                        {
+                                            name != '' ? <h5>Hi, {name}</h5> : null
+                                        }
+                                    </div>
+                                    <h6 div className={styles.encouragingText}>We know it is not easy.</h6>
                                     <h3>You did a great job!</h3>
                                 </div>
-                                {/* Replace by Graphic Components */}
+
                                 <div className={styles.resultImg}>
                                     <Image src={'/result/result-blob.svg'} width={300} height={169} />
                                 </div>
-                                {/* Replace by Answer Components */}
+
                                 <div className={styles.userAns}>
+                                    <p className={styles.sectionHead}>Result Summary</p>
                                     <div className={styles.ans}>
-                                        <Response imgSrc='/result/R1.svg' text={answerOne} />
+                                        <div>
+                                            <p className={styles.ansContainer}>You have chosen {answerOne} , {answerTwo}, {answerThree} and {answerFour}</p>
+                                        </div>
                                     </div>
-                                    <div className={styles.ans}>
-                                        <Response imgSrc='/result/R2.svg' text={answerTwo} />
-                                    </div>
-                                    <div className={styles.ans}>
-                                        <Response imgSrc='/result/R3.svg' text={answerThree} />
-                                    </div>
-                                    <div className={styles.ans}>
-                                        <Response imgSrc='/result/R4.svg' text={answerFour} /></div>
+
                                 </div>
                             </div>
                             {/* Replace by Animated Arrow with Text*/}
-                            <div className={styles.readMore}></div>
+                            {/* <div className={styles.readMore}></div> */}
                         </div>
                         <div className={styles.middleContent}>
-                            <h4 className={styles.userName}> Hi</h4>
+                            <p className={styles.sectionHead}>Customized Suggestions</p>
                             <div className={styles.response}></div>
                         </div>
 
