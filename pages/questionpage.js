@@ -79,12 +79,12 @@ export default function QuestionPage() {
               className={styles.walkingCharacter}
               initial={{ x: "120%" }}
             >
-              <motion.img
+              {/*  <motion.img
                 src={'/character/walkingHugo.svg'}
                 width={80}
                 height={80}
                 initial={{ y: "10%", rotate: 5 }}
-              />
+              /> */}
 
               {
                 colorUrl && colorUrl.map((info, index) => {

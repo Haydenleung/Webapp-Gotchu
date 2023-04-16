@@ -11,17 +11,12 @@ import BackButton from '@/components/BackButton'
 import NextButton from '@/components/NextButton'
 import AnswerButton from '@/components/AnswerButton'
 import QuestionIndicator from '@/components/QuestionIndicator'
+import data from '../data/walking.json'
 
 export default function QuestionFour() {
 
-  // const [answer, setAnswer] = useState([
-  //   answer1 = "",
-  //   answer2 = "",
-  //   answer3 = '',
-  //   answer4 = ''
-  // ])
-
   const [answerFour, setAnswerFour] = useState();
+  const [colorUrl, setColorUrl] = useState([...data])
 
 
   const router = useRouter();
@@ -32,28 +27,17 @@ export default function QuestionFour() {
   const answerTwo = query.answerTwo;
   const answerThree = query.answerThree;
 
-  // const storeAnswers = () => {
-  //   setAnswer({ ...answer, answer1: { optionText } })
-  // }
+
 
   const [isClickP, setIsClickP] = useState(false);
   const [isClickG, setIsClickG] = useState(false);
   const [isClickO, setIsClickO] = useState(false);
   const [next, setNext] = useState(false);
 
-  // const router = useRouter();
-
-  // useEffect(() => {
-  //   router.push('/');
-  // });
 
   return (
     <>
-      {/* <option onClick={() => storeAnswers()} />{optionText} //option 1
-         <option onClick={() => storeAnswers()} />{optionText} //option 2 */}
-      {/* passing the answer array to next page */}
-      {/* <option onClick={() => storeAnswers() infoPassing={answer}} />{optionText} */}
-      {/* in next page: Q2({infoPassing}) */}
+
       <Head>
         <title>Question Four</title>
         <meta name="description" content="Anti-Bully App" />
@@ -117,24 +101,40 @@ export default function QuestionFour() {
             //   x: ["-180%", "120%"],
             // }}
             >
-              <motion.img
+              {/* <motion.img
                 src={'/character/walkingHugo.svg'}
                 width={80}
                 height={80}
 
-                // transition={{
-                //   duration: 0.5,
-                //   repeat: 13,
-                //   repeatType: "reverse",
-                //   ease: "easeOut",
-                //   delay: 0.5
-                // }}
+                 transition={{
+                   duration: 0.5,
+                   repeat: 13,
+                   repeatType: "reverse",
+                   ease: "easeOut",
+                   delay: 0.5
+                 }}
                 initial={{ y: "10%", rotate: 5 }}
-              // animate={{
-              //   y: ["10%", "-30%"],
-              //   rotate: [5, 0]
-              // }}
-              />
+               animate={{
+                 y: ["10%", "-30%"],
+                 rotate: [5, 0]
+               }}
+              /> */}
+
+              {
+                colorUrl && colorUrl.map((info, index) => {
+                  if (info.color == color) {
+                    return (
+                      <motion.img
+                        key={index}
+                        src={info.url}
+                        width={80}
+                        height={80}
+                        initial={{ y: "10%", rotate: 5 }}
+                      />
+                    )
+                  }
+                })
+              }
             </motion.div>
             <motion.div
               className={styles.bottomButton}
@@ -160,7 +160,4 @@ export default function QuestionFour() {
   )
 }
 
-// const array = []
-// create a array with 4 elements in the first page
-//update the value by useState of each element 
-// pass this array to next page 
+

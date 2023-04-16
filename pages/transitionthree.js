@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 import Message from "@/components/Message";
 import QuestionIndicator from "@/components/QuestionIndicator";
+import data from '../data/walking.json'
 
 export default function TransitionThree() {
     const router = useRouter();
@@ -18,6 +19,7 @@ export default function TransitionThree() {
     const answerOne = query.answerOne;
     const answerTwo = query.answerTwo;
     const answerThree = query.answerThree;
+    const [colorUrl, setColorUrl] = useState([...data]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -111,14 +113,34 @@ export default function TransitionThree() {
                         <motion.div
                             className={styles.walkingCharacter}
                             initial={{ x: "120%" }}>
-                            <motion.img
+                        {/*     <motion.img
                                 src={"/character/walkingHugo.svg"}
                                 width={80}
                                 height={80}
                                 initial={{ y: "10%" }}
                                 variants={characterVariants}
                                 animate={"transit"}
-                            />
+                            /> */}
+
+
+                            {
+                                colorUrl && colorUrl.map((info, index) => {
+                                    if (info.color == color) {
+                                        return (
+                                            <motion.img
+                                                key={index}
+                                                src={info.url}
+                                                width={80}
+                                                height={80}
+                                                initial={{ y: "10%" }}
+                                                variants={characterVariants}
+                                                animate={"transit"}
+                                            />
+                                        )
+                                    }
+                                })
+                            }
+
                         </motion.div>
                     </div>
                 </div>
