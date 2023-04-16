@@ -9,8 +9,12 @@ import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 import Message from "@/components/Message";
 import QuestionIndicator from "@/components/QuestionIndicator";
+import data from '../data/walking.json'
 
 export default function Transition() {
+    const [colorUrl, setColorUrl] = useState([...data]);
+    const [isNext, setIsNext] = useState(false);
+
     const router = useRouter();
     const query = router.query;
     const name = query.name;
@@ -29,7 +33,6 @@ export default function Transition() {
         }, 8000);
     });
 
-    const [isNext, setIsNext] = useState(false);
 
     const mainVariants = {
         transit: {
@@ -109,14 +112,32 @@ export default function Transition() {
                         <motion.div
                             className={styles.walkingCharacter}
                             initial={{ x: "120%" }}>
-                            <motion.img
+                            {/*   <motion.img
                                 src={"/character/walkingHugo.svg"}
                                 width={80}
                                 height={80}
                                 initial={{ y: "10%" }}
                                 variants={characterVariants}
                                 animate={"transit"}
-                            />
+                            /> */}
+
+                            {
+                                colorUrl && colorUrl.map((info, index) => {
+                                    if (info.color == color) {
+                                        return (
+                                            <motion.img
+                                                key={index}
+                                                src={info.url}
+                                                width={80}
+                                                height={80}
+                                                initial={{ y: "10%" }}
+                                                variants={characterVariants}
+                                                animate={"transit"}
+                                            />
+                                        )
+                                    }
+                                })
+                            }
                         </motion.div>
                     </div>
                 </div>
