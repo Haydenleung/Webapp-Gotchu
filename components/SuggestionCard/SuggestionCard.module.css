@@ -1,0 +1,19 @@
+.container{
+    width:342px;
+    height:600px;
+    border-radius: 10px;
+    background-color: var(--suggestion-bg);
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    
+}
+
+.chartContainer{
+    
+}
+
+
+.textContainer{
+    padding:1rem 1.5rem;
+}
