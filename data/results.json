@@ -1,100 +1,123 @@
 [
     {
         "id": "AAAA",
-        "text": "lorem"
+        "suggestion": "",
+        "summary": "You are here for yourself because have been affected by emotional and psychological bullying. It's great you have a support system, here are more resources to support you."
     },
     {
         "id": "AAAB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, emo, does, no support"
     },
     {
         "id": "AABA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, emo, doesn't, support"
     },
     {
         "id": "AABB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, emo, not affecting, no support"
     },
     {
         "id": "ABAA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, physical, does, support"
     },
     {
         "id": "ABAB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, physical, does, no support"
     },
     {
         "id": "ABBA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, physical, doesn't, support"
     },
     {
         "id": "ABBB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, physical, doesn't, no support"
     },
     {
         "id": "ACAA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, verbal, does't, support"
     },
     {
         "id": "ACAB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, verbal, does, no support"
     },
     {
         "id": "ACBA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, verbal, doesn't,  support"
     },
     {
         "id": "ACBB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "You, verbal, doesn't, no support"
     },
-
     {
         "id": "BAAA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, emo, does, support"
     },
     {
         "id": "BAAB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, emo, does, no support"
     },
     {
         "id": "BABA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, emo, doesn't, support"
     },
     {
         "id": "BABB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, emo, doesn't, no support"
     },
     {
         "id": "BBAA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, physical, does, support"
     },
     {
         "id": "BBAB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, physical, does, no support"
     },
     {
         "id": "BBBA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, physical, doesn't, support"
     },
     {
         "id": "BBBB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, physical, doesn't, no support"
     },
     {
         "id": "BCAA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, verbal, does, support"
     },
     {
         "id": "BCAB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, verbal, does, no support"
     },
     {
         "id": "BCBA",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, verbal, doesn't, support"
     },
     {
         "id": "BCBB",
-        "text": "lorem"
+        "suggestion": "You",
+        "summary": "Other, verbal, doesn't, no support"
     }
 
 ]
