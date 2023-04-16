@@ -10,6 +10,9 @@ import BackButton from '@/components/BackButton'
 import NextButton from '@/components/NextButton'
 import AnswerButton from '@/components/AnswerButton'
 import QuestionIndicator from '@/components/QuestionIndicator'
+// Copy below
+import data from '../data/walking.json'
+// Copy Above
 
 export default function QuestionPage() {
 
@@ -19,6 +22,10 @@ export default function QuestionPage() {
   //   "answer3" = '',
   //   "answer4" = ''
   // ])
+
+  // Copy below
+  const [colorUrl, setcolorUrl] = useState([...data]);
+  // Copy Above
 
   const [answerOne, setAnswerOne] = useState();
 
@@ -98,12 +105,24 @@ export default function QuestionPage() {
               className={styles.walkingCharacter}
               initial={{ x: "120%" }}
             >
-              <motion.img
-                src={'/character/walkingHugo.svg'}
-                width={80}
-                height={80}
-                initial={{ y: "10%", rotate: 5 }}
-              />
+
+              {/* // Copy Below */}
+              {
+                colorUrl && colorUrl.map((info, index) => {
+                  if (info.color == color) {
+                    return (
+                      <motion.img
+                        key={index}
+                        src={info.url}
+                        width={80}
+                        height={80}
+                        initial={{ y: "10%", rotate: 5 }}
+                      />
+                    )
+                  }
+                })
+              }
+              {/* // Copy Above */}
             </motion.div>
             <motion.div
               className={styles.bottomButton}

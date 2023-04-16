@@ -9,8 +9,12 @@ import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 import Message from "@/components/Message";
 import QuestionIndicator from "@/components/QuestionIndicator";
+// Copy below
+import data from '../data/walking.json'
+// Copy Above
 
 export default function Transition() {
+
     const router = useRouter();
     const query = router.query;
     const name = query.name;
@@ -28,6 +32,10 @@ export default function Transition() {
             );
         }, 8000);
     });
+
+    // Copy below
+    const [colorUrl, setcolorUrl] = useState([...data]);
+    // Copy Above
 
     const [isNext, setIsNext] = useState(false);
 
@@ -109,14 +117,26 @@ export default function Transition() {
                         <motion.div
                             className={styles.walkingCharacter}
                             initial={{ x: "120%" }}>
-                            <motion.img
-                                src={"/character/walkingHugo.svg"}
-                                width={80}
-                                height={80}
-                                initial={{ y: "10%" }}
-                                variants={characterVariants}
-                                animate={"transit"}
-                            />
+
+                            {/* // Copy Below */}
+                            {
+                                colorUrl && colorUrl.map((info, index) => {
+                                    if (info.color == color) {
+                                        return (
+                                            <motion.img
+                                                key={index}
+                                                src={info.url}
+                                                width={80}
+                                                height={80}
+                                                initial={{ y: "10%" }}
+                                                variants={characterVariants}
+                                                animate={"transit"}
+                                            />
+                                        )
+                                    }
+                                })
+                            }
+                            {/* // Copy Above */}
                         </motion.div>
                     </div>
                 </div>
