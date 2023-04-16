@@ -2,8 +2,10 @@ import styles from "../styles/Team.module.css";
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import TeamBio from '@/components/TeamBio';
+import { useState } from "react";
 
 export default function Team() {
+
 
 
   return (
@@ -31,6 +33,8 @@ export default function Team() {
 
           <TeamBio imgSrc='orange_blob.png' name='Evan' position='UX/UI Designer' description='Evan is an artistic and innovative UX/UI Designer from Vietnam. He has an eye for detail and is always creating new and innovative designs. Evan uses a combination of technical and creative skills to produce exceptional work!' />
         </div>
+
+        
 
         <Link href="/"><button className={styles.actionBtn}>Back to Home</button></Link>
 
