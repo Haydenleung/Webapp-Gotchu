@@ -6,7 +6,11 @@ import Link from 'next/link'
 import Button from '@/components/Button'
 import Image from 'next/image'
 import Response from '@/components/Response'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
+import SuggestionCard from '@/components/SuggestionCard'
+
+
 
 
 export default function Result() {
@@ -18,6 +22,11 @@ export default function Result() {
     const answerTwo = query.answerTwo;
     const answerThree = query.answerThree;
     const answerFour = query.answerFour;
+    let arr = [answerOne, answerTwo, answerThree, answerFour];
+    let concatenatedString = arr.join('').concat();
+    console.log(arr);
+    console.log(concatenatedString);
+    // const [result, setResult] = useState([...suggestion]);
 
     return (
         <>
@@ -63,7 +72,19 @@ export default function Result() {
                         </div>
                         <div className={styles.middleContent}>
                             <p className={styles.sectionHead}>Customized Suggestions</p>
-                            <div className={styles.response}></div>
+                            <div className={styles.response}>
+                                
+                              {/*   {
+                                    result && result.map((obj, index) => {
+                                        if (obj.id.toUpperCase() === concatenatedString) {
+                                            return (
+                                                <SuggestionCard key={index} text={obj.text} />
+                                            )
+                                        }
+                                    })
+                                } */}
+                                {/* <SuggestionCard text="Example" /> */}
+                            </div>
                         </div>
 
                         <div className={styles.bottomContent}>
