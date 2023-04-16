@@ -1,0 +1,26 @@
+[
+    {
+      "color":"purple",
+      "url": "/character/walkingHugo_p.svg"
+    },
+    {
+        "color":"green",
+        "url": "/character/walkingHugo_g.svg"
+    },
+    {
+        "color":"orange",
+        "url": "/character/walkingHugo_o.svg"
+    },
+    {
+        "color":"red",
+        "url": "/character/walkingHugo_r.svg"
+    },
+    {
+        "color":"tan",
+        "url": "/character/walkingHugo_t.svg"
+    },
+    {
+        "color":"brown",
+        "url": "/character/walkingHugo_b.svg"
+    }
+  ]
