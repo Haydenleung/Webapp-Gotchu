@@ -55,6 +55,9 @@ width: 10rem;
 border: 1px solid var(--sub-grey);
 }
 
+.box{
+  width: 40px;
+}
 
 
 /* .row{
