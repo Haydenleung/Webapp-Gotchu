@@ -9,7 +9,7 @@ import Response from '@/components/Response'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import SuggestionCard from '@/components/SuggestionCard'
-
+import result from '../data/results.json'
 
 
 
@@ -24,9 +24,9 @@ export default function Result() {
     const answerFour = query.answerFour;
     let arr = [answerOne, answerTwo, answerThree, answerFour];
     let concatenatedString = arr.join('').concat();
-    console.log(arr);
-    console.log(concatenatedString);
-    // const [result, setResult] = useState([...suggestion]);
+    /* console.log(arr);
+    console.log(concatenatedString); */
+    const [info, setInfo] = useState([...result]);
 
     return (
         <>
@@ -61,7 +61,21 @@ export default function Result() {
                                     <p className={styles.sectionHead}>Result Summary</p>
                                     <div className={styles.ans}>
                                         <div>
-                                            <p className={styles.ansContainer}>You have chosen {answerOne} , {answerTwo}, {answerThree} and {answerFour}</p>
+                                            <div className={styles.ansContainer}>
+                                                <p>You have chosen</p>
+                                 <p>
+                                                {
+                                                    info && info.map((obj, index) => {
+                                                        if (obj.id == concatenatedString) {
+                                                            return (
+                                                                <Response key={index} text={obj.summary} />
+                                                            )
+                                                        }
+                                                    })
+                                                    } 
+                                                </p>
+                                                
+                                            </div>
                                         </div>
                                     </div>
 
@@ -74,16 +88,16 @@ export default function Result() {
                             <p className={styles.sectionHead}>Customized Suggestions</p>
                             <div className={styles.response}>
                                 
-                              {/*   {
-                                    result && result.map((obj, index) => {
-                                        if (obj.id.toUpperCase() === concatenatedString) {
+                                {
+                                    info && info.map((obj, index) => {
+                                        if (obj.id == concatenatedString) {
                                             return (
-                                                <SuggestionCard key={index} text={obj.text} />
+                                                <SuggestionCard key={index} text={obj.suggestion} />
                                             )
                                         }
                                     })
-                                } */}
-                                {/* <SuggestionCard text="Example" /> */}
+                                }
+                                
                             </div>
                         </div>
 

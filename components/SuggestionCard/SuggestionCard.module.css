@@ -1,6 +1,6 @@
 .container{
     width:342px;
-    height:600px;
+    /* height:1295px; */
     border-radius: 10px;
     background-color: var(--suggestion-bg);
     display: flex;
@@ -16,4 +16,5 @@
 
 .textContainer{
     padding:1rem 1.5rem;
+    font-size: 14px;
 }
