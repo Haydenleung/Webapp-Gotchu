@@ -9,18 +9,19 @@ import Navbar from '@/components/Navbar'
 import BackButton from '@/components/BackButton'
 import NextButton from '@/components/NextButton'
 import { motion } from 'framer-motion'
+import data from '../data/walking.json'
 
 
 export default function Start() {
+    const [colorUrl, setColorUrl] = useState([...data]);
+    const [isNext, setIsNext] = useState(false);
 
     const router = useRouter();
     const query = router.query;
     const name = query.name;
     const color = query.color;
-
+   
     const nextClick = (e) => {
-        // e.preventDefault();
-        // setLoading(true);
         setTimeout(() => {
             router.push({
                 pathname: "/questionpage",
@@ -30,7 +31,6 @@ export default function Start() {
         }, 4800);
     }
 
-    const [isNext, setIsNext] = useState(false);
 
     const mainVariants = {
         next: {
@@ -160,14 +160,34 @@ export default function Start() {
                                 x: ["-200%", "120%"],
                             }}
                         >
-                            <motion.img
+                            {/* <motion.img
                                 src={'/character/walkingHugo.svg'}
                                 width={80}
                                 height={80}
                                 initial={{ y: "10%" }}
                                 variants={characterVariants}
                                 animate={isNext ? "next" : "start"}
-                            />
+                            /> */}
+
+                            {
+                                colorUrl && colorUrl.map((info, index) => {
+                                    if (info.color == color) {
+                                        return (
+                                            <motion.img
+                                                key={index}
+                                                src={info.url}
+                                                width={80}
+                                                height={80}
+                                                initial={{ y: "10%" }}
+                                                variants={characterVariants}
+                                                animate={isNext ? "next" : "start"}
+                                            />
+                                        )
+                                    }
+                                })
+
+                            }
+
                         </motion.div>
                         <motion.div
                             className={styles.bottomButton}
