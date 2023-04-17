@@ -43,7 +43,7 @@ export default function Navbar() {
                   <h5>Home</h5>
                 </div>
               </Link>
-              <Link href="/tutorial">
+              <Link href="">
                 <div className={styles.tab}>
                   <Image src={'icons/tutorial.svg'} className={styles.icon} width={30} height={30} />
                   <h5>Tutorial</h5>
