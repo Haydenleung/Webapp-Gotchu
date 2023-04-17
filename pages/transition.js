@@ -100,12 +100,12 @@ export default function Transition() {
                             animate={"transit"}
                         >
                             {
-                                answerOne == "A" ? transitionId=1 :transitionId =2
+                                answerOne === "A" ? transitionId=1 :transitionId =2
                             }
                             {
                                 message && message.map((obj, index) => {
                                    
-                                    if (obj.id == transitionId) {
+                                    if (obj.id === transitionId) {
                                         return (
                                             <Message txt={obj.transition} />
                                         )
