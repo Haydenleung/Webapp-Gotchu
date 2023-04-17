@@ -13,7 +13,7 @@ export default function Navbar() {
 
     <section className={styles.navbar}>
       <div className={styles.headbar}>
-        <Image src={'NavbarLogo.svg'} className={styles.navbarLogo} width={40} height={40} />
+        <Link href="/" className={styles.navbarLogoContainer}><Image src={'NavbarLogo.svg'} className={styles.navbarLogo} width={40} height={40} /></Link>
         <Image src={'hamburger.svg'} onClick={() => setPopup(true)} className={styles.hamburger} width={30} height={30} />
       </div>
       {
