@@ -10,6 +10,7 @@ import ColorSelection from '@/components/ColorSelection'
 
 export default function Tutorial() {
 
+    
     const [purple, setPurple] = useState(false);
     const [green, setGreen] = useState(false);
     const [orange, setOrange] = useState(false);
