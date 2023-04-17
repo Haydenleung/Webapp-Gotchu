@@ -19,10 +19,10 @@ export default function IntroductionCard() {
         if (direction == 'backward') {
             if (slideIndex !== 1) {
                 setSlideIndex(prev => prev - 1)
-            } else { setSlideIndex(3) }
+            } else { setSlideIndex(2) }
         }
         else {
-            if (slideIndex !== 3) {
+            if (slideIndex !== 2) {
                 setSlideIndex(prev => prev + 1)
             } else {
                 setSlideIndex(1)
@@ -42,17 +42,17 @@ export default function IntroductionCard() {
                         <Image src={'/IntroImg1.svg'} className={styles.cardImg} width={250} height={250} />
                         <p className={styles.cardText}>{introText}</p>
                     </> :
+                    // slideIndex == 2 ?
+                    //     <>
+                    //         <Image src={'/IntroImg2.svg'} className={styles.cardImg} width={250} height={250} />
+                    //         <p className={styles.cardText}>{tutorialText}</p>
+                    //     </> :
                     slideIndex == 2 ?
                         <>
-                            <Image src={'/IntroImg2.svg'} className={styles.cardImg} width={250} height={250} />
-                            <p className={styles.cardText}>{tutorialText}</p>
+                            <Image src={'/IntroImg3.svg'} className={styles.cardImg} width={200} height={170} />
+                            <p className={styles.cardText}>{disclaimerText}</p>
                         </> :
-                        slideIndex == 3 ?
-                            <>
-                                <Image src={'/IntroImg3.svg'} className={styles.cardImg} width={200} height={170} />
-                                <p className={styles.cardText}>{disclaimerText}</p>
-                            </> :
-                            <p className={styles.cardText}>{introText}</p>
+                        <p className={styles.cardText}>{introText}</p>
             }
 
             <div className={styles.arrowSection}>
@@ -75,7 +75,7 @@ export default function IntroductionCard() {
             </div>
 
             <div className={styles.carouselDots}>
-                {Array.from({ length: 3 }).map((item, index) => (
+                {Array.from({ length: 2 }).map((item, index) => (
                     <div
                         onClick={() => moveDot(index + 1)}
                         className={slideIndex === index + 1 ? styles.dotactive : styles.dot}
