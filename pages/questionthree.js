@@ -13,6 +13,7 @@ import AnswerButton from '@/components/AnswerButton'
 import QuestionIndicator from '@/components/QuestionIndicator'
 import data from '../data/walking.json'
 
+
 export default function QuestionThree() {
 
   const [answerThree, setAnswerThree] = useState();

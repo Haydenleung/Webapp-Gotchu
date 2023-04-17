@@ -63,18 +63,18 @@ export default function Result() {
                                         <div>
                                             <div className={styles.ansContainer}>
                                                 <p>You have chosen</p>
-                                 <p>
-                                                {
-                                                    info && info.map((obj, index) => {
-                                                        if (obj.id == concatenatedString) {
-                                                            return (
-                                                                <Response key={index} text={obj.summary} />
-                                                            )
-                                                        }
-                                                    })
-                                                    } 
+                                                <p>
+                                                    {
+                                                        info && info.map((obj, index) => {
+                                                            if (obj.id == concatenatedString) {
+                                                                return (
+                                                                    <Response key={index} text={obj.summary} />
+                                                                )
+                                                            }
+                                                        })
+                                                    }
                                                 </p>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@ export default function Result() {
                         <div className={styles.middleContent}>
                             <p className={styles.sectionHead}>Customized Suggestions</p>
                             <div className={styles.response}>
-                                
+
                                 {
                                     info && info.map((obj, index) => {
                                         if (obj.id == concatenatedString) {
@@ -97,7 +97,7 @@ export default function Result() {
                                         }
                                     })
                                 }
-                                
+
                             </div>
                         </div>
 

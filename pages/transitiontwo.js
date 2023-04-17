@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import Message from "@/components/Message";
 import QuestionIndicator from "@/components/QuestionIndicator";
 import data from '../data/walking.json'
+import transitionMsg from "../data/transition";
 
 export default function TransitionTwo() {
     const router = useRouter();
@@ -18,6 +19,8 @@ export default function TransitionTwo() {
     const color = query.color;
     const answerOne = query.answerOne;
     const answerTwo = query.answerTwo;
+    let transitionId;
+    const [message, setMessage] = useState([...transitionMsg])
 
     useEffect(() => {
         setTimeout(() => {
@@ -95,7 +98,27 @@ export default function TransitionTwo() {
                             variants={mainVariants}
                             animate={"transit"}
                         >
-                            <Message txt={"You are not alone. \n You are seen and heard. \n I am here to support you."} />
+
+                            {
+                                (answerOne == "A" && answerTwo == "A") ? transitionId = 3 :
+                                    (answerOne == "B" && answerTwo == "A") ? transitionId = 4 :
+                                        (answerOne == "A" && answerTwo == "B") ? transitionId = 5 :
+                                            (answerOne == "B" && answerTwo == "B") ? transitionId = 6 :
+                                                (answerOne == "A" && answerTwo == "C") ? transitionId = 7 :
+                                                    (answerOne == "B" && answerTwo == "C") ? transitionId = 8 :
+                                                        transitionId = 3
+                            }
+                            {
+                                message && message.map((obj, index) => {
+
+                                    if (obj.id == transitionId) {
+                                        return (
+                                            <Message txt={obj.transition} />
+                                        )
+                                    }
+                                })
+                            }
+                            {/* <Message txt={"You are not alone. \n You are seen and heard. \n I am here to support you."} /> */}
                         </motion.div>
                     </div>
                     <div className={styles.bottomGraphic}>
@@ -112,7 +135,7 @@ export default function TransitionTwo() {
                         <motion.div
                             className={styles.walkingCharacter}
                             initial={{ x: "120%" }}>
-                        {/*     <motion.img
+                            {/*     <motion.img
                                 src={"/character/walkingHugo.svg"}
                                 width={80}
                                 height={80}
