@@ -90,3 +90,10 @@
 #test {
   background-color: white;
 }
+
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  flex-grow: 1;
+}
