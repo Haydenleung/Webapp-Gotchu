@@ -9,6 +9,8 @@ import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 import Message from "@/components/Message";
 import QuestionIndicator from "@/components/QuestionIndicator";
+import data from '../data/walking.json'
+import transitionMsg from '../data/transition.json'
 
 export default function TransitionThree() {
     const router = useRouter();
@@ -18,6 +20,9 @@ export default function TransitionThree() {
     const answerOne = query.answerOne;
     const answerTwo = query.answerTwo;
     const answerThree = query.answerThree;
+    const [colorUrl, setColorUrl] = useState([...data]);
+    const [message, setMessage] = useState([...transitionMsg]);
+    let transitionId;
 
     useEffect(() => {
         setTimeout(() => {
@@ -94,7 +99,26 @@ export default function TransitionThree() {
                             variants={mainVariants}
                             animate={"transit"}
                         >
-                            <Message txt={"You are not alone. \n You are seen and heard. \n I am here to support you."} />
+                            {
+                                (answerOne == "A" && answerThree == "A") ? transitionId = 9 :
+                                    (answerOne == "B" && answerThree == "A") ? transitionId = 10 :
+                                        (answerOne == "A" && answerThree == "B") ? transitionId = 11 :
+                                            (answerOne == "B" && answerThree == "B") ? transitionId = 12 :
+                                                transitionId = 12
+                            }
+                            {
+                                message && message.map((obj, index) => {
+
+                                    if (obj.id == transitionId) {
+                                        return (
+                                            <Message txt={obj.transition} />
+                                        )
+                                    }
+                                })
+                            }
+
+
+                            {/* <Message txt={"You are not alone. \n You are seen and heard. \n I am here to support you."} /> */}
                         </motion.div>
                     </div>
                     <div className={styles.bottomGraphic}>
@@ -111,14 +135,34 @@ export default function TransitionThree() {
                         <motion.div
                             className={styles.walkingCharacter}
                             initial={{ x: "120%" }}>
-                            <motion.img
+                            {/*     <motion.img
                                 src={"/character/walkingHugo.svg"}
                                 width={80}
                                 height={80}
                                 initial={{ y: "10%" }}
                                 variants={characterVariants}
                                 animate={"transit"}
-                            />
+                            /> */}
+
+
+                            {
+                                colorUrl && colorUrl.map((info, index) => {
+                                    if (info.color == color) {
+                                        return (
+                                            <motion.img
+                                                key={index}
+                                                src={info.url}
+                                                width={80}
+                                                height={80}
+                                                initial={{ y: "10%" }}
+                                                variants={characterVariants}
+                                                animate={"transit"}
+                                            />
+                                        )
+                                    }
+                                })
+                            }
+
                         </motion.div>
                     </div>
                 </div>

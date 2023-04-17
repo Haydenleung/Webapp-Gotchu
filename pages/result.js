@@ -6,7 +6,11 @@ import Link from 'next/link'
 import Button from '@/components/Button'
 import Image from 'next/image'
 import Response from '@/components/Response'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
+import SuggestionCard from '@/components/SuggestionCard'
+import result from '../data/results.json'
+
 
 
 export default function Result() {
@@ -18,6 +22,11 @@ export default function Result() {
     const answerTwo = query.answerTwo;
     const answerThree = query.answerThree;
     const answerFour = query.answerFour;
+    let arr = [answerOne, answerTwo, answerThree, answerFour];
+    let concatenatedString = arr.join('').concat();
+    /* console.log(arr);
+    console.log(concatenatedString); */
+    const [info, setInfo] = useState([...result]);
 
     return (
         <>
@@ -35,34 +44,61 @@ export default function Result() {
                         <div className={styles.topContent}>
                             <div className={styles.top}>
                                 <div className={styles.pageTitle}>
-                                    <h6>We know it is not easy.</h6>
+                                    <div className={styles.userName}>
+                                        {
+                                            name != '' ? <h5>Hi, {name}</h5> : null
+                                        }
+                                    </div>
+                                    <h6 div className={styles.encouragingText}>We know it is not easy.</h6>
                                     <h3>You did a great job!</h3>
                                 </div>
-                                {/* Replace by Graphic Components */}
+
                                 <div className={styles.resultImg}>
                                     <Image src={'/result/result-blob.svg'} width={300} height={169} />
                                 </div>
-                                {/* Replace by Answer Components */}
+
                                 <div className={styles.userAns}>
+                                    <p className={styles.sectionHead}>Result Summary</p>
                                     <div className={styles.ans}>
-                                        <Response imgSrc='/result/R1.svg' text={answerOne} />
+                                        <div>
+                                            <div className={styles.ansContainer}>
+                                                <p>You have chosen</p>
+                                                <p>
+                                                    {
+                                                        info && info.map((obj, index) => {
+                                                            if (obj.id == concatenatedString) {
+                                                                return (
+                                                                    <Response key={index} text={obj.summary} />
+                                                                )
+                                                            }
+                                                        })
+                                                    }
+                                                </p>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className={styles.ans}>
-                                        <Response imgSrc='/result/R2.svg' text={answerTwo} />
-                                    </div>
-                                    <div className={styles.ans}>
-                                        <Response imgSrc='/result/R3.svg' text={answerThree} />
-                                    </div>
-                                    <div className={styles.ans}>
-                                        <Response imgSrc='/result/R4.svg' text={answerFour} /></div>
+
                                 </div>
                             </div>
                             {/* Replace by Animated Arrow with Text*/}
-                            <div className={styles.readMore}></div>
+                            {/* <div className={styles.readMore}></div> */}
                         </div>
                         <div className={styles.middleContent}>
-                            <h4 className={styles.userName}> Hi</h4>
-                            <div className={styles.response}></div>
+                            <p className={styles.sectionHead}>Customized Suggestions</p>
+                            <div className={styles.response}>
+
+                                {
+                                    info && info.map((obj, index) => {
+                                        if (obj.id == concatenatedString) {
+                                            return (
+                                                <SuggestionCard key={index} text={obj.suggestion} />
+                                            )
+                                        }
+                                    })
+                                }
+
+                            </div>
                         </div>
 
                         <div className={styles.bottomContent}>
