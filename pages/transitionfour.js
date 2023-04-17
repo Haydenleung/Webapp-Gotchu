@@ -23,7 +23,7 @@ export default function TransitionFour() {
     const answerFour = query.answerFour;
     const [colorUrl, setColorUrl] = useState([...data])
     const [message, setMessage] = useState([...transitionMsg]);
-    let transitionId;
+    const [transitionId, setTransitionId] = useState();
 
     useEffect(() => {
         setTimeout(() => {
@@ -76,6 +76,14 @@ export default function TransitionFour() {
         }
     };
 
+    useEffect(() => {
+        (answerOne == "A" && answerFour == "A") ? setTransitionId(13) :
+            (answerOne == "B" && answerFour == "A") ? setTransitionId(14) :
+                (answerOne == "A" && answerFour == "B") ? setTransitionId(15) :
+                    (answerOne == "B" && answerFour == "B") ? setTransitionId(16) :
+                        setTransitionId(14)
+    }, [transitionId])
+
     return (
         <>
             <Head>
@@ -101,13 +109,6 @@ export default function TransitionFour() {
                             animate={"transit"}
                         >
 
-                            {
-                                (answerOne == "A" && answerFour == "A") ? transitionId = 13 :
-                                    (answerOne == "B" && answerFour == "A") ? transitionId = 14 :
-                                        (answerOne == "A" && answerFour == "B") ? transitionId = 15 :
-                                            (answerOne == "B" && answerFour == "B") ? transitionId = 16 :
-                                                transitionId = 14
-                            }
                             {
                                 message && message.map((obj, index) => {
 
@@ -142,7 +143,7 @@ export default function TransitionFour() {
                                 ease: "linear",
                             }}
                         >
-                          {/*   <motion.img
+                            {/*   <motion.img
                                 src={"/character/walkingHugo.svg"}
                                 width={80}
                                 height={80}

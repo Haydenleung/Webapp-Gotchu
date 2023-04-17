@@ -22,7 +22,7 @@ export default function TransitionThree() {
     const answerThree = query.answerThree;
     const [colorUrl, setColorUrl] = useState([...data]);
     const [message, setMessage] = useState([...transitionMsg]);
-    let transitionId;
+    const [transitionId, setTransitionId] = useState();
 
     useEffect(() => {
         setTimeout(() => {
@@ -75,6 +75,14 @@ export default function TransitionThree() {
         }
     };
 
+    useEffect(() => {
+        (answerOne == "A" && answerThree == "A") ? setTransitionId(9) :
+            (answerOne == "B" && answerThree == "A") ? setTransitionId(10) :
+                (answerOne == "A" && answerThree == "B") ? setTransitionId(11) :
+                    (answerOne == "B" && answerThree == "B") ? setTransitionId(12) :
+                        setTransitionId(12)
+    }, [transitionId])
+
     return (
         <>
             <Head>
@@ -99,13 +107,6 @@ export default function TransitionThree() {
                             variants={mainVariants}
                             animate={"transit"}
                         >
-                            {
-                                (answerOne == "A" && answerThree == "A") ? transitionId = 9 :
-                                    (answerOne == "B" && answerThree == "A") ? transitionId = 10 :
-                                        (answerOne == "A" && answerThree == "B") ? transitionId = 11 :
-                                            (answerOne == "B" && answerThree == "B") ? transitionId = 12 :
-                                                transitionId = 12
-                            }
                             {
                                 message && message.map((obj, index) => {
 

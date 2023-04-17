@@ -22,7 +22,7 @@ export default function Transition() {
     const name = query.name;
     const color = query.color;
     const answerOne = query.answerOne;
-    let transitionId;
+    const [transitionId, setTransitionId] = useState();
     console.log(answerOne);
 
     useEffect(() => {
@@ -75,6 +75,12 @@ export default function Transition() {
         }
     };
 
+    useEffect(() => {
+        answerOne === "A" ? setTransitionId(1) : setTransitionId(2)
+    }, [transitionId])
+
+
+
     return (
         <>
             <Head>
@@ -99,12 +105,10 @@ export default function Transition() {
                             variants={mainVariants}
                             animate={"transit"}
                         >
-                            {
-                                answerOne === "A" ? transitionId=1 :transitionId =2
-                            }
+
                             {
                                 message && message.map((obj, index) => {
-                                   
+
                                     if (obj.id === transitionId) {
                                         return (
                                             <Message txt={obj.transition} />
