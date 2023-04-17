@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './SuggestionCard.module.css'
-import PieChart from '@/components/PieChart'
+import PieChart  from '../Piechart'
 
 export default function SuggestionCard({
     text=''
