@@ -11,8 +11,18 @@ import phone from '/public/icons/phone.svg'
 import book from '/public/icons/book.svg'
 import quiz from '/public/icons/quizIcon.svg'
 import Head from 'next/head'
+import { useRouter } from "next/router";
 
 export default function Resources() {
+
+    const router = useRouter();
+    const query = router.query;
+    const name = query.name;
+    const answerOne = query.answerOne;
+    const answerTwo = query.answerTwo;
+    const answerThree = query.answerThree;
+    const answerFour = query.answerFour;
+
     return (
         <>
             <Head>
@@ -84,7 +94,9 @@ export default function Resources() {
                             </div>
                         </section>
                         <div className={styles.actionButton}>
-                            <Button text='Return to Result' color='var(--burgundy)' />
+                            <Link href={{ pathname: '/result', query: { name, answerOne, answerTwo, answerThree, answerFour }}}>
+                                <Button text='Return to Result' color='var(--burgundy)' />
+                            </Link>
                         </div>
 
                     </div>
