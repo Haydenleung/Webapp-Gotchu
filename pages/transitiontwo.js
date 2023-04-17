@@ -19,7 +19,7 @@ export default function TransitionTwo() {
     const color = query.color;
     const answerOne = query.answerOne;
     const answerTwo = query.answerTwo;
-    let transitionId;
+    const [transitionId, setTransitionId] = useState();
     const [message, setMessage] = useState([...transitionMsg])
 
     useEffect(() => {
@@ -74,6 +74,16 @@ export default function TransitionTwo() {
         }
     };
 
+    useEffect(() => {
+        (answerOne == "A" && answerTwo == "A") ? setTransitionId(3) :
+            (answerOne == "B" && answerTwo == "A") ? setTransitionId(4) :
+                (answerOne == "A" && answerTwo == "B") ? setTransitionId(5) :
+                    (answerOne == "B" && answerTwo == "B") ? setTransitionId(6) :
+                        (answerOne == "A" && answerTwo == "C") ? setTransitionId(7) :
+                            (answerOne == "B" && answerTwo == "C") ? setTransitionId(8) :
+                                setTransitionId(3)
+    }, [transitionId])
+
     return (
         <>
             <Head>
@@ -99,15 +109,7 @@ export default function TransitionTwo() {
                             animate={"transit"}
                         >
 
-                            {
-                                (answerOne == "A" && answerTwo == "A") ? transitionId = 3 :
-                                    (answerOne == "B" && answerTwo == "A") ? transitionId = 4 :
-                                        (answerOne == "A" && answerTwo == "B") ? transitionId = 5 :
-                                            (answerOne == "B" && answerTwo == "B") ? transitionId = 6 :
-                                                (answerOne == "A" && answerTwo == "C") ? transitionId = 7 :
-                                                    (answerOne == "B" && answerTwo == "C") ? transitionId = 8 :
-                                                        transitionId = 3
-                            }
+
                             {
                                 message && message.map((obj, index) => {
 

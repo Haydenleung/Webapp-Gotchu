@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./TeamBioPopup.module.css";
+import styles from "./TeamBioPopUp.module.css";
 import Image from 'next/image';
 import { motion } from "framer-motion";
 

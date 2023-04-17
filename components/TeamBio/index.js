@@ -30,7 +30,7 @@ export default function TeamBio({
                         }}
                         style={{ display: popup ? "block" : "none" }}
                     >
-                        <motion.div
+                        {/* </motion.div><motion.div
                             className={styles.popUp}
                             initial={{ x: -100, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
@@ -38,36 +38,36 @@ export default function TeamBio({
                                 type: "duration",
                                 duration: 0.3
                             }}
-                        >
+                        > */}
 
-                            <div className={styles.clickedContent} >
+                        < div className={styles.clickedContent} >
 
-                                <div>
-                                    <div className={styles.bioInfo}>
-                                        <img src={imgSrc} alt={`${name} profile`} />
-                                        <h2>{name}</h2>
-                                        <p>{position}</p>
-                                    </div>
-                                    <hr className={styles.separator} />
-                                    <p>{description}</p>
-                                    <hr className={styles.separator} />
+                            <div>
+                                <div className={styles.bioInfo}>
+                                    <img src={imgSrc} alt={`${name} profile`} />
+                                    <h2>{name}</h2>
+                                    <p>{position}</p>
                                 </div>
-
-                                <div className={styles.close}>
-                                    <Image
-                                        src={'icons/close.svg'}
-                                        onClick={() => setPopup(false)}
-                                        className={styles.closeIcon}
-                                        width={20}
-                                        height={30}
-                                        alt="Close popup"
-                                    />
-                                </div>
+                                <hr className={styles.separator} />
+                                <p>{description}</p>
+                                <hr className={styles.separator} />
                             </div>
-                        </motion.div>
+
+                            <div className={styles.close}>
+                                <Image
+                                    src={'icons/close.svg'}
+                                    onClick={() => setPopup(false)}
+                                    className={styles.closeIcon}
+                                    width={20}
+                                    height={30}
+                                    alt="Close popup"
+                                />
+                            </div>
+                        </div>
+                        {/* </motion.div> */}
                     </motion.div>
                     : <></>
             }
-        </section>
+        </section >
     )
 }
