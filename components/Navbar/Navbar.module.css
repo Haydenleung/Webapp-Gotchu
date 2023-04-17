@@ -21,6 +21,12 @@
     box-shadow: 0px 2px 2px var(--sub-dark);
 }
 
+.navbarLogoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbarLogo {
     cursor: pointer;
     width: 100px;
