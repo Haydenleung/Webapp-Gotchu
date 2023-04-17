@@ -140,7 +140,10 @@
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
-    height: 1000px;
+    /* if we specify the height for different text 
+    length then the  two bottom buttons will be 
+    displayed on top of text section*/
+    /* height: 1000px; */
     width: 100%;
 }
 
