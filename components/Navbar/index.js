@@ -43,7 +43,7 @@ export default function Navbar() {
                   <h5>Home</h5>
                 </div>
               </Link>
-              <Link href="">
+              <Link href="/tutorial">
                 <div className={styles.tab}>
                   <Image src={'icons/tutorial.svg'} className={styles.icon} width={30} height={30} />
                   <h5>Tutorial</h5>
@@ -55,13 +55,13 @@ export default function Navbar() {
                   <h5>Quiz</h5>
                 </div>
               </Link>
-              <Link href="">
+              <Link href="/result">
                 <div className={styles.tab}>
                   <Image src={'icons/result.svg'} className={styles.icon} width={30} height={30} />
                   <h5>Result</h5>
                 </div>
               </Link>
-              <Link href="">
+              <Link href="/resources">
                 <div className={styles.tab}>
                   <Image src={'icons/resources.svg'} className={styles.icon} width={30} height={30} />
                   <h5>Resources</h5>

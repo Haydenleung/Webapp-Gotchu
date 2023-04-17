@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   background-color: var(--font-white);
   overflow-y: hidden;
@@ -25,7 +25,7 @@
   justify-content: flex-start;
   width: 390px;
   height: 100vh;
-  height: 100vh;
+  max-height: 1200px;
   border-radius: 2rem;
   background-color: var(--primary-background);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -41,10 +41,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   flex-grow: 1;
   padding: 2rem 1.5rem;
-  min-height: calc(844px - 3.5rem);
+  min-height: calc(744px - 3.5rem);
 }
 
 .topContent {
@@ -62,66 +63,75 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: var(--placeholder-text);
-  margin-bottom: 0.5rem;
 }
 
 .inputFelid {
   height: 60px;
   width: 346px;
   padding: 1rem;
-  background-color: var(--font-white);
+  background-color: var(--sub-grey);
   border-radius: 10px;
   border-style: none;
   outline: none;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  text-align: center;
+  font-size: 14pt;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.inputFelid:focus {
+  background-color: var(--font-white);
+  cursor: auto;
+}
+
+.inputFelid:not(:placeholder-shown) {
+  background-color: var(--hover-purple);
+  color: rgb(236, 224, 234);
+  box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.inputFelid::placeholder {
+  opacity: 0.5;
 }
 
 .nameInput {
   height: 60px;
   width: 100%;
-  background-color: var(--placeholder-components);
 }
 
 .pagePick {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: var(--placeholder-text);
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .character {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
-  height: 450px;
-  background-color: var(--placeholder-components);
+  gap: 0.4rem;
 }
 
-.bottomContent {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 100%;
-  flex-grow: 1;
+.colorTile:active {
+  border-radius: 12px;
+  box-shadow: inset 0px 0px 10px var(--sub-dark);
+  /* transform: translate(-1px, -1px); */
 }
 
-/* Adjust after inserting components into page */
-.bottomContent>div {
+.colorTile:hover {
+  cursor: pointer;
+}
+
+.bottomButton {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 50px;
-  width: 105px;
-  z-index: 998;
- }
-
-.colorTile{
+  bottom: 5rem;
+  right: 0rem;
+  padding: 0 1.5rem;
+  width: 100%;
+  z-index: 120;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

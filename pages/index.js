@@ -56,14 +56,14 @@ export default function Home() {
               <Link href='/introduction'>
                 <Button color='#896686'
                   text='Get Started'
-                  className={styles.acknowledgeBtn}
+                // className={styles.acknowledgeBtn}
                 />
               </Link>
               {/* change destination to tutorial once the page is created */}
-              <Link href='/'>
+              <Link href='/tutorial'>
                 <Button color='#B1BFA9'
                   text='Tutorial'
-                  className={styles.tutorialBtn}
+                // className={styles.tutorialBtn}
                 />
               </Link>
 

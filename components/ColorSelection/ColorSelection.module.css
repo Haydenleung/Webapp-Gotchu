@@ -1,21 +1,20 @@
-.content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-  
-
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.content>img{
-    width: 10rem;
+.background {
+  width: 100%;
+  height: auto;
 }
 
-
-
-
-
+.character {
+  position: absolute;
+  width: 40%;
+  height: auto;
+}
 
 /* .row{
     display: flex;

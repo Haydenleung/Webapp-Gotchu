@@ -1,0 +1,51 @@
+.messageBG {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    flex-grow: 1;
+    padding: 1.5rem;
+}
+
+.open {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 20px;
+    width: 100%;
+}
+
+.close {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 15px;
+    width: 100%;
+}
+
+.messageText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.messageText>h6 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 16pt;
+    line-height: 140%;
+    white-space: pre-line;
+}
+
+.messageImg {
+    position: absolute;
+    width: 105%;
+    object-fit: contain;
+}
