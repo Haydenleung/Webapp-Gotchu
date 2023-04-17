@@ -16,6 +16,17 @@
     z-index: 999;
 }
 
+.filter{
+    width:100vw;
+    height:100vh;
+    background: #000000;
+    opacity: 0.65;
+    position: absolute;
+    left:0px;
+    top:0px;
+    z-index:997;
+
+}
 /* display screen */
 .main_container {
     position: relative;
@@ -48,6 +59,12 @@
     min-height: calc(744px - 3.5rem);
 }
 
+.selectionArrow{
+    position: absolute;
+    top:9rem;
+    left:5rem;
+    z-index: 999;
+}
 .topContent {
     display: flex;
     flex-direction: column;

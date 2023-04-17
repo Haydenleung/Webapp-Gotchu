@@ -1,16 +1,17 @@
 import { React, useEffect } from 'react'
 import Head from 'next/head'
 import { useState } from 'react'
-import styles from "../styles/Personal.module.css"
+import styles from "../styles/Tutorial.module.css"
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Characters from '@/components/Characters'
 import NextButton from '@/components/NextButton'
 import ColorSelection from '@/components/ColorSelection'
+import Image from 'next/image'
 
 export default function Tutorial() {
 
-    
+
     const [purple, setPurple] = useState(false);
     const [green, setGreen] = useState(false);
     const [orange, setOrange] = useState(false);
@@ -64,52 +65,54 @@ export default function Tutorial() {
             <div className={styles.main}>
                 <div className={styles.empty} />
                 <Navbar />
-                <div className={styles.filter}>
-                    <div className={styles.main_container}>
-                        <div className={styles.pageContent}>
-                            <div className={styles.topContent}>
-                                <div className={styles.pageTitle}>
-                                    <h4>What's your name?</h4>
-                                    <p>(Optional)</p>
+                <div className={styles.filter} />
+                <div className={styles.main_container}>
+                    <Image src={'/icons/navigationArrow.svg'} width={25} height={57} className={styles.navigationNarrow} />
+                    <Image src={'/icons/nextArrowT.svg'} width={25} height={57} className={styles.nextNarrow} />
+                    <div className={styles.pageContent}>
+
+                        <div className={styles.topContent}>
+                            <div className={styles.pageTitle}>
+                                <h4>What's your name?</h4>
+                                <p>(Optional)</p>
+                            </div>
+                            <div className={styles.nameInput}>
+                                <input
+                                    type="text"
+                                    value={name}
+                                    placeholder="Characters Only..."
+                                    onChange={handleInputChange}
+                                    className={styles.inputFelid}
+                                />
+                            </div>
+                            <div className={styles.pagePick}>
+                                <h4>Pick a color you like</h4>
+                            </div>
+                            <div className={styles.character}>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setPurple(true) }}>
+                                    <ColorSelection img={imgP} cha={'/character/purple_character_main.svg'} />
                                 </div>
-                                <div className={styles.nameInput}>
-                                    <input
-                                        type="text"
-                                        value={name}
-                                        placeholder="Characters Only..."
-                                        onChange={handleInputChange}
-                                        className={styles.inputFelid}
-                                    />
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setGreen(true) }}>
+                                    <ColorSelection img={imgG} cha={'/character/green_character_main.svg'} />
                                 </div>
-                                <div className={styles.pagePick}>
-                                    <h4>Pick a color you like</h4>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setOrange(true) }}>
+                                    <ColorSelection img={imgO} cha={'/character/orange_character_main.svg'} />
                                 </div>
-                                <div className={styles.character}>
-                                    <div className={styles.colorTile} onClick={() => { colorChange(); setPurple(true) }}>
-                                        <ColorSelection img={imgP} cha={'/character/purple_character_main.svg'} />
-                                    </div>
-                                    <div className={styles.colorTile} onClick={() => { colorChange(); setGreen(true) }}>
-                                        <ColorSelection img={imgG} cha={'/character/green_character_main.svg'} />
-                                    </div>
-                                    <div className={styles.colorTile} onClick={() => { colorChange(); setOrange(true) }}>
-                                        <ColorSelection img={imgO} cha={'/character/orange_character_main.svg'} />
-                                    </div>
-                                    <div className={styles.colorTile} onClick={() => { colorChange(); setRed(true) }}>
-                                        <ColorSelection img={imgR} cha={'/character/red_character_main.svg'} />
-                                    </div>
-                                    <div className={styles.colorTile} onClick={() => { colorChange(); setBrown(true) }}>
-                                        <ColorSelection img={imgB} cha={'/character/brown_character_main.svg'} />
-                                    </div>
-                                    <div className={styles.colorTile} onClick={() => { colorChange(); setTan(true) }}>
-                                        <ColorSelection img={imgT} cha={'/character/tan_character_main.svg'} />
-                                    </div>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setRed(true) }}>
+                                    <ColorSelection img={imgR} cha={'/character/red_character_main.svg'} />
+                                </div>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setBrown(true) }}>
+                                    <ColorSelection img={imgB} cha={'/character/brown_character_main.svg'} />
+                                </div>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setTan(true) }}>
+                                    <ColorSelection img={imgT} cha={'/character/tan_character_main.svg'} />
                                 </div>
                             </div>
-                            <div className={styles.bottomButton}>
-                                <Link href={{ pathname: "/start", query: { name, color } }}>
-                                    <NextButton />
-                                </Link>
-                            </div>
+                        </div>
+                        <div className={styles.bottomButton}>
+                            <Link href={{ pathname: "/start", query: { name, color } }}>
+                                <NextButton />
+                            </Link>
                         </div>
                     </div>
                 </div>
