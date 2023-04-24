@@ -5,6 +5,8 @@ import TeamBio from '@/components/TeamBio';
 import TeamBioPopup from "@/components/TeamBioPopUp";
 import { useState } from "react";
 import Head from "next/head";
+import Button from '@/components/Button'
+
 
 export default function Team() {
 
@@ -36,10 +38,19 @@ export default function Team() {
               <TeamBio imgSrc='orange_blob.png' name='Evan' position='UX/UI Designer' description='Evan is an artistic and innovative UX/UI Designer from Vietnam. He has an eye for detail and is always creating new and innovative designs. Evan uses a combination of technical and creative skills to produce exceptional work!' />
             </div>
           </div>
-          {/* <Link href="/"><button className={styles.actionBtn}>Back to Home</button></Link> */}
-        </div>
+          <div className={styles.bottomContent}>
+            <Link href='/'>
+              <Button color='#896686'
+                text='Landing Page'
+                className={styles.actionBtn}
+              />
+            </Link>
+          </div>        </div>
         <div className={styles.empty} />
+
       </div >
+
+
     </>
   )
 }
