@@ -38,7 +38,7 @@ export default function Team() {
               <TeamBio imgSrc='orange_blob.png' name='Evan' position='UX/UI Designer' description='Evan is an artistic and innovative UX/UI Designer from Vietnam. He has an eye for detail and is always creating new and innovative designs. Evan uses a combination of technical and creative skills to produce exceptional work!' />
             </div>
           </div>
-          <div className={styles.bottomContent}>
+          <div className={styles.bottonContent}>
             <Link href='/'>
               <Button color='#896686'
                 text='Landing Page'
