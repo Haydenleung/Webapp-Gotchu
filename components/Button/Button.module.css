@@ -42,14 +42,17 @@
 
 .purpleButton:hover {
   background-color: var(--hover-purple) !important;
+  transform: translateY(-1px);
 }
 
 .greenButton:hover {
   background-color: var(--hover-green) !important;
+  transform: translateY(-1px);
 }
 
 .redButton:hover {
   background-color: #6F3B41 !important;
+  transform: translateY(-1px);
 }
 
 .purpleButton:active {

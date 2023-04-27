@@ -54,7 +54,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: calc(100vh - 16rem);
 }
 
 .top {
@@ -75,7 +74,7 @@
     align-items: center;
 }
 
-.encouragingText{
+.encouragingText {
     padding-top: 1rem;
 }
 
@@ -95,35 +94,44 @@
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.sectionHead{
+.sectionHead {
     font-size: 18px;
     font-weight: 500;
 }
+
 .ans {
     width: 100%;
-    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ansContainer {
+    width: 338px;
+    height: 160px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    gap: 0.2rem;
+    background-color: var(--primary-background);
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
 }
 
-.ansContainer{
-     width: 338px; 
-    height:160px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap:1rem;
-    background-color: var(--font-white);
-    border-radius: 5px 5px 0px 0px ;
-    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
-    padding:1rem;
+.ansContainer:hover {
+    transform: translateY(-1px);
+}
+
+.ansHeading {
+    font-weight: 600;
 }
 
 .readMore {
@@ -139,7 +147,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     /* if we specify the height for different text 
     length then the  two bottom buttons will be 
     displayed on top of text section*/
@@ -155,10 +163,13 @@
     height: 50px;
     width: 100%;
     text-align: center;
-    
+
 }
 
 .response {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     width: 100%;
     /* height: 600px; */
     /* background-color: var(--placeholder-components); */
@@ -171,6 +182,6 @@
     width: 100%;
     flex-grow: 1;
     gap: 0.5rem;
-    padding-top: 2rem;
+    padding-top: 0rem;
     padding-bottom: 2rem;
 }

@@ -24,6 +24,13 @@ export default function Personal() {
     const [imgB, setImgB] = useState();
     const [imgT, setImgT] = useState();
 
+    const [opacP, setOpacP] = useState('1');
+    const [opacG, setOpacG] = useState('1');
+    const [opacO, setOpacO] = useState('1');
+    const [opacR, setOpacR] = useState('1');
+    const [opacB, setOpacB] = useState('1');
+    const [opacT, setOpacT] = useState('1');
+
     const colorChange = () => {
         setPurple(false);
         setGreen(false);
@@ -31,15 +38,21 @@ export default function Personal() {
         setRed(false);
         setBrown(false);
         setTan(false);
+        setOpacP('0.4');
+        setOpacG('0.4');
+        setOpacO('0.4');
+        setOpacR('0.4');
+        setOpacB('0.4');
+        setOpacT('0.4');
     }
 
     useEffect(() => {
-        purple === true ? (setImgP('/character/character_BG_select.svg'), setColor("purple")) : setImgP('/character/character_BG.svg')
-        green === true ? (setImgG('/character/character_BG_select.svg'), setColor("green")) : setImgG('/character/character_BG.svg')
-        orange === true ? (setImgO('/character/character_BG_select.svg'), setColor("orange")) : setImgO('/character/character_BG.svg')
-        red === true ? (setImgR('/character/character_BG_select.svg'), setColor("red")) : setImgR('/character/character_BG.svg')
-        brown === true ? (setImgB('/character/character_BG_select.svg'), setColor("brown")) : setImgB('/character/character_BG.svg')
-        tan === true ? (setImgT('/character/character_BG_select.svg'), setColor("tan")) : setImgT('/character/character_BG.svg')
+        purple === true ? (setImgP('/character/character_BG_select.svg'), setColor("purple"), setOpacP('1')) : setImgP('/character/character_BG.svg')
+        green === true ? (setImgG('/character/character_BG_select.svg'), setColor("green"), setOpacG('1')) : setImgG('/character/character_BG.svg')
+        orange === true ? (setImgO('/character/character_BG_select.svg'), setColor("orange"), setOpacO('1')) : setImgO('/character/character_BG.svg')
+        red === true ? (setImgR('/character/character_BG_select.svg'), setColor("red"), setOpacR('1')) : setImgR('/character/character_BG.svg')
+        brown === true ? (setImgB('/character/character_BG_select.svg'), setColor("brown"), setOpacB('1')) : setImgB('/character/character_BG.svg')
+        tan === true ? (setImgT('/character/character_BG_select.svg'), setColor("tan"), setOpacT('1')) : setImgT('/character/character_BG.svg')
     })
 
     const [name, setName] = useState('');
@@ -83,22 +96,22 @@ export default function Personal() {
                                 <h4>Pick a color you like</h4>
                             </div>
                             <div className={styles.character}>
-                                <div className={styles.colorTile} onClick={() => { colorChange(); setPurple(true) }}>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setPurple(true) }} style={{ opacity: opacP }}>
                                     <ColorSelection img={imgP} cha={'/character/purple_character_main.svg'} />
                                 </div>
-                                <div className={styles.colorTile} onClick={() => { colorChange(); setGreen(true) }}>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setGreen(true) }} style={{ opacity: opacG }}>
                                     <ColorSelection img={imgG} cha={'/character/green_character_main.svg'} />
                                 </div>
-                                <div className={styles.colorTile} onClick={() => { colorChange(); setOrange(true) }}>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setOrange(true) }} style={{ opacity: opacO }}>
                                     <ColorSelection img={imgO} cha={'/character/orange_character_main.svg'} />
                                 </div>
-                                <div className={styles.colorTile} onClick={() => { colorChange(); setRed(true) }}>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setRed(true) }} style={{ opacity: opacR }}>
                                     <ColorSelection img={imgR} cha={'/character/red_character_main.svg'} />
                                 </div>
-                                <div className={styles.colorTile} onClick={() => { colorChange(); setBrown(true) }}>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setBrown(true) }} style={{ opacity: opacB }}>
                                     <ColorSelection img={imgB} cha={'/character/brown_character_main.svg'} />
                                 </div>
-                                <div className={styles.colorTile} onClick={() => { colorChange(); setTan(true) }}>
+                                <div className={styles.colorTile} onClick={() => { colorChange(); setTan(true) }} style={{ opacity: opacT }}>
                                     <ColorSelection img={imgT} cha={'/character/tan_character_main.svg'} />
                                 </div>
                             </div>
@@ -111,7 +124,7 @@ export default function Personal() {
                     </div>
                 </div>
                 <div className={styles.empty} />
-            </div>
+            </div >
         </>
     )
 }

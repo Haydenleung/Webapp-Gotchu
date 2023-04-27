@@ -33,7 +33,7 @@ export default function TransitionThree() {
                 },
                 "/questionfour"
             );
-        }, 8000);
+        }, 10000);
     });
 
     const [isNext, setIsNext] = useState(false);
@@ -42,8 +42,8 @@ export default function TransitionThree() {
         transit: {
             opacity: [0, 100, 100, 0],
             transition: {
-                times: [0.0, 0.15, 0.8, 0.95],
-                duration: 7.0,
+                times: [0.0, 0.05, 0.95, 1],
+                duration: 9.0,
                 ease: "easeInOut",
                 delay: 0.5
             },
@@ -54,7 +54,7 @@ export default function TransitionThree() {
         transit: {
             x: [-1620, -2060],
             transition: {
-                duration: 7.0,
+                duration: 9.0,
                 ease: "linear",
                 delay: 0.5
             },
@@ -67,7 +67,7 @@ export default function TransitionThree() {
             rotate: [5, 0],
             transition: {
                 duration: 0.5,
-                repeat: 13,
+                repeat: 17,
                 repeatType: "reverse",
                 ease: "easeOut",
                 delay: 0.5
@@ -136,14 +136,13 @@ export default function TransitionThree() {
                         <motion.div
                             className={styles.walkingCharacter}
                             initial={{ x: "120%" }}>
-                            {/*     <motion.img
-                                src={"/character/walkingHugo.svg"}
-                                width={80}
-                                height={80}
-                                initial={{ y: "10%" }}
-                                variants={characterVariants}
-                                animate={"transit"}
-                            /> */}
+                            <motion.img
+                                src={'/character/shadow.png'}
+                                width={100}
+                                height={100}
+                                className={styles.walkingShadow}
+                                initial={{ y: "30px", x: "-10px", scaleY: "0.5", opacity: "0.5" }}
+                            />
 
 
                             {

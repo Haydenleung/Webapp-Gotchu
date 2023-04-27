@@ -117,6 +117,7 @@
 .colorTile:active {
   border-radius: 12px;
   box-shadow: inset 0px 0px 10px var(--sub-dark);
+  transition-duration: 200ms;
   /* transform: translate(-1px, -1px); */
 }
 

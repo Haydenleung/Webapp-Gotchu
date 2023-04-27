@@ -81,14 +81,29 @@
 
 .contentP:hover {
     background-color: var(--purple);
+    transform: translateY(-1px);
 }
 
 .contentG:hover {
     background-color: var(--green);
+    transform: translateY(-1px);
 }
 
 .contentO:hover {
     background-color: var(--orange);
+    transform: translateY(-1px);
+}
+
+.contentP:active {
+    transform: translateY(1px);
+}
+
+.contentG:active {
+    transform: translateY(1px);
+}
+
+.contentO:active {
+    transform: translateY(1px);
 }
 
 

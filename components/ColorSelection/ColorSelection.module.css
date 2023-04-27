@@ -3,6 +3,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+}
+
+.content:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 5px var(--sub-grey);
+  transition-duration: 200ms;
+}
+
+.content:active {
+  transform: translate(0px, 0px);
+  transition-duration: 200ms;
 }
 
 .background {
@@ -12,8 +24,8 @@
 
 .character {
   position: absolute;
-  width: 40%;
-  height: auto;
+  /* width: 40%; */
+  /* height: auto; */
 }
 
 /* .row{

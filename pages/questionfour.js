@@ -56,7 +56,7 @@ export default function QuestionFour() {
               className={styles.topContent}
               initial={{ opacity: "0%" }}
               animate={{ opacity: "100%" }}
-              transition={{ delay: 1, ease: "easeInOut", duration: 0.8 }}
+              transition={{ delay: 0.2, ease: "easeInOut", duration: 0.8 }}
             >
 
               <div className={styles.question}>
