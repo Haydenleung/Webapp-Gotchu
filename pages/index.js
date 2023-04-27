@@ -59,8 +59,7 @@ export default function Home() {
                 // className={styles.acknowledgeBtn}
                 />
               </Link>
-              {/* change destination to tutorial once the page is created */}
-              <Link href=''>
+              <Link href='/tutorial'>
                 <Button color='#B1BFA9'
                   text='Tutorial'
                 // className={styles.tutorialBtn}
