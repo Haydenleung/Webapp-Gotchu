@@ -16,6 +16,27 @@
     z-index: 999;
 }
 
+.filter {
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    opacity: 0.55;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 997;
+}
+
+.filterB {
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
 /* display screen */
 .main_container {
     position: relative;
@@ -42,65 +63,70 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
-    padding: 2rem 0rem 0rem 0rem;
+    padding: 2rem 1.5rem;
+    min-height: calc(744px - 3.5rem);
+}
+
+.selectionArrow {
+    position: absolute;
+    top: 9rem;
+    left: 5rem;
+    z-index: 999;
 }
 
 .topContent {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     flex-grow: 1;
-    margin-bottom: 250px;
+    margin-bottom: 150px;
 }
 
-.pageTitle {
+.pageIndicator {
     width: 100%;
     height: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
 }
 
-.pageTitle>h4>span {
-    color: var(--purple);
-}
-
-.shape {
-    position: relative;
-    height: 400px;
-    width: 100%;
+.question {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    cursor: pointer;
-}
-
-.box {
-    position: absolute;
-    width: 28rem;
-    height: 24rem;
-    background: var(--purple);
-}
-
-.shapeText {
-    width: 100%;
-    padding: 0 5rem;
-    position: absolute;
     text-align: center;
-    color: var(--primary-background);
-    line-height: 140%;
+    height: 110px;
+    width: 100%;
+    /* background-color: var(--placeholder-components); */
+    margin-bottom: 1rem;
 }
 
-.shapeText>span {
+.question>h6 {
+    color: var(--purple);
     font-weight: 600;
+}
+
+.answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    /* background-color: var(--placeholder-components); */
+    margin-bottom: 2rem;
+}
+
+.answerBox {
+    width: 100%;
 }
 
 .bottomGraphic {
@@ -130,10 +156,6 @@
     z-index: 100;
 }
 
-.walkingShadow {
-    position: absolute;
-}
-
 .bottomButton {
     position: absolute;
     bottom: 5rem;
@@ -144,4 +166,54 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.selectionArrow {
+    position: absolute;
+    top: 15rem;
+    left: 10rem;
+    z-index: 999;
+    width: 4rem;
+}
+
+.backArrow {
+    position: absolute;
+    bottom: 8rem;
+    left: 8rem;
+    z-index: 999;
+    width: 4rem;
+}
+
+.tutorialText {
+    position: absolute;
+    top: 14rem;
+    left: 4rem;
+    width: 5rem;
+    z-index: 999;
+    color: var(--font-white);
+    font-family: 'itim';
+}
+
+.tutorialTextTwo {
+    position: absolute;
+    bottom: 11.5rem;
+    right: 8rem;
+    z-index: 999;
+    color: var(--font-white);
+    font-family: 'itim';
+}
+
+.clickIndicator {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    right: 4rem;
+    top: 30rem;
+    z-index: 999;
+}
+
+.clickHand {
+    position: absolute;
+    top: 1.1rem;
+    left: 1.6rem;
 }

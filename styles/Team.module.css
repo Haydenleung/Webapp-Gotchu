@@ -83,17 +83,23 @@
 
 .topRow,
 .bottomRow {
-  display: flex;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
 }
 
 #test {
   background-color: white;
 }
 
-.bottonContent {
+.bottomContent {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  justify-content: flex-end;
+  align-items: center;
   flex-grow: 1;
+  padding-bottom: 2rem;
+  font-size: 10pt;
+  color: var(--sub-dark);
 }

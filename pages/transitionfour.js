@@ -34,7 +34,7 @@ export default function TransitionFour() {
                 },
                 "/result"
             );
-        }, 8000);
+        }, 10000);
     });
 
     const [isNext, setIsNext] = useState(false);
@@ -43,8 +43,8 @@ export default function TransitionFour() {
         transit: {
             opacity: [0, 100, 100, 0],
             transition: {
-                times: [0.0, 0.15, 0.8, 0.95],
-                duration: 7.0,
+                times: [0.0, 0.05, 0.95, 1],
+                duration: 9.0,
                 ease: "easeInOut",
                 delay: 0.5
             },
@@ -55,7 +55,7 @@ export default function TransitionFour() {
         transit: {
             x: [-2060, -2280],
             transition: {
-                duration: 3.5,
+                duration: 5.5,
                 ease: "linear",
                 delay: 0.5
             },
@@ -68,7 +68,7 @@ export default function TransitionFour() {
             rotate: [5, 0],
             transition: {
                 duration: 0.5,
-                repeat: 13,
+                repeat: 19,
                 repeatType: "reverse",
                 ease: "easeOut",
                 delay: 0.5
@@ -138,19 +138,18 @@ export default function TransitionFour() {
                             initial={{ x: "120%" }}
                             animate={{ x: ["120%", "120%", "130%", "420%"] }}
                             transition={{
-                                duration: 7.5,
-                                time: [0, 0.5, 0.6, 1],
+                                duration: 10,
+                                time: [0, 0.55, 0.65, 1],
                                 ease: "linear",
                             }}
                         >
-                            {/*   <motion.img
-                                src={"/character/walkingHugo.svg"}
-                                width={80}
-                                height={80}
-                                initial={{ y: "10%" }}
-                                variants={characterVariants}
-                                animate={"transit"}
-                            /> */}
+                            <motion.img
+                                src={'/character/shadow.png'}
+                                width={100}
+                                height={100}
+                                className={styles.walkingShadow}
+                                initial={{ y: "30px", x: "-10px", scaleY: "0.5", opacity: "0.5" }}
+                            />
 
 
                             {

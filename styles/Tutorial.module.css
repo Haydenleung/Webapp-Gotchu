@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 .main {
   display: flex;
   flex-direction: row;
@@ -7,9 +9,8 @@
   background-color: var(--font-white);
   overflow-y: hidden;
   position: relative;
-  
-}
 
+}
 
 .empty {
   flex-grow: 1;
@@ -18,17 +19,26 @@
   z-index: 999;
 }
 
-.filter{
-    width:100vw;
-    height:100vh;
-    background: #000000;
-    opacity: 0.65;
-    position: absolute;
-    left:0px;
-    top:0px;
-    z-index:997;
-
+.filter {
+  width: 100vw;
+  height: 100vh;
+  background: #000000;
+  opacity: 0.55;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 997;
 }
+
+.filterB {
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
 /* display screen */
 .main_container {
   position: relative;
@@ -44,8 +54,6 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   overflow: auto;
   padding-top: 3.5rem;
-  z-index: 1;
-  
 }
 
 .main_container::-webkit-scrollbar {
@@ -61,7 +69,7 @@
   flex-grow: 1;
   padding: 2rem 1.5rem;
   min-height: calc(744px - 3.5rem);
-  
+
 }
 
 .topContent {
@@ -72,18 +80,38 @@
   width: 100%;
 }
 
-.navigationNarrow{
-  position:absolute;
-  top:3rem;
-  left:4rem;
-  z-index:999;
+.navigationArrow {
+  position: absolute;
+  top: 3.5rem;
+  right: 2.5rem;
+  z-index: 999;
+  width: 4rem;
 }
 
-.nextNarrow{
-  position:absolute;
-  bottom:6rem;
-  right:6rem;
-  z-index:999;
+.nextArrow {
+  position: absolute;
+  bottom: 8rem;
+  right: 8rem;
+  z-index: 999;
+  width: 4rem;
+}
+
+.tutorialText {
+  position: absolute;
+  top: 7rem;
+  right: 3rem;
+  z-index: 999;
+  color: var(--font-white);
+  font-family: 'itim';
+}
+
+.tutorialTextTwo {
+  position: absolute;
+  bottom: 11.5rem;
+  right: 8rem;
+  z-index: 999;
+  color: var(--font-white);
+  font-family: 'itim';
 }
 
 .pageTitle {
@@ -166,10 +194,25 @@
   justify-content: flex-end;
 }
 
-.quizButton{
+.quizButton {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.clickIndicator {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  right: 4rem;
+  top: 30rem;
+  z-index: 999;
+}
+
+.clickHand {
+  position: absolute;
+  top: 1.1rem;
+  left: 1.6rem;
 }

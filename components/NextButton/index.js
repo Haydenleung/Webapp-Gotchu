@@ -6,8 +6,8 @@ import { motion } from 'framer-motion'
 export default function NextButton() {
 
     const variants = {
-        over: { x: ["-10%", "0%"] },
-        noOver: { x: ["0%", "0%"] }
+        // over: { x: ["-10%", "0%"] },
+        // noOver: { x: ["0%", "0%"] }
     }
 
     const [isOver, setIsOver] = useState(false)
@@ -19,7 +19,7 @@ export default function NextButton() {
                 src='/icons/nextArrow.svg'
                 width={20}
                 height={17}
-                animate={isOver ? "over" : "noOver"}
+                animate={{ x: ["-10%", "0%"] }}
                 variants={variants}
                 transition={{
                     duration: 0.5,

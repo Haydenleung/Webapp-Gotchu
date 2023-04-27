@@ -1,36 +1,64 @@
-.popUp{
+.popUp {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--font-white);
-    border-right: 2px solid var(--sub-grey);
-    border-bottom: 2px solid var(--sub-grey);
-    border-radius: 10px;
-    padding: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.content>img{
-    width: 8rem;
-}
-
-.bioInfo>img{
-width: 10rem;
-}
-
-.clickedContent{
+.content {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--font-white);
+  border-right: 2px solid var(--sub-grey);
+  border-bottom: 2px solid var(--sub-grey);
+  border-radius: 10px;
+  padding: 2rem 1rem 1rem 1rem;
+  gap: 0.5rem;
+  width: 100%;
+  height: 14rem;
+  cursor: pointer;
+}
+
+.content:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 2px 2px 1px var(--sub-grey);
+}
+
+.content:active {
+  transform: translate(1px, 1px);
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.content>img {
+  width: 6.5rem;
+  margin-bottom: 1rem;
+}
+
+.contentText>h5 {
+  line-height: 140%;
+}
+
+.contentText>p {
+  font-size: 10pt;
+}
+
+.bioInfo>img {
+  width: 10rem;
+}
+
+.clickedContent {
+  display: flex;
+  justify-content: center;
   position: absolute;
   left: 1.5rem;
   top: 10rem;
-  width: 21.75rem;
+  width: 21.5rem;
   height: 34rem;
   background-color: var(--font-white);
   border-right: 2px solid var(--sub-grey);
@@ -41,26 +69,44 @@ width: 10rem;
   padding-bottom: 2rem;
 }
 
-.bioInfo{
+.bioInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
 }
 
-.bioInfo>img{
+.bioInfo>img {
   margin-bottom: 1rem;
 
 }
 
 .separator {
-border: 1px solid var(--sub-grey);
+  border: 1px solid var(--sub-grey);
+  margin: 1rem 0;
 }
 
-.box{
+.box {
   width: 40px;
 }
 
+.close {
+  position: absolute;
+  right: 1.5rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+
+.longDesc {
+  text-align: center;
+  font-size: 12pt;
+  padding: 0 0.5rem;
+}
 
 /* .row{
     display: flex;
