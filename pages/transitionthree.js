@@ -99,7 +99,7 @@ export default function TransitionThree() {
                 <div className={styles.main_container}>
                     <div className={styles.pageContent}>
                         <div className={styles.pageIndicator}>
-                            <QuestionIndicator status={3} ini_wd={50} fin_wd={75} time={7.5} />
+                            <QuestionIndicator status={3} ini_wd={50} fin_wd={75} time={10} />
                         </div>
                         <motion.div
                             className={styles.topContent}

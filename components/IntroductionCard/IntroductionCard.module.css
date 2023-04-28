@@ -36,8 +36,8 @@
 }
 
 .cardText {
-    padding: 0 2rem 0rem 2rem;
-    font-size: 14px;
+    padding: 0 2rem;
+    font-size: calc(8px + 0.6vh);
     text-align: center;
 }
 
@@ -77,19 +77,32 @@
 }
 
 .dot {
-    width: 0.5rem;
+    width: 0.6rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border-color: var(--purple);
     border-style: solid;
+    border-width: 1px;
     /* background-color: var(--purple); */
     cursor: pointer;
 }
 
 .dotactive {
-    width: 0.5rem;
+    width: 0.6rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
+    border-width: 1px;
     background-color: var(--purple);
     cursor: pointer;
+}
+
+.chartTitle {
+    font-size: 10pt;
+    text-align: center;
+    font-weight: 600;
+    padding: 0 1rem;
+}
+
+.tabTitle {
+    font-weight: 600;
 }

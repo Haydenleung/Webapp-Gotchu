@@ -97,7 +97,7 @@ export default function Transition() {
                 <div className={styles.main_container}>
                     <div className={styles.pageContent}>
                         <div className={styles.pageIndicator}>
-                            <QuestionIndicator status={1} ini_wd={0} fin_wd={25} time={7.5} />
+                            <QuestionIndicator status={1} ini_wd={0} fin_wd={25} time={10} />
                         </div>
                         <motion.div
                             className={styles.topContent}
