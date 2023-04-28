@@ -9,6 +9,8 @@ import Button from '@/components/Button'
 
 export default function Introduction() {
 
+    var pageTitle = process.env.NEXT_PUBLIC_TITLE;
+
     return (
         <>
             <Head>
@@ -24,7 +26,7 @@ export default function Introduction() {
                     <div className={styles.pageContent}>
                         <div className={styles.topContent}>
                             <div className={styles.pageTitle}>
-                                <h4>Introduction</h4>
+                                <h4>{pageTitle}</h4>
                             </div>
 
                             <div className={styles.introCard}>
