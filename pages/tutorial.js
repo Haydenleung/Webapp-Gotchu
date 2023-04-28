@@ -8,9 +8,9 @@ import Characters from '@/components/Characters'
 import NextButton from '@/components/NextButton'
 import ColorSelection from '@/components/ColorSelection'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function Tutorial() {
-
 
     const [purple, setPurple] = useState(false);
     const [green, setGreen] = useState(false);
@@ -57,7 +57,7 @@ export default function Tutorial() {
     return (
         <>
             <Head>
-                <title>Get Started</title>
+                <title>Tutorial</title>
                 <meta name="description" content="Anti-Bully App" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
@@ -65,12 +65,30 @@ export default function Tutorial() {
             <div className={styles.main}>
                 <div className={styles.empty} />
                 <Navbar />
+                <Link href="tutorialB" className={styles.filterB} />
                 <div className={styles.filter} />
                 <div className={styles.main_container}>
-                    <Image src={'/icons/navigationArrow.svg'} width={25} height={57} className={styles.navigationNarrow} />
-                    <Image src={'/icons/nextArrowT.svg'} width={25} height={57} className={styles.nextNarrow} />
+                    <div className={styles.clickIndicator}>
+                        <Image src={'click_dot.svg'} width={65} height={65} className={styles.clickDot} />
+                        <motion.img
+                            src={'click_hand.svg'}
+                            width={100}
+                            height={100}
+                            className={styles.clickHand}
+                            animate={{ x: ["0%", "5%"], y: ["0%", "5%"] }}
+                            transition={{
+                                duration: 0.5,
+                                repeat: Infinity,
+                                repeatType: "reverse",
+                                ease: "easeOut"
+                            }}
+                        />
+                    </div>
+                    <Image src={'/icons/navigationArrow.svg'} width={25} height={57} className={styles.navigationArrow} />
+                    <h4 className={styles.tutorialText}>Navigation</h4>
+                    <Image src={'/icons/nextArrowT.svg'} width={25} height={57} className={styles.nextArrow} />
+                    <h4 className={styles.tutorialTextTwo}>Next Button</h4>
                     <div className={styles.pageContent}>
-
                         <div className={styles.topContent}>
                             <div className={styles.pageTitle}>
                                 <h4>What's your name?</h4>
@@ -117,7 +135,7 @@ export default function Tutorial() {
                     </div>
                 </div>
                 <div className={styles.empty} />
-            </div>
+            </div >
         </>
     )
 }

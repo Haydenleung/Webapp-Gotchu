@@ -56,7 +56,7 @@
     align-items: center;
     width: 100%;
     flex-grow: 1;
-    margin-bottom: 200px;
+    margin-bottom: 250px;
 }
 
 .pageIndicator {
@@ -97,4 +97,8 @@
     left: 3.8rem;
     top: 3rem;
     z-index: 100;
+}
+
+.walkingShadow {
+    position: absolute;
 }

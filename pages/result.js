@@ -9,6 +9,7 @@ import Response from '@/components/Response'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import SuggestionCard from '@/components/SuggestionCard'
+import Suggestion from '@/components/Suggestion'
 import result from '../data/results.json'
 
 
@@ -44,12 +45,11 @@ export default function Result() {
                         <div className={styles.topContent}>
                             <div className={styles.top}>
                                 <div className={styles.pageTitle}>
-                                    <div className={styles.userName}>
+                                    <h6 div className={styles.encouragingText}>
                                         {
-                                            name != '' ? <h5>Hi, {name}</h5> : null
+                                            name !== '' ? <>Hi, {name}. </> : null
                                         }
-                                    </div>
-                                    <h6 div className={styles.encouragingText}>We know it is not easy.</h6>
+                                        We know it is not easy.</h6>
                                     <h3>You did a great job!</h3>
                                 </div>
 
@@ -62,7 +62,7 @@ export default function Result() {
                                     <div className={styles.ans}>
                                         <div>
                                             <div className={styles.ansContainer}>
-                                                <p>You have chosen</p>
+                                                <p className={styles.ansHeading}>You have chosen</p>
                                                 <p>
                                                     {
                                                         info && info.map((obj, index) => {
@@ -74,25 +74,25 @@ export default function Result() {
                                                         })
                                                     }
                                                 </p>
-
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-                            {/* Replace by Animated Arrow with Text*/}
-                            {/* <div className={styles.readMore}></div> */}
                         </div>
                         <div className={styles.middleContent}>
-                            <p className={styles.sectionHead}>Customized Suggestions</p>
+                            <p className={styles.sectionHead}>Suggestions for You</p>
                             <div className={styles.response}>
-
                                 {
                                     info && info.map((obj, index) => {
                                         if (obj.id == concatenatedString) {
                                             return (
-                                                <SuggestionCard key={index} text={obj.suggestion} />
+                                                <>
+                                                    <Suggestion key={index} color='purple' heading={'Psychological'} text={''} />
+                                                    <Suggestion key={index} color='green' heading={'Social Being'} text={''} />
+                                                    <Suggestion key={index} color='orange' heading={'Actions'} text={''} />
+                                                    {/* <SuggestionCard key={index} text={obj.suggestion} /> */}
+                                                </>
                                             )
                                         }
                                     })
@@ -104,7 +104,7 @@ export default function Result() {
                         <div className={styles.bottomContent}>
                             <Link href='/resources'>
                                 <Button color='#8B4A51'
-                                    text='Get Help'
+                                    text='Find Support'
                                     className={styles.actionBtn}
                                 />
                             </Link>

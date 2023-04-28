@@ -129,6 +129,10 @@
     z-index: 100;
 }
 
+.walkingShadow {
+    position: absolute;
+}
+
 .bottomButton {
     position: absolute;
     bottom: 5rem;

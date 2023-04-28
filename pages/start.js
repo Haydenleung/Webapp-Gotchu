@@ -20,7 +20,7 @@ export default function Start() {
     const query = router.query;
     const name = query.name;
     const color = query.color;
-   
+
     const nextClick = (e) => {
         setTimeout(() => {
             router.push({
@@ -160,15 +160,13 @@ export default function Start() {
                                 x: ["-200%", "120%"],
                             }}
                         >
-                            {/* <motion.img
-                                src={'/character/walkingHugo.svg'}
-                                width={80}
-                                height={80}
-                                initial={{ y: "10%" }}
-                                variants={characterVariants}
-                                animate={isNext ? "next" : "start"}
-                            /> */}
-
+                            <motion.img
+                                src={'/character/shadow.png'}
+                                width={100}
+                                height={100}
+                                className={styles.walkingShadow}
+                                initial={{ y: "30px", x: "-10px", scaleY: "0.5", opacity: "0.5" }}
+                            />
                             {
                                 colorUrl && colorUrl.map((info, index) => {
                                     if (info.color == color) {
@@ -185,7 +183,6 @@ export default function Start() {
                                         )
                                     }
                                 })
-
                             }
 
                         </motion.div>

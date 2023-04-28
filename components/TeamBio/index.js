@@ -16,8 +16,10 @@ export default function TeamBio({
         <section>
             <div className={styles.content} onClick={() => setPopup(true)}>
                 <img src={imgSrc} alt={`${name} profile`} />
-                <h2>{name}</h2>
-                <p>{position}</p>
+                <div className={styles.contentText}>
+                    <h5>{name}</h5>
+                    <p>{position}</p>
+                </div>
             </div>
             {
                 popup === true ?
@@ -49,14 +51,14 @@ export default function TeamBio({
                                     <p>{position}</p>
                                 </div>
                                 <hr className={styles.separator} />
-                                <p>{description}</p>
+                                <p className={styles.longDesc}>{description}</p>
                                 <hr className={styles.separator} />
                             </div>
 
                             <div className={styles.close}>
                                 <Image
                                     src={'icons/close.svg'}
-                                    onClick={() => setPopup(false)}
+                                    // onClick={() => setPopup(false)}
                                     className={styles.closeIcon}
                                     width={20}
                                     height={30}

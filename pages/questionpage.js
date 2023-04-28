@@ -45,7 +45,7 @@ export default function QuestionPage() {
               className={styles.topContent}
               initial={{ opacity: "0%" }}
               animate={{ opacity: "100%" }}
-              transition={{ delay: 0.5, ease: "easeInOut", duration: 0.8 }}
+              transition={{ delay: 0.2, ease: "easeInOut", duration: 0.8 }}
             >
               <div className={styles.pageIndicator}>
                 <QuestionIndicator />
@@ -79,12 +79,13 @@ export default function QuestionPage() {
               className={styles.walkingCharacter}
               initial={{ x: "120%" }}
             >
-              {/*  <motion.img
-                src={'/character/walkingHugo.svg'}
-                width={80}
-                height={80}
-                initial={{ y: "10%", rotate: 5 }}
-              /> */}
+              <motion.img
+                src={'/character/shadow.png'}
+                width={100}
+                height={100}
+                className={styles.walkingShadow}
+                initial={{ y: "30px", x: "-10px", scaleY: "0.5", opacity: "0.5" }}
+              />
 
               {
                 colorUrl && colorUrl.map((info, index) => {

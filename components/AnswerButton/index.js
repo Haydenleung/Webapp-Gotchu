@@ -37,7 +37,7 @@ export default function AnswerButton({
                             style={isClickP ? { color: `white` } : { color: `` }}>
                             {txt}
                         </p>
-                        <motion.img className={styles.arrowP} src={'/answer/answerArrow.svg'} width={100} height={100}
+                        {/* <motion.img className={styles.arrowP} src={'/answer/answerArrow.svg'} width={100} height={100}
                             animate={isOver ? "over" : "noOver"}
                             style={isClickP ? { filter: `invert(95%) sepia(1%) saturate(85%) hue-rotate(319deg) brightness(117%) contrast(100%)` } : {}}
                             variants={variants}
@@ -46,7 +46,7 @@ export default function AnswerButton({
                                 repeat: Infinity,
                                 repeatType: "reverse",
                                 ease: "easeOut",
-                            }} />
+                            }} /> */}
                     </div > :
                     color == 'green' ?
                         <div
@@ -60,7 +60,7 @@ export default function AnswerButton({
                                 style={isClickG ? { color: `white` } : { color: `` }}>
                                 {txt}
                             </p>
-                            <motion.img className={styles.arrowG} src={'/answer/answerArrow.svg'} width={100} height={100}
+                            {/* <motion.img className={styles.arrowG} src={'/answer/answerArrow.svg'} width={100} height={100}
                                 style={isClickG ? { filter: `invert(95%) sepia(1%) saturate(85%) hue-rotate(319deg) brightness(117%) contrast(100%)` } : {}}
                                 animate={isOverG ? "over" : "noOver"}
                                 variants={variants}
@@ -69,7 +69,7 @@ export default function AnswerButton({
                                     repeat: Infinity,
                                     repeatType: "reverse",
                                     ease: "easeOut",
-                                }} />
+                                }} /> */}
                         </div> :
                         <div
                             className={styles.contentO}
@@ -81,7 +81,7 @@ export default function AnswerButton({
                                 className={styles.text}
                                 style={isClickO ? { color: `white` } : { color: `` }}>
                                 {txt}</p>
-                            <motion.img className={styles.arrowO} src={'/answer/answerArrow.svg'} width={100} height={100}
+                            {/* <motion.img className={styles.arrowO} src={'/answer/answerArrow.svg'} width={100} height={100}
                                 style={isClickO ? { filter: `invert(95%) sepia(1%) saturate(85%) hue-rotate(319deg) brightness(117%) contrast(100%)` } : {}}
                                 animate={isOverO ? "over" : "noOver"}
                                 variants={variants}
@@ -90,7 +90,7 @@ export default function AnswerButton({
                                     repeat: Infinity,
                                     repeatType: "reverse",
                                     ease: "easeOut",
-                                }} />
+                                }} /> */}
                         </div>
             }
         </>
