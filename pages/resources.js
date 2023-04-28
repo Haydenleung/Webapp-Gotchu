@@ -18,6 +18,7 @@ export default function Resources() {
     const router = useRouter();
     const query = router.query;
     const name = query.name;
+    const color = query.color;
     const answerOne = query.answerOne;
     const answerTwo = query.answerTwo;
     const answerThree = query.answerThree;
@@ -41,7 +42,7 @@ export default function Resources() {
                             <p className={styles.sectionHead}>External Support</p>
                             <p className={styles.sectionText}>Here are some resources available to help you deal with bullying. You will find many online resources are available, including websites, blogs, and social media groups that provide information and support for those dealing with bullying.</p>
                             <div className={styles.row}>
-                                <Image className={styles.img} src={'/resources/externalHelp.svg'} width={168} height={351} />
+                                <Image className={styles.img} src={'/resources/externalHelp.png'} width={168} height={351} />
                                 <div className={styles.buttons}>
 
                                     <Link target='_blank' href={'https://www2.gov.bc.ca/gov/content/erase'}>
@@ -72,14 +73,14 @@ export default function Resources() {
 
                                         <ResourcesButton text='Bully Free at Work' imgSrc={book} color='var(--resources-red)' /></Link>
                                 </div>
-                                <Image className={styles.img} src={'/resources/referenceReading.svg'} width={168} height={351} />
+                                <Image className={styles.img} src={'/resources/referenceReading.png'} width={168} height={351} />
                             </div>
                         </section>
                         <section className={styles.externalQuiz}>
                             <p className={styles.sectionHead}>External Quiz</p>
                             <p className={styles.sectionText}>Many websites offer quizzes to help test your knowledge and understanding of the effects of bullying. By taking these quizzes, you can assess your own understanding of the issue and identify areas where you may need to learn more.</p>
                             <div className={styles.row}>
-                                <Image className={styles.img} src={'/resources/externalQuiz.svg'} width={168} height={351} />
+                                <Image className={styles.img} src={'/resources/externalQuiz.png'} width={168} height={351} />
                                 <div className={styles.buttons}>
 
                                     <Link target='_blank' href={'https://www.quizony.com/are-you-a-bully/index.html'}>
@@ -100,11 +101,14 @@ export default function Resources() {
                                 </div>
                             </div>
                         </section>
-                        <div className={styles.actionButton}>
-                            <Link href={{ pathname: '/result', query: { name, answerOne, answerTwo, answerThree, answerFour } }}>
-                                <Button text='Return to Result' color='var(--burgundy)' />
-                            </Link>
-                        </div>
+                        {
+                            color ?
+                                <div className={styles.actionButton}>
+                                    <Link href={{ pathname: '/result', query: { name, color, answerOne, answerTwo, answerThree, answerFour } }}>
+                                        <Button text='Return to Result' color='var(--burgundy)' />
+                                    </Link>
+                                </div> : <></>
+                        }
 
                     </div>
                 </div>

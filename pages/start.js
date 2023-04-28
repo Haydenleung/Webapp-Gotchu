@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
@@ -10,16 +10,44 @@ import BackButton from '@/components/BackButton'
 import NextButton from '@/components/NextButton'
 import { motion } from 'framer-motion'
 import data from '../data/walking.json'
+import DynamicMessage from '@/components/DynamicMessage'
 
 
 export default function Start() {
     const [colorUrl, setColorUrl] = useState([...data]);
+    const [colorHex, setColorHex] = useState('#896686');
     const [isNext, setIsNext] = useState(false);
+    const [isTap, setIsTap] = useState(false);
+    const [counter, setCounter] = useState(15);
 
     const router = useRouter();
     const query = router.query;
     const name = query.name;
     const color = query.color;
+
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            isTap === true ? setCounter(counter - 1) : ""
+        }, 1000);
+        switch (color) {
+            case "purple":
+                return setColorHex('#896686')
+            case "green":
+                return setColorHex('#b1bfa9')
+            case "orange":
+                return setColorHex('#D88D70')
+            case "red":
+                return setColorHex('#894751')
+            case "brown":
+                return setColorHex('9E8C6F')
+            case "tan":
+                return setColorHex('#A08381')
+            default:
+                return setColorHex('#896686')
+        }
+    })
 
     const nextClick = (e) => {
         setTimeout(() => {
@@ -31,10 +59,62 @@ export default function Start() {
         }, 4800);
     }
 
-
     const mainVariants = {
         next: {
             opacity: 0,
+            transition: {
+                duration: 1,
+                ease: "linear",
+            }
+        }
+    }
+
+    const shapeVariants = {
+        start: {
+            opacity: 1,
+            transition: {
+                delay: 10.5
+            }
+        },
+        next: {
+            opacity: 0,
+            transition: {
+                duration: 1,
+                ease: "linear",
+            }
+        },
+        tap: {
+            opacity: [1, 1],
+            scale: [1, 0],
+            rotate: [0, 90],
+            height: ["24rem", "28rem"],
+            borderRadius: ["70% 60% 45% 68% / 68% 68% 35% 38%", "99% 99% 99% 99% / 99% 99% 99% 99%"],
+            transition: {
+                duration: 15,
+                ease: "linear"
+            }
+        }
+    }
+
+    const textVariants = {
+        start: {
+            opacity: 1,
+            transition: {
+                delay: 10.5
+            }
+        },
+        next: {
+            opacity: 0,
+            transition: {
+                duration: 1,
+                ease: "linear",
+            }
+        }
+    }
+
+    const countVariants = {
+        next: {
+            opacity: 0.7,
             transition: {
                 duration: 1,
                 ease: "linear",
@@ -46,7 +126,7 @@ export default function Start() {
         start: {
             opacity: 1,
             transition: {
-                delay: 7.3
+                delay: 10.5
             }
         },
         next: {
@@ -115,28 +195,46 @@ export default function Start() {
                             className={styles.topContent}
                             variants={mainVariants}
                             animate={isNext ? "next" : ""}>
-                            <div className={styles.pageTitle}>
-                                <h4>Hello <span>{name}</span></h4>
-                            </div>
-                            <div className={styles.shape} onClick={() => { setIsNext(true); nextClick() }}>
+                            <motion.div
+                                className={styles.pageTitle}
+                                transition={{
+                                    delay: 10.5
+                                }}
+                                initial={{ opacity: 1 }}
+                                animate={{ opacity: 0 }}
+                            >
+                                <DynamicMessage
+                                    txt={"Hello " + name + "!!!"}
+                                    txt2={'          '}
+                                    txt3={'Get ready to meet your new quiz buddy, Hugo!'}
+                                    txt4={'It will be with you every step of the way as you take on the quiz.'}
+                                    txt5={"Before we start, let's start a breathing exercise."}
+                                />
+                            </motion.div>
+                            <div className={styles.shape} onMouseDown={() => setIsTap(true)} onClick={() => { setIsNext(true); nextClick() }}>
                                 <motion.div
                                     className={styles.box}
-                                    initial={{ borderRadius: "70% 60% 45% 68% / 68% 68% 35% 38%", rotate: 0 }}
-                                    whileTap={{
-                                        scale: [1, 0],
-                                        rotate: [0, 90],
-                                        height: ["24rem", "28rem"],
-                                        borderRadius: ["70% 60% 45% 68% / 68% 68% 35% 38%", "99% 99% 99% 99% / 99% 99% 99% 99%"]
-                                    }}
-                                    transition={{
-                                        duration: 15,
-                                        ease: "linear"
-                                    }}
-                                />
-                                <p className={styles.shapeText}><span>Keep Pressing</span> and
-                                    take a Deep Breathe<br /><br />
-                                    <span>Release</span> your finger
-                                    when you are Ready to Go</p>
+                                    initial={{ borderRadius: "70% 60% 45% 68% / 68% 68% 35% 38%", rotate: 0, opacity: 0 }}
+                                    variants={shapeVariants}
+                                    animate={isTap ? "tap" : "start"}
+                                    style={{ background: colorHex }}
+                                >
+                                </motion.div>
+                                <motion.p
+                                    className={styles.shapeText}
+                                    variants={textVariants}
+                                    initial={{ opacity: 0 }}
+                                    animate={isTap ? "next" : "start"}
+                                ><span>Breathing Exercise</span><br /><br />
+                                    Press the shape behind and slowly breathing for 15 seconds. Release your finger when you are ready to start.
+                                </motion.p>
+                                <motion.p
+                                    className={styles.shapeTextTwo}
+                                    variants={countVariants}
+                                    initial={{ opacity: 0 }}
+                                    animate={isTap ? "next" : ""}
+                                >{counter}
+                                </motion.p>
                             </div>
                         </motion.div>
                     </div>

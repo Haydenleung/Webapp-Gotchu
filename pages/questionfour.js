@@ -101,25 +101,13 @@ export default function QuestionFour() {
             //   x: ["-180%", "120%"],
             // }}
             >
-              {/* <motion.img
-                src={'/character/walkingHugo.svg'}
-                width={80}
-                height={80}
-
-                 transition={{
-                   duration: 0.5,
-                   repeat: 13,
-                   repeatType: "reverse",
-                   ease: "easeOut",
-                   delay: 0.5
-                 }}
-                initial={{ y: "10%", rotate: 5 }}
-               animate={{
-                 y: ["10%", "-30%"],
-                 rotate: [5, 0]
-               }}
-              /> */}
-
+              <motion.img
+                src={'/character/shadow.png'}
+                width={100}
+                height={100}
+                className={styles.walkingShadow}
+                initial={{ y: "30px", x: "-10px", scaleY: "0.5", opacity: "0.5" }}
+              />
               {
                 colorUrl && colorUrl.map((info, index) => {
                   if (info.color == color) {

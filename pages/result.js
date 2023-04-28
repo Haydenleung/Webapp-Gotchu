@@ -12,8 +12,6 @@ import SuggestionCard from '@/components/SuggestionCard'
 import Suggestion from '@/components/Suggestion'
 import result from '../data/results.json'
 
-
-
 export default function Result() {
     const router = useRouter();
     const query = router.query;
@@ -52,7 +50,6 @@ export default function Result() {
                                         We know it is not easy.</h6>
                                     <h3>You did a great job!</h3>
                                 </div>
-
                                 <div className={styles.resultImg}>
                                     <Image src={'/result/result-blob.svg'} width={300} height={169} />
                                 </div>
@@ -63,17 +60,15 @@ export default function Result() {
                                         <div>
                                             <div className={styles.ansContainer}>
                                                 <p className={styles.ansHeading}>You have chosen</p>
-                                                <p>
-                                                    {
-                                                        info && info.map((obj, index) => {
-                                                            if (obj.id == concatenatedString) {
-                                                                return (
-                                                                    <Response key={index} text={obj.summary} />
-                                                                )
-                                                            }
-                                                        })
-                                                    }
-                                                </p>
+                                                {
+                                                    info && info.map((obj, index) => {
+                                                        if (obj.id == concatenatedString) {
+                                                            return (
+                                                                <Response key={index} text={obj.summary} />
+                                                            )
+                                                        }
+                                                    })
+                                                }
                                             </div>
                                         </div>
                                     </div>
@@ -102,7 +97,7 @@ export default function Result() {
                         </div>
 
                         <div className={styles.bottomContent}>
-                            <Link href='/resources'>
+                            <Link href={{ pathname: "/resources", query: { name, color, answerOne, answerTwo, answerThree, answerFour } }}>
                                 <Button color='#8B4A51'
                                     text='Find Support'
                                     className={styles.actionBtn}

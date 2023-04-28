@@ -14,8 +14,8 @@ export default function ColorSelection({
                 <Image src={img} width={100} height={100} className={styles.background} />
                 <motion.img
                     src={cha}
-                    width={100}
-                    height={100}
+                    width={160}
+                    height={160}
                     className={styles.character}
                     whileHover={{
                         rotate: [3, -3],
