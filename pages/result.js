@@ -83,7 +83,7 @@ export default function Result() {
                                         if (obj.id == concatenatedString) {
                                             return (
                                                 <>
-                                                    <Suggestion key={index} color='purple' heading={'Definition'} text={obj.definition} />
+                                                    <Suggestion key={index} color='purple' heading={'Coping Tips'} text={obj.coping} />
                                                     <Suggestion key={index} color='green' heading={'Self Care Tips'} text={obj.selfcare} />
                                                     <Suggestion key={index} color='orange' heading={'Crisis Phone Numbers'} text={obj.phone} />
                                                     {/* <SuggestionCard key={index} text={obj.suggestion} /> */}
