@@ -10,7 +10,8 @@ export default function IntroductionCard() {
     const [slideIndex, setSlideIndex] = useState(1);
     const [fill, setFill] = useState(false);
     const introText = "Gotchu is an innovative anti-bullying app that creates a safe, supportive environment for individuals experiencing or witnessing bullying. Gotchu provides emotional tools and support to connect users with the right resources and understand the potential impacts of bullying. Join our community of supportive individuals committed to promoting kindness and empathy.";
-    const tutorialText = "Bullying Background";
+    const tutorialText = "Bullying Deifinition";
+    const definition = "Bullying is unwanted, aggressive behaviour that involves a real or perceived power imbalance. The behaviour is repeated over time. People who are bullied may have serious and lasting problems (stopbullying.com, 2023). This harmful behaviour can manifest in various forms. It is crucial for communities to work together to raise awareness and develop effective strategies to stop bullying.";
     const disclaimerText = "Gotchu™ is intended to provide information, resources, and support to individuals who may be experiencing bullying or know someone who is being bullied. While the app aims to provide helpful tools and strategies to cope with bullying, it is not a substitute for professional help or advice from a qualified mental health professional. If you or someone you know is experiencing bullying and requires professional assistance, please seek help from a licensed mental health provider or other qualified professional.";
     const purple = '#896686'
 
@@ -50,6 +51,7 @@ export default function IntroductionCard() {
                             <p className={styles.chartTitle}>Aged 15 to 17 Reported Experiencing Some Form of Bullying in the Preceding Year</p>
                             <PieChart />
                             <p className={styles.cardText}>{tutorialText}</p>
+                            <p className={styles.cardText}>{definition}</p>
                         </> :
                         slideIndex == 3 ?
                             <>
