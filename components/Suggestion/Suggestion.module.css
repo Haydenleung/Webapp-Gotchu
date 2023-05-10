@@ -63,4 +63,5 @@
     text-align: center;
     font-size: 10pt;
     padding: 1rem 0.5rem;
+    white-space: pre-line;
 }
