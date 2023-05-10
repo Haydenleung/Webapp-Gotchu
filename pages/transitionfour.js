@@ -136,7 +136,7 @@ export default function TransitionFour() {
                         <motion.div
                             className={styles.walkingCharacter}
                             initial={{ x: "120%" }}
-                            animate={{ x: ["120%", "120%", "130%", "420%"] }}
+                            animate={{ x: ["120%", "120%", "130%", "450%"] }}
                             transition={{
                                 duration: 10,
                                 time: [0, 0.55, 0.65, 1],

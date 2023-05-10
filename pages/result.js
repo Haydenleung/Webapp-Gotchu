@@ -8,9 +8,11 @@ import Image from 'next/image'
 import Response from '@/components/Response'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import SuggestionCard from '@/components/SuggestionCard'
 import Suggestion from '@/components/Suggestion'
 import result from '../data/results.json'
+import resulthugo from '../data/resulthugo.json'
+import { motion } from "framer-motion";
+
 
 export default function Result() {
     const router = useRouter();
@@ -26,6 +28,8 @@ export default function Result() {
     /* console.log(arr);
     console.log(concatenatedString); */
     const [info, setInfo] = useState([...result]);
+    const [pic, setPic] = useState([...resulthugo]);
+
 
     return (
         <>
@@ -51,15 +55,31 @@ export default function Result() {
                                     <h3>You did a great job!</h3>
                                 </div>
                                 <div className={styles.resultImg}>
-                                    <Image src={'/result/result-blob.svg'} width={300} height={169} />
+                                    {
+                                        pic && pic.map((obj, index) => {
+                                            if (obj.id == concatenatedString) {
+                                                return (
+                                                    <motion.img key={index} src={obj.url} width={280} height={280}
+                                                        animate={{
+                                                            rotate: [3, -3],
+                                                            transition: {
+                                                                repeat: Infinity,
+                                                                repeatType: "reverse",
+                                                                duration: 2,
+                                                                ease: "easeInOut"
+                                                            }
+                                                        }} />
+                                                )
+                                            }
+                                        })
+                                    }
                                 </div>
-
                                 <div className={styles.userAns}>
                                     <p className={styles.sectionHead}>Result Summary</p>
                                     <div className={styles.ans}>
                                         <div>
                                             <div className={styles.ansContainer}>
-                                                <p className={styles.ansHeading}>You have chosen</p>
+                                                {/* <p className={styles.ansHeading}>You have chosen</p> */}
                                                 {
                                                     info && info.map((obj, index) => {
                                                         if (obj.id == concatenatedString) {
