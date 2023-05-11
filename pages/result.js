@@ -12,9 +12,26 @@ import Suggestion from '@/components/Suggestion'
 import result from '../data/results.json'
 import resulthugo from '../data/resulthugo.json'
 import { motion } from "framer-motion";
+import { useIntl } from 'react-intl'
 
 
 export default function Result() {
+
+    const { locales } = useRouter();
+    const intl = useIntl();
+    const pageTitle = intl.formatMessage({ id: "page.result.pageTitle" })
+    const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
+    const headingOne = intl.formatMessage({ id: 'page.result.headingOne' });
+    const headingTwo = intl.formatMessage({ id: 'page.result.headingTwo' });
+    const headingThree = intl.formatMessage({ id: 'page.result.headingThree' });
+    const summaryTitle = intl.formatMessage({ id: 'page.result.summaryTitle' });
+    const suggestionTitle = intl.formatMessage({ id: 'page.result.suggestionTitle' });
+    const subTitleOne = intl.formatMessage({ id: 'page.result.subTitleOne' });
+    const subTitleTwo = intl.formatMessage({ id: 'page.result.subTitleTwo' });
+    const subTitleThree = intl.formatMessage({ id: 'page.result.subTitleThree' });
+    const buttonOne = intl.formatMessage({ id: 'page.result.buttonOne' });
+    const buttonTwo = intl.formatMessage({ id: 'page.result.buttonTwo' });
+
     const router = useRouter();
     const query = router.query;
     const name = query.name;
@@ -34,8 +51,8 @@ export default function Result() {
     return (
         <>
             <Head>
-                <title>Your Result</title>
-                <meta name="description" content="Anti-Bully App" />
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDes} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -49,10 +66,10 @@ export default function Result() {
                                 <div className={styles.pageTitle}>
                                     <h6 div className={styles.encouragingText}>
                                         {
-                                            name !== '' ? <>Hi, {name}. </> : null
+                                            name !== '' ? <>{headingOne}, {name}. </> : null
                                         }
-                                        We know it is not easy.</h6>
-                                    <h3>You did a great job!</h3>
+                                        {headingTwo}</h6>
+                                    <h3>{headingThree}</h3>
                                 </div>
                                 <div className={styles.resultImg}>
                                     {
@@ -75,7 +92,7 @@ export default function Result() {
                                     }
                                 </div>
                                 <div className={styles.userAns}>
-                                    <p className={styles.sectionHead}>Result Summary</p>
+                                    <p className={styles.sectionHead}>{summaryTitle}</p>
                                     <div className={styles.ans}>
                                         <div>
                                             <div className={styles.ansContainer}>
@@ -96,16 +113,16 @@ export default function Result() {
                             </div>
                         </div>
                         <div className={styles.middleContent}>
-                            <p className={styles.sectionHead}>Suggestions for You</p>
+                            <p className={styles.sectionHead}>{suggestionTitle}</p>
                             <div className={styles.response}>
                                 {
                                     info && info.map((obj, index) => {
                                         if (obj.id == concatenatedString) {
                                             return (
                                                 <>
-                                                    <Suggestion key={index} color='purple' heading={'Coping Tips'} text={obj.coping} />
-                                                    <Suggestion key={index} color='green' heading={'Self Care Tips'} text={obj.selfcare} />
-                                                    <Suggestion key={index} color='orange' heading={'Crisis Phone Numbers'} text={obj.phone} />
+                                                    <Suggestion key={index} color='purple' heading={subTitleOne} text={obj.coping} />
+                                                    <Suggestion key={index} color='green' heading={subTitleTwo} text={obj.selfcare} />
+                                                    <Suggestion key={index} color='orange' heading={subTitleThree} text={obj.phone} />
                                                     {/* <SuggestionCard key={index} text={obj.suggestion} /> */}
                                                 </>
                                             )
@@ -119,13 +136,13 @@ export default function Result() {
                         <div className={styles.bottomContent}>
                             <Link href={{ pathname: "/resources", query: { name, color, answerOne, answerTwo, answerThree, answerFour } }}>
                                 <Button color='#8B4A51'
-                                    text='Find Support'
+                                    text={buttonOne}
                                     className={styles.actionBtn}
                                 />
                             </Link>
                             <Link href='/personal'>
                                 <Button color='#A18481'
-                                    text='Quiz Again'
+                                    text={buttonTwo}
                                     className={styles.actionBtn}
                                 />
                             </Link>

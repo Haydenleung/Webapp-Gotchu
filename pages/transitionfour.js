@@ -24,6 +24,7 @@ export default function TransitionFour() {
     const [colorUrl, setColorUrl] = useState([...data])
     const [message, setMessage] = useState([...transitionMsg]);
     const [transitionId, setTransitionId] = useState();
+    const currentLang = router.locale;
 
     useEffect(() => {
         setTimeout(() => {
@@ -31,8 +32,7 @@ export default function TransitionFour() {
                 {
                     pathname: "/result",
                     query: { name: name, color: color, answerOne: answerOne, answerTwo: answerTwo, answerThree: answerThree, answerFour: answerFour },
-                },
-                "/result"
+                }
             );
         }, 10000);
     });
@@ -112,7 +112,11 @@ export default function TransitionFour() {
                             {
                                 message && message.map((obj, index) => {
 
-                                    if (obj.id == transitionId) {
+                                    if (obj.id === transitionId && currentLang == "fr") {
+                                        return (
+                                            <Message txt={obj.transition_fr} />
+                                        )
+                                    } else if (obj.id === transitionId) {
                                         return (
                                             <Message txt={obj.transition} />
                                         )

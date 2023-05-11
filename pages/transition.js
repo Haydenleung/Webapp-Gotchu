@@ -12,7 +12,8 @@ import QuestionIndicator from "@/components/QuestionIndicator";
 import data from '../data/walking.json'
 import transitionMsg from '../data/transition.json'
 
-export default function Transition() {
+export default function Transition({ dir }) {
+
     const [colorUrl, setColorUrl] = useState([...data]);
     const [isNext, setIsNext] = useState(false);
     const [message, setMessage] = useState([...transitionMsg]);
@@ -23,7 +24,8 @@ export default function Transition() {
     const color = query.color;
     const answerOne = query.answerOne;
     const [transitionId, setTransitionId] = useState();
-    console.log(answerOne);
+
+    const currentLang = router.locale;
 
     useEffect(() => {
         setTimeout(() => {
@@ -31,8 +33,7 @@ export default function Transition() {
                 {
                     pathname: "/questiontwo",
                     query: { name: name, color: color, answerOne: answerOne },
-                },
-                "/questiontwo"
+                }
             );
         }, 10000);
     });
@@ -109,7 +110,11 @@ export default function Transition() {
                             {
                                 message && message.map((obj, index) => {
 
-                                    if (obj.id === transitionId) {
+                                    if (obj.id === transitionId && currentLang == "fr") {
+                                        return (
+                                            <Message txt={obj.transition_fr} />
+                                        )
+                                    } else if (obj.id === transitionId) {
                                         return (
                                             <Message txt={obj.transition} />
                                         )

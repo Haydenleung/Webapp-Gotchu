@@ -7,18 +7,29 @@ import bubbleLarge from "@/public/hugDotOne.svg"
 import bubbleSmall from "@/public/hugDotTwo.svg"
 import landingLogo from "@/public/logo.svg"
 import Button from '@/components/Button'
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion"
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
 
 
-export default function Home() {
+export default function Home({ dir }) {
+
+  const { locales } = useRouter();
+  const intl = useIntl();
+  const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
+  const startButton = intl.formatMessage({ id: "page.home.button.start" })
+  const tutorialButton = intl.formatMessage({ id: "page.home.button.tutorial" })
+
   return (
     <>
       <Head>
         <title>Gotchu</title>
-        <meta name="description" content="Anti-Bully App" />
+        <meta name="description" content={pageDes} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.translation}>
+      </div>
       <main className={styles.main}>
         <div className={styles.main_container}>
           <div className={styles.pageImg}>
@@ -55,13 +66,13 @@ export default function Home() {
             <div className={styles.action}>
               <Link href='/introduction'>
                 <Button color='#896686'
-                  text='Get Started'
+                  text={startButton}
                 // className={styles.acknowledgeBtn}
                 />
               </Link>
               <Link href='/tutorial'>
                 <Button color='#B1BFA9'
-                  text='Tutorial'
+                  text={tutorialButton}
                 // className={styles.tutorialBtn}
                 />
               </Link>

@@ -9,8 +9,21 @@ import NextButton from '@/components/NextButton'
 import ColorSelection from '@/components/ColorSelection'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
 
 export default function Tutorial() {
+
+    const { locales } = useRouter();
+    const intl = useIntl();
+    const pageTitle = intl.formatMessage({ id: "page.nav.tutorial" })
+    const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
+    const oneText = intl.formatMessage({ id: "page.tutorial.one" })
+    const twoText = intl.formatMessage({ id: "page.tutorial.two" })
+    const title = intl.formatMessage({ id: "page.personal.title" })
+    const subTitle = intl.formatMessage({ id: "page.personal.subTitle" })
+    const inputText = intl.formatMessage({ id: "page.personal.input" })
+    const colorTitle = intl.formatMessage({ id: "page.personal.color" })
 
     const [purple, setPurple] = useState(false);
     const [green, setGreen] = useState(false);
@@ -57,8 +70,8 @@ export default function Tutorial() {
     return (
         <>
             <Head>
-                <title>Tutorial</title>
-                <meta name="description" content="Anti-Bully App" />
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDes} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -69,9 +82,9 @@ export default function Tutorial() {
                 <div className={styles.filter} />
                 <div className={styles.main_container}>
                     <div className={styles.clickIndicator}>
-                        <Image src={'click_dot.svg'} width={65} height={65} className={styles.clickDot} />
+                        <Image src={'../click_dot.svg'} width={65} height={65} className={styles.clickDot} />
                         <motion.img
-                            src={'click_hand.svg'}
+                            src={'../click_hand.svg'}
                             width={100}
                             height={100}
                             className={styles.clickHand}
@@ -85,26 +98,26 @@ export default function Tutorial() {
                         />
                     </div>
                     <Image src={'/icons/navigationArrow.svg'} width={25} height={57} className={styles.navigationArrow} />
-                    <h4 className={styles.tutorialText}>Navigation</h4>
+                    <h4 className={styles.tutorialText}>{oneText}</h4>
                     <Image src={'/icons/nextArrowT.svg'} width={25} height={57} className={styles.nextArrow} />
-                    <h4 className={styles.tutorialTextTwo}>Next Button</h4>
+                    <h4 className={styles.tutorialTextTwo}>{twoText}</h4>
                     <div className={styles.pageContent}>
                         <div className={styles.topContent}>
                             <div className={styles.pageTitle}>
-                                <h4>What's your name?</h4>
-                                <p>(Optional)</p>
+                                <h4>{title}</h4>
+                                <p>({subTitle})</p>
                             </div>
                             <div className={styles.nameInput}>
                                 <input
                                     type="text"
                                     value={name}
-                                    placeholder="Characters Only..."
+                                    placeholder={inputText}
                                     onChange={handleInputChange}
                                     className={styles.inputFelid}
                                 />
                             </div>
                             <div className={styles.pagePick}>
-                                <h4>Pick a color you like</h4>
+                                <h4>{colorTitle}</h4>
                             </div>
                             <div className={styles.character}>
                                 <div className={styles.colorTile} onClick={() => { colorChange(); setPurple(true) }}>

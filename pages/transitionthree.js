@@ -23,6 +23,7 @@ export default function TransitionThree() {
     const [colorUrl, setColorUrl] = useState([...data]);
     const [message, setMessage] = useState([...transitionMsg]);
     const [transitionId, setTransitionId] = useState();
+    const currentLang = router.locale;
 
     useEffect(() => {
         setTimeout(() => {
@@ -30,8 +31,7 @@ export default function TransitionThree() {
                 {
                     pathname: "/questionfour",
                     query: { name: name, color: color, answerOne: answerOne, answerTwo: answerTwo, answerThree: answerThree },
-                },
-                "/questionfour"
+                }
             );
         }, 10000);
     });
@@ -110,7 +110,11 @@ export default function TransitionThree() {
                             {
                                 message && message.map((obj, index) => {
 
-                                    if (obj.id == transitionId) {
+                                    if (obj.id === transitionId && currentLang == "fr") {
+                                        return (
+                                            <Message txt={obj.transition_fr} />
+                                        )
+                                    } else if (obj.id === transitionId) {
                                         return (
                                             <Message txt={obj.transition} />
                                         )

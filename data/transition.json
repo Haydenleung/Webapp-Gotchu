@@ -1,85 +1,98 @@
 [
   {
-    "id":1,
+    "id": 1,
     "answer": "Me",
-    "transition":"You do not have to face anything alone. You are seen and heard. I will be with you every step of the way."
+    "transition": "You do not have to face anything alone. You are seen and heard. I will be with you every step of the way.",
+    "transition_fr": "Vous n'avez pas à affronter quoi que ce soit seul. Vous êtes vu et entendu. Je serai avec vous à chaque étape du chemin."
   },
   {
-    "id":2,
+    "id": 2,
     "answer": "Someone else",
-    "transition":"Thank you for being an ally. Your support and encouragement not only helps your loved ones, it helps make our world a safer place."
+    "transition": "Thank you for being an ally. Your support and encouragement not only helps your loved ones, it helps make our world a safer place.",
+    "transition_fr": "Merci d'être un allié. Votre soutien et votre encouragement non seulement aident vos proches, mais contribuent également à rendre notre monde plus sûr."
   },
   {
-    "id":3,
+    "id": 3,
     "answer": "Emotional and Psychological",
-    "transition":"Remember you are strong and resilient. The only person that can define you, is you. You matter and bring value to this world"
+    "transition": "Remember you are strong and resilient. The only person that can define you, is you. You matter and bring value to this world",
+    "transition_fr": "Souvenez-vous que vous êtes fort et résilient. La seule personne qui peut vous définir, c'est vous. Vous êtes important et apportez de la valeur à ce monde."
   },
   {
-    "id":4,
+    "id": 4,
     "answer": "Emotional and Psychological",
-    "transition":"Check in on your loved ones, it can sometimes be difficult for them to ask for help. Let them know you are there to support them!"
+    "transition": "Check in on your loved ones, it can sometimes be difficult for them to ask for help. Let them know you are there to support them!",
+    "transition_fr": "Prenez des nouvelles de vos proches, il peut parfois être difficile pour eux de demander de l'aide. Faites-leur savoir que vous êtes là pour les soutenir!"
   },
   {
-    "id":5,
+    "id": 5,
     "answer": "Physical",
-    "transition":"You deserve to be treated with dignity and respect. You deserve to feel safe. You have the strength to make a change."
+    "transition": "You deserve to be treated with dignity and respect. You deserve to feel safe. You have the strength to make a change.",
+    "transition_fr": "Vous méritez d'être traité avec dignité et respect. Vous méritez de vous sentir en sécurité. Vous avez la force de faire un changement."
   },
   {
-    "id":6,
+    "id": 6,
     "answer": "Physical",
-    "transition":"Reach out to your loved ones and offer safety and comfort. Help them find resources to secure a safe place."
+    "transition": "Reach out to your loved ones and offer safety and comfort. Help them find resources to secure a safe place.",
+    "transition_fr": "Prenez contact avec vos proches et offrez-leur sécurité et confort. Aidez-les à trouver des ressources pour assurer un endroit sûr."
   },
   {
-    "id":7,
+    "id": 7,
     "answer": "Verbal",
-    "transition":"We know how difficult this is for you. You are not to blame for what is happening to you. You deserve to be spoken to with love and kindness."
+    "transition": "We know how difficult this is for you. You are not to blame for what is happening to you. You deserve to be spoken to with love and kindness.",
+    "transition_fr": "Nous savons à quel point c'est difficile pour vous. Vous n'êtes pas responsable de ce qui vous arrive. Vous méritez d'être parlé avec amour et gentillesse."
   },
   {
-    "id":8,
+    "id": 8,
     "answer": "Verbal",
-    "transition":"Tell your loved ones why you love them and what strengths you see in them. Help build their confidence so they do not feel alone."
+    "transition": "Tell your loved ones why you love them and what strengths you see in them. Help build their confidence so they do not feel alone.",
+    "transition_fr": "Dites à vos proches pourquoi vous les aimez et quelles sont leurs forces. Aidez à renforcer leur confiance pour qu'ils ne se sentent pas seuls."
   },
   {
-    "id":9,
+    "id": 9,
     "answer": "It does affect me",
-    "transition":"Bullying can negatively impact your daily life. Recognizing that bullying is affecting you is the first step in making a positive change."
+    "transition": "Bullying can negatively impact your daily life. Recognizing that bullying is affecting you is the first step in making a positive change.",
+    "transition_fr": "Le harcèlement peut avoir un impact négatif sur votre vie quotidienne. Reconnaître que le harcèlement vous affecte est la première étape pour apporter un changement positif."
   },
   {
-    "id":10,
+    "id": 10,
     "answer": "It does affect me",
-    "transition":"Help your loved ones recognize that bullying is affecting different parts of their life and support them to make changes"
+    "transition": "Help your loved ones recognize that bullying is affecting different parts of their life and support them to make changes",
+    "transition_fr": "Aidez vos proches à reconnaître que le harcèlement a des conséquences sur différents aspects de leur vie et soutenez-les pour apporter des changements."
   },
   {
-    "id":11,
+    "id": 11,
     "answer": "It does not affect me",
-    "transition":"Make sure to check in with yourself often. Sometimes emotions can be expressed in ways that we do not expect."
+    "transition": "Make sure to check in with yourself often. Sometimes emotions can be expressed in ways that we do not expect.",
+    "transition_fr": "Assurez-vous de vous vérifier vous-même régulièrement. Parfois, les émotions peuvent être exprimées de manières que nous n'attendons pas."
   },
   {
-    "id":12,
+    "id": 12,
     "answer": "It does not affect me",
-    "transition":"Everyone expresses emotions differently. People process bullying in many ways, there is no single way to deal with bullying."
+    "transition": "Everyone expresses emotions differently. People process bullying in many ways, there is no single way to deal with bullying.",
+    "transition_fr": "Chacun exprime les émotions différemment. Les gens gèrent le harcèlement de différentes manières, il n'y a pas de méthode unique pour y faire face."
   },
   {
-    "id":13,
+    "id": 13,
     "answer": "Yes, I have a support system",
-    "transition":"Asking for help and being vulnerable, is truly an act of strength. Reach out to your support system as often as you need to, they are there to help you."
+    "transition": "Asking for help and being vulnerable, is truly an act of strength. Reach out to your support system as often as you need to, they are there to help you.",
+    "transition_fr": "Demander de l'aide et être vulnérable est vraiment un acte de force. Contactez votre système de soutien aussi souvent que vous en avez besoin, ils sont là pour vous aider."
   },
   {
-    "id":14,
+    "id": 14,
     "answer": "Yes, I have a support system",
-    "transition":"You are a part of your loved one support system. Be sure to take care of yourself as well, you cannot support others without supporting yourself."
+    "transition": "You are a part of your loved one support system. Be sure to take care of yourself as well, you cannot support others without supporting yourself.",
+    "transition_fr": "Vous faites partie du système de soutien de vos proches. Assurez-vous de prendre soin de vous également, vous ne pouvez pas aider les autres sans vous aider vous-même."
   },
   {
-    "id":15,
+    "id": 15,
     "answer": "No, I deal with things on my own",
-    "transition":"It is okay to handle things on your own. Trust and connection with others is something that grows over time. You are not alone, our community is always here for you."
+    "transition": "It is okay to handle things on your own. Trust and connection with others is something that grows over time. You are not alone, our community is always here for you.",
+    "transition_fr": "Il est normal de gérer les choses seul. La confiance et la connexion avec les autres se développent avec le temps. Vous n'êtes pas seul, notre communauté est toujours là pour vous."
   },
   {
-    "id":16,
+    "id": 16,
     "answer": "No, I deal with things on my own",
-    "transition":"Your loved one may be more comfortable dealing with things on their own. Do not push them to share, just make sure they know you are there for them if they want to reach out."
+    "transition": "Your loved one may be more comfortable dealing with things on their own. Do not push them to share, just make sure they know you are there for them if they want to reach out.",
+    "transition_fr": "Votre proche peut être plus à l'aise de gérer les choses seul. Ne les poussez pas à partager, assurez-vous simplement qu'ils savent que vous êtes là pour eux s'ils veulent demander de l'aide."
   }
 ]
-
-
-  

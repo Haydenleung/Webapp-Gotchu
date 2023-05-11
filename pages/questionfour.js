@@ -12,12 +12,19 @@ import NextButton from '@/components/NextButton'
 import AnswerButton from '@/components/AnswerButton'
 import QuestionIndicator from '@/components/QuestionIndicator'
 import data from '../data/walking.json'
+import { useIntl } from 'react-intl'
 
 export default function QuestionFour() {
 
+  const { locales } = useRouter();
+  const intl = useIntl();
+  const number = intl.formatMessage({ id: 'page.questionFour.number' });
+  const title = intl.formatMessage({ id: 'page.questionFour.title' });
+  const ansOne = intl.formatMessage({ id: 'page.questionFour.ansOne' });
+  const ansTwo = intl.formatMessage({ id: 'page.questionFour.ansTwo' });
+
   const [answerFour, setAnswerFour] = useState();
   const [colorUrl, setColorUrl] = useState([...data])
-
 
   const router = useRouter();
   const query = router.query;
@@ -27,13 +34,10 @@ export default function QuestionFour() {
   const answerTwo = query.answerTwo;
   const answerThree = query.answerThree;
 
-
-
   const [isClickP, setIsClickP] = useState(false);
   const [isClickG, setIsClickG] = useState(false);
   const [isClickO, setIsClickO] = useState(false);
   const [next, setNext] = useState(false);
-
 
   return (
     <>
@@ -60,15 +64,15 @@ export default function QuestionFour() {
             >
 
               <div className={styles.question}>
-                <h6>Question 4</h6>
-                <h4>Do you have a support system?</h4>
+                <h6>{number}</h6>
+                <h4>{title}</h4>
               </div>
               <div className={styles.answer}>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(true); setIsClickG(false); setIsClickO(false); setNext(true); setAnswerFour("A") }}>
-                  <AnswerButton img={'/answer/four_support.png'} txt={'Yes, I have a support system'} color={'purple'} isClickP={isClickP} />
+                  <AnswerButton img={'/answer/four_support.png'} txt={ansOne} color={'purple'} isClickP={isClickP} />
                 </div>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(true); setIsClickO(false); setNext(true); setAnswerFour("B") }}>
-                  <AnswerButton img={'/answer/four_nosupport.png'} txt={'No, I deal with things on my own'} color={'green'} isClickG={isClickG} />
+                  <AnswerButton img={'/answer/four_nosupport.png'} txt={ansTwo} color={'green'} isClickG={isClickG} />
                 </div>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(false); setIsClickO(true); setNext(true) }}>
                   {/* <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'orange'} isClickO={isClickO} /> */}

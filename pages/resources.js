@@ -12,8 +12,20 @@ import quiz from '/public/icons/quizIcon.svg'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from "next/router";
+import { useIntl } from 'react-intl'
 
 export default function Resources() {
+
+    const { locales } = useRouter();
+    const intl = useIntl();
+    const pageTitle = intl.formatMessage({ id: "page.nav.resources" })
+    const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
+    const headingOne = intl.formatMessage({ id: 'page.resource.headingOne' });
+    const contentOne = intl.formatMessage({ id: 'page.resource.contentOne' });
+    const headingTwo = intl.formatMessage({ id: 'page.resource.headingTwo' });
+    const contentTwo = intl.formatMessage({ id: 'page.resource.contentTwo' });
+    const headingThree = intl.formatMessage({ id: 'page.resource.headingThree' });
+    const contentThree = intl.formatMessage({ id: 'page.resource.contentThree' });
 
     const router = useRouter();
     const query = router.query;
@@ -27,8 +39,8 @@ export default function Resources() {
     return (
         <>
             <Head>
-                <title>Resources</title>
-                <meta name="description" content="Anti-Bully App" />
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDes} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -39,8 +51,8 @@ export default function Resources() {
                     <div className={styles.pageContent}>
                         <Image className={styles.logo} src={logo} width={310} height={124} />
                         <section className={styles.externalSupport}>
-                            <p className={styles.sectionHead}>External Support</p>
-                            <p className={styles.sectionText}>Here are some resources available to help you deal with bullying. You will find many online resources are available, including websites, blogs, and social media groups that provide information and support for those dealing with bullying.</p>
+                            <p className={styles.sectionHead}>{headingOne}</p>
+                            <p className={styles.sectionText}>{contentOne}</p>
                             <div className={styles.row}>
                                 <Image className={styles.img} src={'/resources/externalHelp.png'} width={168} height={351} />
                                 <div className={styles.buttons}>
@@ -58,8 +70,8 @@ export default function Resources() {
                             </div>
                         </section>
                         <section className={styles.referenceReading}>
-                            <p className={styles.sectionHead}>Reference Reading</p>
-                            <p className={styles.sectionText}>We offer Reference Reading resources for those looking to learn more about the effects of bullying. Our selection includes a range of materials, including articles, books, and research papers from reputable sources.</p>
+                            <p className={styles.sectionHead}>{headingTwo}</p>
+                            <p className={styles.sectionText}>{contentTwo}</p>
                             <div className={styles.row}>
                                 <div className={styles.buttons}>
 
@@ -77,8 +89,8 @@ export default function Resources() {
                             </div>
                         </section>
                         <section className={styles.externalQuiz}>
-                            <p className={styles.sectionHead}>External Quiz</p>
-                            <p className={styles.sectionText}>Many websites offer quizzes to help test your knowledge and understanding of the effects of bullying. By taking these quizzes, you can assess your own understanding of the issue and identify areas where you may need to learn more.</p>
+                            <p className={styles.sectionHead}>{headingThree}</p>
+                            <p className={styles.sectionText}>{contentThree}</p>
                             <div className={styles.row}>
                                 <Image className={styles.img} src={'/resources/externalQuiz.png'} width={168} height={351} />
                                 <div className={styles.buttons}>

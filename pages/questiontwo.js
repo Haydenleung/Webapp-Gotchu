@@ -12,8 +12,19 @@ import NextButton from '@/components/NextButton'
 import AnswerButton from '@/components/AnswerButton'
 import QuestionIndicator from '@/components/QuestionIndicator'
 import data from '../data/walking.json'
+import { useIntl } from 'react-intl'
 
-export default function QuestionTwo() {
+export default function QuestionTwo({ dir }) {
+
+  const { locales } = useRouter();
+  const intl = useIntl();
+  const number = intl.formatMessage({ id: 'page.questionTwo.number' });
+  const title = intl.formatMessage({ id: 'page.questionTwo.title' });
+  const ansOne = intl.formatMessage({ id: 'page.questionTwo.ansOne' });
+  const ansTwo = intl.formatMessage({ id: 'page.questionTwo.ansTwo' });
+  const ansThree = intl.formatMessage({ id: 'page.questionTwo.ansThree' });
+
+
   const [colorUrl, setColorUrl] = useState([...data]);
   const [answerTwo, setAnswerTwo] = useState();
 
@@ -54,18 +65,18 @@ export default function QuestionTwo() {
             >
 
               <div className={styles.question}>
-                <h6>Question 2</h6>
-                <h4>What kind of bullying is happening?</h4>
+                <h6>{number}</h6>
+                <h4>{title}</h4>
               </div>
               <div className={styles.answer}>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(true); setIsClickG(false); setIsClickO(false); setNext(true); setAnswerTwo("A") }}>
-                  <AnswerButton img={'/answer/two_brain.png'} txt={'Emotional Psychological'} color={'purple'} isClickP={isClickP} />
+                  <AnswerButton img={'/answer/two_brain.png'} txt={ansOne} color={'purple'} isClickP={isClickP} />
                 </div>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(true); setIsClickO(false); setNext(true); setAnswerTwo("B") }}>
-                  <AnswerButton img={'/answer/two_physic.png'} txt={'Physical'} color={'green'} isClickG={isClickG} />
+                  <AnswerButton img={'/answer/two_physic.png'} txt={ansTwo} color={'green'} isClickG={isClickG} />
                 </div>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(false); setIsClickO(true); setNext(true); setAnswerTwo("C") }}>
-                  <AnswerButton img={'/answer/two_verbal.png'} txt={'Verbal'} color={'orange'} isClickO={isClickO} />
+                  <AnswerButton img={'/answer/two_verbal.png'} txt={ansThree} color={'orange'} isClickO={isClickO} />
                 </div>
               </div>
             </motion.div>

@@ -7,8 +7,20 @@ import Navbar from '@/components/Navbar'
 import Characters from '@/components/Characters'
 import NextButton from '@/components/NextButton'
 import ColorSelection from '@/components/ColorSelection'
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
 
-export default function Personal() {
+export default function Personal({ dir }) {
+
+    const { locales } = useRouter();
+    const intl = useIntl();
+    const pageTitle = intl.formatMessage({ id: "page.home.button.start" })
+    const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
+    const title = intl.formatMessage({ id: "page.personal.title" })
+    const subTitle = intl.formatMessage({ id: "page.personal.subTitle" })
+    const inputText = intl.formatMessage({ id: "page.personal.input" })
+    const colorTitle = intl.formatMessage({ id: "page.personal.color" })
+
 
     const [purple, setPurple] = useState(false);
     const [green, setGreen] = useState(false);
@@ -68,8 +80,8 @@ export default function Personal() {
     return (
         <>
             <Head>
-                <title>Get Started</title>
-                <meta name="description" content="Anti-Bully App" />
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDes} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -80,20 +92,20 @@ export default function Personal() {
                     <div className={styles.pageContent}>
                         <div className={styles.topContent}>
                             <div className={styles.pageTitle}>
-                                <h4>What's your name?</h4>
-                                <p>(Optional)</p>
+                                <h4>{title}</h4>
+                                <p>({subTitle})</p>
                             </div>
                             <div className={styles.nameInput}>
                                 <input
                                     type="text"
                                     value={name}
-                                    placeholder="Characters Only..."
+                                    placeholder={inputText}
                                     onChange={handleInputChange}
                                     className={styles.inputFelid}
                                 />
                             </div>
                             <div className={styles.pagePick}>
-                                <h4>Pick a color you like</h4>
+                                <h4>{colorTitle}</h4>
                             </div>
                             <div className={styles.character}>
                                 <div className={styles.colorTile} onClick={() => { colorChange(); setPurple(true) }} style={{ opacity: opacP }}>

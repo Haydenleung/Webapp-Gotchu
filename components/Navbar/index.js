@@ -4,17 +4,29 @@ import styles from "./Navbar.module.css"
 import Image from 'next/image'
 import { useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
 
-export default function Navbar() {
+export default function Navbar({ dir }) {
 
   const [popup, setPopup] = useState(false);
+  const { locales } = useRouter();
+  const intl = useIntl();
+  const { asPath } = useRouter();
+
+  const homeMsg = intl.formatMessage({ id: 'page.nav.home' });
+  const tutorialMsg = intl.formatMessage({ id: 'page.nav.tutorial' });
+  const quizMsg = intl.formatMessage({ id: 'page.nav.quiz' });
+  const resourcesMsg = intl.formatMessage({ id: 'page.nav.resources' });
+  const aboutMsg = intl.formatMessage({ id: 'page.nav.about' });
+
 
   return (
 
     <section className={styles.navbar}>
       <div className={styles.headbar}>
-        <Link href="/" className={styles.navbarLogoContainer}><Image src={'NavbarLogo.svg'} className={styles.navbarLogo} width={40} height={40} /></Link>
-        <Image src={'hamburger.svg'} onClick={() => setPopup(true)} className={styles.hamburger} width={30} height={30} />
+        <Link href="/" className={styles.navbarLogoContainer}><Image src={'../NavbarLogo.svg'} className={styles.navbarLogo} width={40} height={40} /></Link>
+        <Image src={'../hamburger.svg'} onClick={() => setPopup(true)} className={styles.hamburger} width={30} height={30} />
       </div>
       {
         popup === true ?
@@ -35,24 +47,24 @@ export default function Navbar() {
               }}
             >
               <div className={styles.close}>
-                <Image src={'icons/close.svg'} onClick={() => setPopup(false)} className={styles.closeIcon} width={30} height={30} />
+                <Image src={'../icons/close.svg'} onClick={() => setPopup(false)} className={styles.closeIcon} width={30} height={30} />
               </div>
               <Link href="/">
                 <div className={styles.tab}>
-                  <Image src={'icons/home.svg'} className={styles.icon} width={30} height={30} />
-                  <h5>Home</h5>
+                  <Image src={'../icons/home.svg'} className={styles.icon} width={30} height={30} />
+                  <h5>{homeMsg}</h5>
                 </div>
               </Link>
               <Link href="/tutorial">
                 <div className={styles.tab}>
-                  <Image src={'icons/tutorial.svg'} className={styles.icon} width={30} height={30} />
-                  <h5>Tutorial</h5>
+                  <Image src={'../icons/tutorial.svg'} className={styles.icon} width={30} height={30} />
+                  <h5>{tutorialMsg}</h5>
                 </div>
               </Link>
               <Link href="/personal">
                 <div className={styles.tab}>
-                  <Image src={'icons/quiz.svg'} className={styles.icon} width={30} height={30} />
-                  <h5>Quiz</h5>
+                  <Image src={'../icons/quiz.svg'} className={styles.icon} width={30} height={30} />
+                  <h5>{quizMsg}</h5>
                 </div>
               </Link>
               {/* <Link href="/result">
@@ -61,18 +73,25 @@ export default function Navbar() {
                   <h5>Result</h5>
                 </div>
               </Link> */}
-              <Link href="/resources">
+              <Link href="resources">
                 <div className={styles.tab}>
-                  <Image src={'icons/resources.svg'} className={styles.icon} width={30} height={30} />
-                  <h5>Resources</h5>
+                  <Image src={'../icons/resources.svg'} className={styles.icon} width={30} height={30} />
+                  <h5>{resourcesMsg}</h5>
                 </div>
               </Link>
               <Link href="/team">
                 <div className={styles.tab}>
-                  <Image src={'icons/aboutus.svg'} className={styles.icon} width={30} height={30} />
-                  <h5>About Us</h5>
+                  <Image src={'../icons/aboutus.svg'} className={styles.icon} width={30} height={30} />
+                  <h5>{aboutMsg}</h5>
                 </div>
               </Link>
+              <div className={styles.lang}>
+                {[...locales].sort().map((locale) => (
+                  <Link key={locale} href={asPath} locale={locale}>
+                    <div>{locale}</div>
+                  </Link>
+                ))}
+              </div>
             </motion.div>
           </motion.div>
 
