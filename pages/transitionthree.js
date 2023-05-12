@@ -11,8 +11,14 @@ import Message from "@/components/Message";
 import QuestionIndicator from "@/components/QuestionIndicator";
 import data from '../data/walking.json'
 import transitionMsg from '../data/transition.json'
+import { useIntl } from 'react-intl'
 
-export default function TransitionThree() {
+export default function TransitionThree({ dir }) {
+
+    const { locales } = useRouter();
+    const intl = useIntl();
+    const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
+
     const router = useRouter();
     const query = router.query;
     const name = query.name;
@@ -89,7 +95,7 @@ export default function TransitionThree() {
                 <title>
                     ...
                 </title>
-                <meta name="description" content="Anti-Bully App" />
+                <meta name="description" content={pageDes} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

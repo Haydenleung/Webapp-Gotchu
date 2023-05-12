@@ -20,6 +20,12 @@
     object-fit: contain;
 }
 
+.cardImgTwo {
+    height: 160px;
+    width: 80px;
+    object-fit: contain;
+}
+
 .disclaimerImg {
     padding-top: 2.5rem;
     transform: scale(0.4);

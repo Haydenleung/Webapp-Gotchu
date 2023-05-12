@@ -47,6 +47,7 @@ export default function Result() {
     const [info, setInfo] = useState([...result]);
     const [pic, setPic] = useState([...resulthugo]);
 
+    const currentLang = router.locale;
 
     return (
         <>
@@ -97,9 +98,22 @@ export default function Result() {
                                         <div>
                                             <div className={styles.ansContainer}>
                                                 {/* <p className={styles.ansHeading}>You have chosen</p> */}
-                                                {
+                                                {/* {
                                                     info && info.map((obj, index) => {
                                                         if (obj.id == concatenatedString) {
+                                                            return (
+                                                                <Response key={index} text={obj.summary} />
+                                                            )
+                                                        }
+                                                    })
+                                                } */}
+                                                {
+                                                    info && info.map((obj, index) => {
+                                                        if (obj.id === concatenatedString && currentLang == "fr") {
+                                                            return (
+                                                                <Response key={index} text={obj.summary_fr} />
+                                                            )
+                                                        } else if (obj.id === concatenatedString) {
                                                             return (
                                                                 <Response key={index} text={obj.summary} />
                                                             )
@@ -117,7 +131,15 @@ export default function Result() {
                             <div className={styles.response}>
                                 {
                                     info && info.map((obj, index) => {
-                                        if (obj.id == concatenatedString) {
+                                        if (obj.id === concatenatedString && currentLang == "fr") {
+                                            return (
+                                                <>
+                                                    <Suggestion key={index} color='purple' heading={subTitleOne} text={obj.coping_fr} />
+                                                    <Suggestion key={index} color='green' heading={subTitleTwo} text={obj.selfcare_fr} />
+                                                    <Suggestion key={index} color='orange' heading={subTitleThree} text={obj.phone_fr} />
+                                                </>
+                                            )
+                                        } else if (obj.id === concatenatedString) {
                                             return (
                                                 <>
                                                     <Suggestion key={index} color='purple' heading={subTitleOne} text={obj.coping} />
@@ -129,7 +151,6 @@ export default function Result() {
                                         }
                                     })
                                 }
-
                             </div>
                         </div>
 

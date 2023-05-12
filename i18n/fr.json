@@ -26,22 +26,26 @@
   "page.start.exeTitle": "Exercice de respiration",
   "page.start.exeInstr": "Appuyez sur la forme derrière et respirez lentement pendant 15 secondes. Relâchez votre doigt lorsque vous êtes prêt à commencer.",
 
+  "page.questionOne.heading": "Question Une",
   "page.questionOne.number": "Question 1",
   "page.questionOne.title": "Êtes-vous ou quelqu'un d'autre victime d'intimidation?",
   "page.questionOne.ansOne": "Moi",
   "page.questionOne.ansTwo": "Quelqu'un d'autre",
 
+  "page.questionTwo.heading": "Question Deux",
   "page.questionTwo.number": "Question 2",
   "page.questionTwo.title": "Quel type d'intimidation se produit?",
   "page.questionTwo.ansOne": "Émotionnelle Psychologique",
   "page.questionTwo.ansTwo": "Physique",
   "page.questionTwo.ansThree": "Verbale",
 
+  "page.questionThree.heading": "Question Trois",
   "page.questionThree.number": "Question 3",
   "page.questionThree.title": "Comment cela impacte-t-il votre vie quotidienne?",
   "page.questionThree.ansOne": "Cela me touche",
   "page.questionThree.ansTwo": "Cela ne me touche pas",
 
+  "page.questionFour.heading": "Question Quatre",
   "page.questionFour.number": "Question 4",
   "page.questionFour.title": "Avez-vous un système de soutien?",
   "page.questionFour.ansOne": "Oui, j'ai un système de soutien",
@@ -65,6 +69,7 @@
   "page.resource.contentTwo": "Nous offrons des ressources de lecture de référence pour ceux qui cherchent à en savoir plus sur les effets du harcèlement. Notre sélection comprend une gamme de matériaux, y compris des articles, des livres et des articles de recherche de sources réputées.",
   "page.resource.headingThree": "Quiz externe",
   "page.resource.contentThree": "De nombreux sites web proposent des quiz pour aider à tester vos connaissances et votre compréhension des effets du harcèlement. En passant ces quiz, vous pouvez évaluer votre propre compréhension de la question et identifier les domaines où vous pourriez avoir besoin d'en savoir plus.",
+  "page.resource.button": "Retour au résultat",
 
   "page.tutorial.one": "Navigation",
   "page.tutorial.two": "Bouton suivant",

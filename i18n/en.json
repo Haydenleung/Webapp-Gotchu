@@ -26,22 +26,26 @@
   "page.start.exeTitle": "Breathing Exercise",
   "page.start.exeInstr": "Press the shape behind and slowly breathing for 15 seconds. Release your finger when you are ready to start.",
 
+  "page.questionOne.heading": "Question One",
   "page.questionOne.number": "Question 1",
   "page.questionOne.title": "Are you or someone else being bullied?",
   "page.questionOne.ansOne": "Me",
   "page.questionOne.ansTwo": "Someone Else",
 
+  "page.questionTwo.heading": "Question Two",
   "page.questionTwo.number": "Question 2",
   "page.questionTwo.title": "What kind of bullying is happening?",
   "page.questionTwo.ansOne": "Emotional Psychological",
   "page.questionTwo.ansTwo": "Physical",
   "page.questionTwo.ansThree": "Verbal",
 
+  "page.questionThree.heading": "Question Three",
   "page.questionThree.number": "Question 3",
   "page.questionThree.title": "How does it impact your daily life?",
   "page.questionThree.ansOne": "It does affect me",
   "page.questionThree.ansTwo": "It does not affect me",
 
+  "page.questionFour.heading": "Question Four",
   "page.questionFour.number": "Question 4",
   "page.questionFour.title": "Do you have a support system?",
   "page.questionFour.ansOne": "Yes, I have a support system",
@@ -65,6 +69,7 @@
   "page.resource.contentTwo": "We offer Reference Reading resources for those looking to learn more about the effects of bullying. Our selection includes a range of materials, including articles, books, and research papers from reputable sources.",
   "page.resource.headingThree": "External Quiz",
   "page.resource.contentThree": "Many websites offer quizzes to help test your knowledge and understanding of the effects of bullying. By taking these quizzes, you can assess your own understanding of the issue and identify areas where you may need to learn more.",
+  "page.resource.button": "Return to Result",
 
   "page.tutorial.one": "Navigation",
   "page.tutorial.two": "Next Button",

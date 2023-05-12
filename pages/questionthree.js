@@ -19,6 +19,8 @@ export default function QuestionThree() {
 
   const { locales } = useRouter();
   const intl = useIntl();
+  const pageTitle = intl.formatMessage({ id: 'page.questionThree.heading' });
+  const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
   const number = intl.formatMessage({ id: 'page.questionThree.number' });
   const title = intl.formatMessage({ id: 'page.questionThree.title' });
   const ansOne = intl.formatMessage({ id: 'page.questionThree.ansOne' });
@@ -47,8 +49,8 @@ export default function QuestionThree() {
     <>
 
       <Head>
-        <title>Question Three</title>
-        <meta name="description" content="Anti-Bully App" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDes} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

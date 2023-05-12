@@ -62,7 +62,7 @@ export default function IntroductionCard({ dir }) {
                     slideIndex == 2 ?
                         <>
                             <h6 className={styles.tabTitle}>{defTitle}</h6>
-                            <p className={styles.chartTitle}>Aged 15 to 17 Reported Experiencing Some Form of Bullying in the Preceding Year</p>
+                            <p className={styles.chartTitle}>{chartTitle}</p>
                             <PieChart />
                             {/* <p className={styles.cardText}>{tutorialText}</p> */}
                             <p className={styles.cardText}>{definition}</p>
@@ -70,7 +70,7 @@ export default function IntroductionCard({ dir }) {
                         slideIndex == 3 ?
                             <>
                                 <h6 className={styles.tabTitle}>{disTitle}</h6>
-                                <Image src={'/IntroImg3.png'} className={styles.cardImg} width={200} height={170} />
+                                <Image src={'/IntroImg3.png'} className={styles.cardImgTwo} width={200} height={170} />
                                 <p className={styles.cardText}>{disclaimerText}</p>
                             </> :
                             <p className={styles.cardText}>{introText}</p>

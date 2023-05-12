@@ -18,6 +18,8 @@ export default function QuestionTwo({ dir }) {
 
   const { locales } = useRouter();
   const intl = useIntl();
+  const pageTitle = intl.formatMessage({ id: 'page.questionTwo.heading' });
+  const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
   const number = intl.formatMessage({ id: 'page.questionTwo.number' });
   const title = intl.formatMessage({ id: 'page.questionTwo.title' });
   const ansOne = intl.formatMessage({ id: 'page.questionTwo.ansOne' });
@@ -44,8 +46,8 @@ export default function QuestionTwo({ dir }) {
   return (
     <>
       <Head>
-        <title>Question Two</title>
-        <meta name="description" content="Anti-Bully App" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDes} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

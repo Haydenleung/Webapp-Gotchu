@@ -26,6 +26,8 @@ export default function Resources() {
     const contentTwo = intl.formatMessage({ id: 'page.resource.contentTwo' });
     const headingThree = intl.formatMessage({ id: 'page.resource.headingThree' });
     const contentThree = intl.formatMessage({ id: 'page.resource.contentThree' });
+    const buttonText = intl.formatMessage({ id: 'page.resource.button' });
+
 
     const router = useRouter();
     const query = router.query;
@@ -117,7 +119,7 @@ export default function Resources() {
                             color ?
                                 <div className={styles.actionButton}>
                                     <Link href={{ pathname: '/result', query: { name, color, answerOne, answerTwo, answerThree, answerFour } }}>
-                                        <Button text='Return to Result' color='var(--burgundy)' />
+                                        <Button text={buttonText} color='var(--burgundy)' />
                                     </Link>
                                 </div> : <></>
                         }
