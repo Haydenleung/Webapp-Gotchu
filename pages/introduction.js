@@ -5,17 +5,23 @@ import styles from "../styles/introduction.module.css"
 import Link from 'next/link'
 import IntroductionCard from '@/components/IntroductionCard'
 import Button from '@/components/Button'
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
 
-
-export default function Introduction() {
+export default function Introduction({ dir }) {
 
     var pageTitle = process.env.NEXT_PUBLIC_TITLE;
+
+    const { locales } = useRouter();
+    const intl = useIntl();
+    const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
+    const acknowledgeButton = intl.formatMessage({ id: "page.intro.button" })
 
     return (
         <>
             <Head>
-                <title>Introduction</title>
-                <meta name="description" content="Anti-Bully App" />
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDes} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -36,7 +42,7 @@ export default function Introduction() {
                         <div className={styles.bottomContent}>
                             <Link href='/personal'>
                                 <Button color='#896686'
-                                    text='Acknowledge'
+                                    text={acknowledgeButton}
                                     className={styles.actionBtn}
                                 />
                             </Link>

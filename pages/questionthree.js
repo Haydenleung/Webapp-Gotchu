@@ -12,9 +12,19 @@ import NextButton from '@/components/NextButton'
 import AnswerButton from '@/components/AnswerButton'
 import QuestionIndicator from '@/components/QuestionIndicator'
 import data from '../data/walking.json'
+import { useIntl } from 'react-intl'
 
 
 export default function QuestionThree() {
+
+  const { locales } = useRouter();
+  const intl = useIntl();
+  const pageTitle = intl.formatMessage({ id: 'page.questionThree.heading' });
+  const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
+  const number = intl.formatMessage({ id: 'page.questionThree.number' });
+  const title = intl.formatMessage({ id: 'page.questionThree.title' });
+  const ansOne = intl.formatMessage({ id: 'page.questionThree.ansOne' });
+  const ansTwo = intl.formatMessage({ id: 'page.questionThree.ansTwo' });
 
   const [answerThree, setAnswerThree] = useState();
   const [colorUrl, setColorUrl] = useState([...data]);
@@ -39,8 +49,8 @@ export default function QuestionThree() {
     <>
 
       <Head>
-        <title>Question Three</title>
-        <meta name="description" content="Anti-Bully App" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDes} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -60,15 +70,15 @@ export default function QuestionThree() {
             >
 
               <div className={styles.question}>
-                <h6>Question 3</h6>
-                <h4>How does it impact your daily life?</h4>
+                <h6>{number}</h6>
+                <h4>{title}</h4>
               </div>
               <div className={styles.answer}>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(true); setIsClickG(false); setIsClickO(false); setNext(true); setAnswerThree("A") }}>
-                  <AnswerButton img={'/answer/three_affect.png'} txt={'It does affect me'} color={'purple'} isClickP={isClickP} />
+                  <AnswerButton img={'/answer/three_affect.png'} txt={ansOne} color={'purple'} isClickP={isClickP} />
                 </div>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(true); setIsClickO(false); setNext(true); setAnswerThree("B") }}>
-                  <AnswerButton img={'/answer/three_notaffect.png'} txt={'It does not affect me'} color={'green'} isClickG={isClickG} />
+                  <AnswerButton img={'/answer/three_notaffect.png'} txt={ansTwo} color={'green'} isClickG={isClickG} />
                 </div>
                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(false); setIsClickO(true); setNext(true) }}>
                   {/* <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'orange'} isClickO={isClickO} /> */}

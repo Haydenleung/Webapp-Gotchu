@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import styles from './PieChart.module.css'
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
 import { Pie } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -16,7 +18,14 @@ ChartJS.register(
 );
 
 
-export default function PieChart() {
+export default function PieChart({ dir }) {
+
+    const { locales } = useRouter();
+    const intl = useIntl();
+    const chartLegandOne = intl.formatMessage({ id: "page.introcard.chartLegandOne" })
+    const chartLegandTwo = intl.formatMessage({ id: "page.introcard.chartLegandTwo" })
+
+
     const [chartData, setChartData] = useState({
         datasets: []
     })
@@ -24,7 +33,7 @@ export default function PieChart() {
     const [chartOptions, setChartOptions] = useState({})
     useEffect(() => {
         setChartData({
-            labels: ['Yes (70%)', 'No (30%)'],
+            labels: [chartLegandOne, chartLegandTwo],
             datasets: [
                 {
                     label: 'Rate %',
@@ -53,7 +62,7 @@ export default function PieChart() {
                 }
             },
             maintainAspectRatio: false,
-            responsive: true
+            responsive: true,
         })
     }, [])
 

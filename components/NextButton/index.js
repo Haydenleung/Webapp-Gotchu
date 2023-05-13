@@ -2,8 +2,14 @@ import React from 'react'
 import styles from './NextButton.module.css'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
 
-export default function NextButton() {
+export default function NextButton({ dir }) {
+
+    const { locales } = useRouter();
+    const intl = useIntl();
+    const nextText = intl.formatMessage({ id: "page.button.next" })
 
     const variants = {
         // over: { x: ["-10%", "0%"] },
@@ -14,7 +20,7 @@ export default function NextButton() {
 
     return (
         <div className={styles.buttonContainer} onMouseEnter={() => setIsOver(true)} onMouseLeave={() => setIsOver(false)}>
-            <div className={styles.button}>Next</div>
+            <div className={styles.button}>{nextText}</div>
             <motion.img
                 src='/icons/nextArrow.svg'
                 width={20}

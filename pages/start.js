@@ -11,9 +11,22 @@ import NextButton from '@/components/NextButton'
 import { motion } from 'framer-motion'
 import data from '../data/walking.json'
 import DynamicMessage from '@/components/DynamicMessage'
+import { useIntl } from 'react-intl'
 
 
 export default function Start() {
+
+    const { locales } = useRouter();
+    const intl = useIntl();
+    const pageTitle = intl.formatMessage({ id: "page.home.button.start" })
+    const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
+    const greeting = intl.formatMessage({ id: 'page.start.greeting' });
+    const instrOne = intl.formatMessage({ id: 'page.start.instrOne' });
+    const instrTwo = intl.formatMessage({ id: 'page.start.instrTwo' });
+    const instrThree = intl.formatMessage({ id: 'page.start.instrThree' });
+    const exeTitle = intl.formatMessage({ id: 'page.start.exeTitle' });
+    const exeInstr = intl.formatMessage({ id: 'page.start.exeInstr' });
+
     const [colorUrl, setColorUrl] = useState([...data]);
     const [colorHex, setColorHex] = useState('#896686');
     const [isNext, setIsNext] = useState(false);
@@ -54,8 +67,7 @@ export default function Start() {
             router.push({
                 pathname: "/questionpage",
                 query: { name: name, color: color }
-            },
-                "/questionpage")
+            })
         }, 4800);
     }
 
@@ -181,8 +193,8 @@ export default function Start() {
     return (
         <>
             <Head>
-                <title>Get Started</title>
-                <meta name="description" content="Anti-Bully App" />
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDes} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -204,11 +216,11 @@ export default function Start() {
                                 animate={{ opacity: 0 }}
                             >
                                 <DynamicMessage
-                                    txt={"Hello " + name + "!!!"}
+                                    txt={greeting + " " + name + "!"}
                                     txt2={'          '}
-                                    txt3={'Get ready to meet your new quiz buddy, Hugo!'}
-                                    txt4={'It will be with you every step of the way as you take on the quiz.'}
-                                    txt5={"Before we start, let's start a breathing exercise."}
+                                    txt3={instrOne}
+                                    txt4={instrTwo}
+                                    txt5={instrThree}
                                 />
                             </motion.div>
                             <div className={styles.shape} onMouseDown={() => setIsTap(true)} onClick={() => { setIsNext(true); nextClick() }}>
@@ -225,8 +237,8 @@ export default function Start() {
                                     variants={textVariants}
                                     initial={{ opacity: 0 }}
                                     animate={isTap ? "next" : "start"}
-                                ><span>Breathing Exercise</span><br /><br />
-                                    Press the shape behind and slowly breathing for 15 seconds. Release your finger when you are ready to start.
+                                ><span>{exeTitle}</span><br /><br />
+                                    {exeInstr}
                                 </motion.p>
                                 <motion.p
                                     className={styles.shapeTextTwo}

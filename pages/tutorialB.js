@@ -9,27 +9,43 @@ import BackButton from '@/components/BackButton'
 import NextButton from '@/components/NextButton'
 import AnswerButton from '@/components/AnswerButton'
 import QuestionIndicator from '@/components/QuestionIndicator'
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
+import { useState } from 'react'
 
 export default function TutorailB() {
+
+    const { locales } = useRouter();
+    const intl = useIntl();
+    const pageTitle = intl.formatMessage({ id: "page.nav.tutorial" })
+    const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
+    const oneText = intl.formatMessage({ id: "page.tutorialTwo.one" })
+    const twoText = intl.formatMessage({ id: "page.tutorialTwo.two" })
+    const number = intl.formatMessage({ id: 'page.questionOne.number' });
+    const title = intl.formatMessage({ id: 'page.questionOne.title' });
+    const ansOne = intl.formatMessage({ id: 'page.questionOne.ansOne' });
+    const ansTwo = intl.formatMessage({ id: 'page.questionOne.ansTwo' });
+
+    const [landing, setLanding] = useState('true');
 
     return (
         <>
             <Head>
-                <title>Tutorial</title>
-                <meta name="description" content="Anti-Bully App" />
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDes} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.main}>
                 <div className={styles.empty} />
                 <Navbar />
-                <Link href="/" className={styles.filterB} />
+                <Link className={styles.filterB} href={{ pathname: "/", query: { landing } }} />
                 <div className={styles.filter} />
                 <div className={styles.main_container}>
                     <div className={styles.clickIndicator}>
-                        <Image src={'click_dot.svg'} width={65} height={65} className={styles.clickDot} />
+                        <Image src={'../click_dot.svg'} width={65} height={65} className={styles.clickDot} />
                         <motion.img
-                            src={'click_hand.svg'}
+                            src={'../click_hand.svg'}
                             width={100}
                             height={100}
                             className={styles.clickHand}
@@ -43,9 +59,9 @@ export default function TutorailB() {
                         />
                     </div>
                     <Image src={"/icons/SelectArrow.svg"} width={25} height={57} className={styles.selectionArrow} />
-                    <h4 className={styles.tutorialText}>Select Answer</h4>
+                    <h4 className={styles.tutorialText}>{oneText}</h4>
                     <Image src={"/icons/BackArrow.svg"} width={25} height={57} className={styles.backArrow} />
-                    <h4 className={styles.tutorialTextTwo}>Back Button</h4>
+                    <h4 className={styles.tutorialTextTwo}>{twoText}</h4>
                     <div className={styles.pageContent}>
                         <div
                             className={styles.topContent}
@@ -54,15 +70,15 @@ export default function TutorailB() {
                                 <QuestionIndicator />
                             </div>
                             <div className={styles.question}>
-                                <h6>Question 1</h6>
-                                <h4>Are you or someone else being bullied?</h4>
+                                <h6>{number}</h6>
+                                <h4>{title}</h4>
                             </div>
                             <div className={styles.answer}>
                                 <div className={styles.answerBox} onClick={() => { setIsClickP(true); setIsClickG(false); setIsClickO(false); setNext(true); setAnswerOne("A") }}>
-                                    <AnswerButton img={'/answer/one_me.png'} txt={'Me'} color={'purple'} />
+                                    <AnswerButton img={'/answer/one_me.png'} txt={ansOne} color={'purple'} />
                                 </div>
                                 <div className={styles.answerBox} onClick={() => { setIsClickP(false); setIsClickG(true); setIsClickO(false); setNext(true); setAnswerOne("B") }}>
-                                    <AnswerButton img={'/answer/one_someone.png'} txt={'Someone Else'} color={'green'} />
+                                    <AnswerButton img={'/answer/one_someone.png'} txt={ansTwo} color={'green'} />
                                 </div>
                             </div>
                         </div>

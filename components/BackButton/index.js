@@ -3,8 +3,14 @@ import styles from './BackButton.module.css'
 import Image from 'next/image'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
 
-export default function BackButton() {
+export default function BackButton({ dir }) {
+
+  const { locales } = useRouter();
+  const intl = useIntl();
+  const backText = intl.formatMessage({ id: "page.button.back" })
 
   const variants = {
     over: { x: ["0%", "10%"] },
@@ -29,7 +35,7 @@ export default function BackButton() {
             ease: "easeOut",
           }}
         />
-        <div className={styles.button}>Back</div>
+        <div className={styles.button}>{backText}</div>
       </div>
     </div>
 

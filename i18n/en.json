@@ -1,0 +1,102 @@
+{
+  "page.home.head.title": "Gotchu",
+  "page.home.head.meta.description": "Anti-Bully App",
+
+  "page.home.button.start": "Get Started",
+  "page.home.button.tutorial": "Tutorial",
+
+  "page.intro.title": "Introduction",
+  "page.intro.button": "Acknowledge",
+
+  "page.personal.title": "What's your name?",
+  "page.personal.subTitle": "Optional",
+  "page.personal.input": "Characters Only",
+  "page.personal.color": "Pick a color you like",
+
+  "page.nav.home": "Home",
+  "page.nav.tutorial": "Tutorial",
+  "page.nav.quiz": "Quiz",
+  "page.nav.resources": "Resources",
+  "page.nav.about": "About Us",
+
+  "page.start.greeting": "Hello ",
+  "page.start.instrOne": "Get ready to meet your new quiz buddy, Hugo!",
+  "page.start.instrTwo": "It will be with you every step of the way as you take on the quiz.",
+  "page.start.instrThree": "Before we start, let's start a breathing exercise.",
+  "page.start.exeTitle": "Breathing Exercise",
+  "page.start.exeInstr": "Press the shape behind and slowly breathing for 15 seconds. Release your finger when you are ready to start.",
+
+  "page.questionOne.heading": "Question One",
+  "page.questionOne.number": "Question 1",
+  "page.questionOne.title": "Are you or someone else being bullied?",
+  "page.questionOne.ansOne": "Me",
+  "page.questionOne.ansTwo": "Someone Else",
+
+  "page.questionTwo.heading": "Question Two",
+  "page.questionTwo.number": "Question 2",
+  "page.questionTwo.title": "What kind of bullying is happening?",
+  "page.questionTwo.ansOne": "Emotional Psychological",
+  "page.questionTwo.ansTwo": "Physical",
+  "page.questionTwo.ansThree": "Verbal",
+
+  "page.questionThree.heading": "Question Three",
+  "page.questionThree.number": "Question 3",
+  "page.questionThree.title": "How does it impact your daily life?",
+  "page.questionThree.ansOne": "It does affect me",
+  "page.questionThree.ansTwo": "It does not affect me",
+
+  "page.questionFour.heading": "Question Four",
+  "page.questionFour.number": "Question 4",
+  "page.questionFour.title": "Do you have a support system?",
+  "page.questionFour.ansOne": "Yes, I have a support system",
+  "page.questionFour.ansTwo": "No, I deal with things on my own",
+
+  "page.result.pageTitle": "Résultat",
+  "page.result.headingOne": "Hi",
+  "page.result.headingTwo": "We know it is not easy.",
+  "page.result.headingThree": "You did a great job!",
+  "page.result.summaryTitle": "Result Summary",
+  "page.result.suggestionTitle": "Suggestions for You",
+  "page.result.subTitleOne": "Coping Tips",
+  "page.result.subTitleTwo": "Self Care Tips",
+  "page.result.subTitleThree": "Crisis Phone Numbers",
+  "page.result.buttonOne": "Find Support",
+  "page.result.buttonTwo": "Quiz Again",
+
+  "page.resource.headingOne": "External Support",
+  "page.resource.contentOne": "Here are some resources available to help you deal with bullying. You will find many online resources are available, including websites, blogs, and social media groups that provide information and support for those dealing with bullying.",
+  "page.resource.headingTwo": "Reference Reading",
+  "page.resource.contentTwo": "We offer Reference Reading resources for those looking to learn more about the effects of bullying. Our selection includes a range of materials, including articles, books, and research papers from reputable sources.",
+  "page.resource.headingThree": "External Quiz",
+  "page.resource.contentThree": "Many websites offer quizzes to help test your knowledge and understanding of the effects of bullying. By taking these quizzes, you can assess your own understanding of the issue and identify areas where you may need to learn more.",
+  "page.resource.button": "Return to Result",
+
+  "page.tutorial.one": "Navigation",
+  "page.tutorial.two": "Next Button",
+
+  "page.tutorialTwo.one": "Select Answer",
+  "page.tutorialTwo.two": "Back Button",
+
+  "page.team.title": "Our Team",
+  "page.team.oneDes": "UX/UI Designer ",
+  "page.team.oneLong": "Hayden is an outstanding UX/UI Designer and Developer from Hong Kong. He is a creative designer who keeps up with the latest design trends. Hayden has an eye for detail and consistently produces exceptional work!",
+  "page.team.twoDes": "UX/UI Designer ",
+  "page.team.twoLong": "Kiona is a talented and dedicated UX/UI Designer and Developer from Kaiping. She is a quick learner with a passion for detail. She is always eager to learn and improve her skills!",
+  "page.team.threeDes": "UX/UI Designer ",
+  "page.team.threeLong": "Sara, a UX/UI Designer and Developer from Toronto, who is a highly motivated and passionate individual. She has a great aptitude for problem-solving and is always eager to create high-quality applications!",
+  "page.team.fourDes": "UX/UI Designer ",
+  "page.team.fourLong": "Evan is an artistic and innovative UX/UI Designer from Vietnam. He has an eye for detail and is always creating new and innovative designs. Evan uses a combination of technical and creative skills to produce exceptional work!",
+
+  "page.introcard.titleone": "What is Gotchu?",
+  "page.introcard.titletwo": "What is Bullying?",
+  "page.introcard.titlethree": "Disclaimer",
+  "page.introcard.paraone": "Gotchu is an innovative anti-bullying app that creates a safe, supportive environment for individuals experiencing or witnessing bullying. Gotchu provides emotional tools and support to connect users with the right resources and understand the potential impacts of bullying. Join our community of supportive individuals committed to promoting kindness and empathy.",
+  "page.introcard.paratwo": "Bullying is unwanted, aggressive behaviour that involves a real or perceived power imbalance. The behaviour is repeated over time. People who are bullied may have serious and lasting problems (stopbullying.com, 2023). This harmful behaviour can manifest in various forms. It is crucial for communities to work together to raise awareness and develop effective strategies to stop bullying.",
+  "page.introcard.parathree": "Gotchu™ is intended to provide information, resources, and support to individuals who may be experiencing bullying or know someone who is being bullied. While the app aims to provide helpful tools and strategies to cope with bullying, it is not a substitute for professional help or advice from a qualified mental health professional. If you or someone you know is experiencing bullying and requires professional assistance, please seek help from a licensed mental health provider or other qualified professional.",
+  "page.introcard.chartTitle": "Aged 15 to 17 Reported Experiencing Some Form of Bullying in the Preceding Year",
+  "page.introcard.chartLegandOne": "Yes (70%)",
+  "page.introcard.chartLegandTwo": "No (30%)",
+
+  "page.button.next": "Next",
+  "page.button.back": "Back"
+}

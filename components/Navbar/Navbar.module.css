@@ -101,3 +101,34 @@
     height: 25px;
     object-fit: contain;
 }
+
+.lang {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1.4rem;
+    gap: 0.5rem;
+    height: 3rem;
+    flex-grow: 1;
+    align-items: flex-end;
+    font-size: 16pt;
+    font-weight: 600;
+}
+
+.lang>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10pt;
+    color: var(--purple);
+    border: 3px solid var(--purple);
+    cursor: pointer;
+}
+
+.lang>a:hover {
+    background-color: var(--purple);
+    color: white;
+}

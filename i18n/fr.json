@@ -1,0 +1,102 @@
+{
+  "page.home.head.title": "Gotchu",
+  "page.home.head.meta.description": "Application Anti-harcèlement",
+
+  "page.home.button.start": "Commencer",
+  "page.home.button.tutorial": "Tutoriel",
+
+  "page.intro.title": "Introduction",
+  "page.intro.button": "Admettre",
+
+  "page.personal.title": "Quel est ton nom?",
+  "page.personal.subTitle": "Facultatif",
+  "page.personal.input": "Caractères uniquement",
+  "page.personal.color": "Choisissez une couleur que vous aimez",
+
+  "page.nav.home": "Accueil",
+  "page.nav.tutorial": "Tutoriel",
+  "page.nav.quiz": "Quiz",
+  "page.nav.resources": "Ressources",
+  "page.nav.about": "À propos de nous",
+
+  "page.start.greeting": "Bonjour ",
+  "page.start.instrOne": "Préparez-vous à rencontrer votre nouveau camarade de quiz, Hugo !",
+  "page.start.instrTwo": "Il sera avec vous à chaque étape du quiz.",
+  "page.start.instrThree": "Avant de commencer, faisons un exercice de respiration.",
+  "page.start.exeTitle": "Exercice de respiration",
+  "page.start.exeInstr": "Appuyez sur la forme derrière et respirez lentement pendant 15 secondes. Relâchez votre doigt lorsque vous êtes prêt à commencer.",
+
+  "page.questionOne.heading": "Question Une",
+  "page.questionOne.number": "Question 1",
+  "page.questionOne.title": "Êtes-vous ou quelqu'un d'autre victime d'intimidation?",
+  "page.questionOne.ansOne": "Moi",
+  "page.questionOne.ansTwo": "Quelqu'un d'autre",
+
+  "page.questionTwo.heading": "Question Deux",
+  "page.questionTwo.number": "Question 2",
+  "page.questionTwo.title": "Quel type d'intimidation se produit?",
+  "page.questionTwo.ansOne": "Émotionnelle Psychologique",
+  "page.questionTwo.ansTwo": "Physique",
+  "page.questionTwo.ansThree": "Verbale",
+
+  "page.questionThree.heading": "Question Trois",
+  "page.questionThree.number": "Question 3",
+  "page.questionThree.title": "Comment cela impacte-t-il votre vie quotidienne?",
+  "page.questionThree.ansOne": "Cela me touche",
+  "page.questionThree.ansTwo": "Cela ne me touche pas",
+
+  "page.questionFour.heading": "Question Quatre",
+  "page.questionFour.number": "Question 4",
+  "page.questionFour.title": "Avez-vous un système de soutien?",
+  "page.questionFour.ansOne": "Oui, j'ai un système de soutien",
+  "page.questionFour.ansTwo": "Non, je gère les choses tout seul",
+
+  "page.result.pageTitle": "Résultat",
+  "page.result.headingOne": "Salut",
+  "page.result.headingTwo": "Nous savons que ce n'est pas facile.",
+  "page.result.headingThree": "Vous avez fait du bon travail!",
+  "page.result.summaryTitle": "Résumé des résultats",
+  "page.result.suggestionTitle": "Suggestions pour vous",
+  "page.result.subTitleOne": "Conseils de gestion",
+  "page.result.subTitleTwo": "Conseils de soins personnels",
+  "page.result.subTitleThree": "Numéros de téléphone d'urgence",
+  "page.result.buttonOne": "Trouver du soutien",
+  "page.result.buttonTwo": "Refaire le quiz",
+
+  "page.resource.headingOne": "Support externe",
+  "page.resource.contentOne": "Voici quelques ressources disponibles pour vous aider à faire face au harcèlement. Vous trouverez de nombreuses ressources en ligne, notamment des sites web, des blogs et des groupes de médias sociaux qui fournissent des informations et un soutien aux personnes confrontées au harcèlement.",
+  "page.resource.headingTwo": "Lecture de référence",
+  "page.resource.contentTwo": "Nous offrons des ressources de lecture de référence pour ceux qui cherchent à en savoir plus sur les effets du harcèlement. Notre sélection comprend une gamme de matériaux, y compris des articles, des livres et des articles de recherche de sources réputées.",
+  "page.resource.headingThree": "Quiz externe",
+  "page.resource.contentThree": "De nombreux sites web proposent des quiz pour aider à tester vos connaissances et votre compréhension des effets du harcèlement. En passant ces quiz, vous pouvez évaluer votre propre compréhension de la question et identifier les domaines où vous pourriez avoir besoin d'en savoir plus.",
+  "page.resource.button": "Retour au résultat",
+
+  "page.tutorial.one": "Navigation",
+  "page.tutorial.two": "Bouton suivant",
+
+  "page.tutorialTwo.one": "Sélectionner une réponse",
+  "page.tutorialTwo.two": "Bouton Retour",
+
+  "page.team.title": "Notre Équipe",
+  "page.team.oneDes": "Designer UX/UI",
+  "page.team.oneLong": "Hayden est un designer UX/UI et développeur exceptionnel originaire de Hong Kong. C'est un designer créatif qui suit les dernières tendances en matière de conception. Hayden a le sens du détail et produit constamment un travail exceptionnel !",
+  "page.team.twoDes": "Designer UX/UI",
+  "page.team.twoLong": "Kiona est une designer UX/UI et développeuse talentueuse et dévouée originaire de Kaiping. Elle est une apprenante rapide avec une passion pour le détail. Elle est toujours désireuse d'apprendre et d'améliorer ses compétences !",
+  "page.team.threeDes": "Designer UX/UI",
+  "page.team.threeLong": "Sara, une designer UX/UI et développeuse de Toronto, est une personne hautement motivée et passionnée. Elle a une grande aptitude pour la résolution de problèmes et est toujours désireuse de créer des applications de haute qualité !",
+  "page.team.fourDes": "Designer UX/UI",
+  "page.team.fourLong": "Evan est un designer UX/UI artistique et innovant originaire du Vietnam. Il a le sens du détail et crée toujours de nouveaux designs innovants. Evan utilise une combinaison de compétences techniques et créatives pour produire un travail exceptionnel !",
+
+  "page.introcard.titleone": "Qu'est-ce que Gotchu ?",
+  "page.introcard.titletwo": "Qu'est-ce que l'intimidation ?",
+  "page.introcard.titlethree": "Avertissement",
+  "page.introcard.paraone": "Gotchu est une application innovante de lutte contre l'intimidation qui crée un environnement sûr et favorable pour les personnes qui vivent ou témoignent de l'intimidation. Gotchu fournit des outils émotionnels et un soutien pour connecter les utilisateurs avec les bonnes ressources et comprendre les impacts potentiels de l'intimidation. Rejoignez notre communauté de personnes solidaires engagées à promouvoir la gentillesse et l'empathie.",
+  "page.introcard.paratwo": "L'intimidation est un comportement agressif indésirable qui implique un déséquilibre réel ou perçu de pouvoir. Le comportement se répète au fil du temps. Les personnes qui subissent de l'intimidation peuvent avoir des problèmes graves et durables (stopbullying.com, 2023). Ce comportement nuisible peut se manifester sous différentes formes. Il est crucial que les communautés travaillent ensemble pour sensibiliser et développer des stratégies efficaces pour mettre fin à l'intimidation.",
+  "page.introcard.parathree": "Gotchu™ vise à fournir des informations, des ressources et un soutien aux personnes qui peuvent être confrontées à l'intimidation ou connaître quelqu'un qui en est victime. Bien que l'application vise à fournir des outils et des stratégies utiles pour faire face à l'intimidation, elle ne remplace pas l'aide professionnelle ou les conseils d'un professionnel de la santé mentale qualifié. Si vous ou quelqu'un que vous connaissez subissez de l'intimidation et avez besoin d'une assistance professionnelle, veuillez consulter un fournisseur de soins de santé mentale agréé ou un autre professionnel qualifié.",
+  "page.introcard.chartTitle": "Les 15 à 17 ans ont signalé avoir été victimes d'une forme d'intimidation au cours de l'année précédente",
+  "page.introcard.chartLegandOne": "Oui (70%)",
+  "page.introcard.chartLegandTwo": "Non (30%)",
+
+  "page.button.next": "Suivant",
+  "page.button.back": "Retour"
+}

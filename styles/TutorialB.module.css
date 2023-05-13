@@ -71,13 +71,6 @@
     min-height: calc(744px - 3.5rem);
 }
 
-.selectionArrow {
-    position: absolute;
-    top: 9rem;
-    left: 5rem;
-    z-index: 999;
-}
-
 .topContent {
     display: flex;
     flex-direction: column;
@@ -173,7 +166,7 @@
 .selectionArrow {
     position: absolute;
     top: 15rem;
-    left: 10rem;
+    left: 11rem;
     z-index: 999;
     width: 4rem;
 }
@@ -189,8 +182,8 @@
 .tutorialText {
     position: absolute;
     top: 14rem;
-    left: 4rem;
-    width: 5rem;
+    left: 3rem;
+    width: 8rem;
     z-index: 999;
     color: var(--font-white);
     font-family: 'itim';

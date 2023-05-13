@@ -57,7 +57,7 @@ export default function TeamBio({
 
                             <div className={styles.close}>
                                 <Image
-                                    src={'icons/close.svg'}
+                                    src={'../icons/close.svg'}
                                     // onClick={() => setPopup(false)}
                                     className={styles.closeIcon}
                                     width={20}
