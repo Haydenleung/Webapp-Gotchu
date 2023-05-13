@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './IntroductionCard.module.css'
 import Image from 'next/image'
-import dots from '@/public/carouselIndicator.svg'
 import { useState } from 'react'
 import PieChart from '../Piechart'
 import { useRouter } from 'next/router'

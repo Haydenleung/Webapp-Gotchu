@@ -62,7 +62,7 @@ export default function PieChart({ dir }) {
                 }
             },
             maintainAspectRatio: false,
-            responsive: true
+            responsive: true,
         })
     }, [])
 

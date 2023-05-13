@@ -19,13 +19,14 @@ export default function Navbar({ dir }) {
   const quizMsg = intl.formatMessage({ id: 'page.nav.quiz' });
   const resourcesMsg = intl.formatMessage({ id: 'page.nav.resources' });
   const aboutMsg = intl.formatMessage({ id: 'page.nav.about' });
+  const [landing, setLanding] = useState('true');
 
 
   return (
 
     <section className={styles.navbar}>
       <div className={styles.headbar}>
-        <Link href="/" className={styles.navbarLogoContainer}><Image src={'../NavbarLogo.svg'} className={styles.navbarLogo} width={40} height={40} /></Link>
+        <Link href={{ pathname: "/", query: { landing } }} className={styles.navbarLogoContainer}><Image src={'../NavbarLogo.svg'} className={styles.navbarLogo} width={40} height={40} /></Link>
         <Image src={'../hamburger.svg'} onClick={() => setPopup(true)} className={styles.hamburger} width={30} height={30} />
       </div>
       {
@@ -49,7 +50,7 @@ export default function Navbar({ dir }) {
               <div className={styles.close}>
                 <Image src={'../icons/close.svg'} onClick={() => setPopup(false)} className={styles.closeIcon} width={30} height={30} />
               </div>
-              <Link href="/">
+              <Link href={{ pathname: "/", query: { landing } }} >
                 <div className={styles.tab}>
                   <Image src={'../icons/home.svg'} className={styles.icon} width={30} height={30} />
                   <h5>{homeMsg}</h5>

@@ -11,6 +11,7 @@ import AnswerButton from '@/components/AnswerButton'
 import QuestionIndicator from '@/components/QuestionIndicator'
 import { useRouter } from 'next/router'
 import { useIntl } from 'react-intl'
+import { useState } from 'react'
 
 export default function TutorailB() {
 
@@ -25,6 +26,8 @@ export default function TutorailB() {
     const ansOne = intl.formatMessage({ id: 'page.questionOne.ansOne' });
     const ansTwo = intl.formatMessage({ id: 'page.questionOne.ansTwo' });
 
+    const [landing, setLanding] = useState('true');
+
     return (
         <>
             <Head>
@@ -36,7 +39,7 @@ export default function TutorailB() {
             <div className={styles.main}>
                 <div className={styles.empty} />
                 <Navbar />
-                <Link href="/" className={styles.filterB} />
+                <Link className={styles.filterB} href={{ pathname: "/", query: { landing } }} />
                 <div className={styles.filter} />
                 <div className={styles.main_container}>
                     <div className={styles.clickIndicator}>

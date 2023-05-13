@@ -10,6 +10,7 @@ import Button from '@/components/Button'
 import { motion, AnimatePresence } from "framer-motion"
 import { useRouter } from 'next/router'
 import { useIntl } from 'react-intl'
+import Shape from '@/components/Shape'
 
 
 export default function Home({ dir }) {
@@ -19,6 +20,11 @@ export default function Home({ dir }) {
   const pageDes = intl.formatMessage({ id: "page.home.head.meta.description" })
   const startButton = intl.formatMessage({ id: "page.home.button.start" })
   const tutorialButton = intl.formatMessage({ id: "page.home.button.tutorial" })
+
+  const router = useRouter();
+  const query = router.query;
+  const landing = query.landing;
+  console.log(landing);
 
   return (
     <>
@@ -32,6 +38,9 @@ export default function Home({ dir }) {
       </div>
       <main className={styles.main}>
         <div className={styles.main_container}>
+          {
+            landing == 'true' ? <></> : <Shape />
+          }
           <div className={styles.pageImg}>
             <div className={styles.bubble}>
               <motion.div
