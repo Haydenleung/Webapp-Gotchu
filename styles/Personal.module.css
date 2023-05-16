@@ -68,7 +68,7 @@
 
 .inputFelid {
   height: 60px;
-  width: 346px;
+  width: 100%;
   padding: 1rem;
   background-color: var(--sub-grey);
   border-radius: 10px;
