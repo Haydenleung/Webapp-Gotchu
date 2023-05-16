@@ -23,14 +23,21 @@ Gotchu is an anti-bullying educational app that provides emotional tools and sup
 ```
 * HTML
 * CSS
-* JavaScript
+* NextJS
 ```
 
 # Packages/Dependencies
 
 ```
-chartjs
-i18n
+npm install next-i18next
+```
+
+```
+npm i react-intl
+```
+
+```
+npm i react-chartjs-2
 ```
 
 # Resources
