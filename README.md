@@ -26,15 +26,15 @@ Gotchu is an anti-bullying educational app that provides emotional tools and sup
 * JavaScript
 ```
 
-
 # Packages/Dependencies
+
 ```
 chartjs
 i18n
 ```
 
-
 # Resources
-[bullying resources](https://www.stopbullying.gov/)
-[bullying statistics](https://www.safecanada.ca/bullying-in-canada/)
-[hotline numbers] (https://antibullyingsoftware.com/anti-bullying-hotlines-in-the-us-and-canada/)
+
+[bullying resources](https://www.stopbullying.gov/),
+[bullying statistics](https://www.safecanada.ca/bullying-in-canada/),
+[hotline numbers](https://antibullyingsoftware.com/anti-bullying-hotlines-in-the-us-and-canada/)
